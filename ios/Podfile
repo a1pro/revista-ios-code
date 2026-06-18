@@ -1,0 +1,45 @@
+platform :ios, '15.1'
+
+require_relative '../node_modules/react-native/scripts/react_native_pods'
+
+prepare_react_native_project!
+
+target 'Revista' do
+  config = use_native_modules!
+
+  use_react_native!(
+    :path => config[:reactNativePath],
+    :hermes_enabled => false
+  )
+
+  post_install do |installer|
+    react_native_post_install(installer)
+
+    installer.pods_project.targets.each do |target|
+      target.build_configurations.each do |config|
+
+        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '15.1'
+
+        # RN 0.85 requires C++20
+        config.build_settings['CLANG_CXX_LANGUAGE_STANDARD'] = 'c++20'
+
+        config.build_settings['CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES'] = 'YES'
+
+        # Remove -Werror flags
+        ['OTHER_CFLAGS', 'OTHER_CPLUSPLUSFLAGS'].each do |flag|
+          next unless config.build_settings[flag]
+
+          if config.build_settings[flag].is_a?(String)
+            config.build_settings[flag] =
+              config.build_settings[flag].gsub(/-Werror\b/, '')
+          elsif config.build_settings[flag].is_a?(Array)
+            config.build_settings[flag] =
+              config.build_settings[flag].reject { |f| f.to_s.include?('-Werror') }
+          end
+        end
+      end
+    end
+
+    installer.pods_project.save
+  end
+end
