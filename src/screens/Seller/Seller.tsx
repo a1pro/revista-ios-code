@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import {
   View,
@@ -7,7 +8,6 @@ import {
   ScrollView,
   FlatList,
   TouchableOpacity,
-  SafeAreaView,
   ActivityIndicator,
   Linking,
   Share,
@@ -24,6 +24,8 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../../types';
 import { CustomText } from '../../components/CustomText';
 import { horizontalScale, verticalScale } from '../../utils/Metrics';
+import { SafeAreaView } from 'react-native-safe-area-context';
+
 interface Product {
   id: number;
   name: string;
@@ -31,9 +33,11 @@ interface Product {
   thumbnail_path: string;
   quantity: number;
   image: string;
-  price: number
+  price: number;
 }
+
 type SellerNavigationProp = NativeStackNavigationProp<RootStackParamList, 'Seller'>;
+
 const Seller = () => {
   const navigation = useNavigation<SellerNavigationProp>();
   const { t } = useTranslation();
@@ -41,11 +45,13 @@ const Seller = () => {
   const route = useRoute<any>();
   const { seller, shop } = route?.params || {};
 
-  const [popularProducts, setPopularProducts] = useState<Product[]>([]);
-  const [loadingProducts, setLoadingProducts] = useState(true);
+  const [popularProducts, setPopularProducts] = useState<[]>([]);
+  const [loadingProducts, setLoadingProducts] = useState<boolean>(true);
+  const [ratingdata, setRatingdata] = useState<any>();
+  const [usercount, setusercount] = useState(0);
+  // Track image loading errors for products
+  const [imageErrors, setImageErrors] = useState<{ [key: number]: boolean }>({});
 
-  console.log(seller)
-  console.log(shop)
   const fetchPopularProducts = async (sellerId: any) => {
     setLoadingProducts(true);
     try {
@@ -66,6 +72,8 @@ const Seller = () => {
       );
       if (res.data && res.data.products) {
         setPopularProducts(res.data.products);
+        // Reset image errors for new products
+        setImageErrors({});
       } else {
         setPopularProducts([]);
       }
@@ -74,19 +82,81 @@ const Seller = () => {
     }
     setLoadingProducts(false);
   };
+
   const formatLocalDate = (dateString?: string) => {
-        if (!dateString) return 'N/A';
-        try {
-            const date = new Date(dateString);
-            return date.toLocaleDateString(undefined, {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric',
-            });
-        } catch (error) {
-            return 'Invalid Date';
+    if (!dateString) return 'N/A';
+    try {
+      const date = new Date(dateString);
+      return date.toLocaleDateString(undefined, {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+      });
+    } catch (error) {
+      return 'Invalid Date';
+    }
+  };
+
+  const formatUserCount = (count: number): string => {
+    if (count < 1000) {
+      return count.toString();
+    } else if (count >= 1000 && count < 10000) {
+      const formatted = (count / 1000).toFixed(2);
+      return `${formatted} K`;
+    } else if (count >= 10000 && count < 100000) {
+      const formatted = (count / 1000).toFixed(1);
+      return `${formatted} K`;
+    } else if (count >= 100000 && count < 1000000) {
+      const formatted = (count / 1000).toFixed(1);
+      return `${formatted} K`;
+    } else if (count >= 1000000) {
+      const formatted = (count / 1000000).toFixed(2);
+      return `${formatted} M`;
+    }
+    return count.toString();
+  };
+
+  // seller's customer  
+  const sellerCustomer = async (sellerId:any) => {
+    try {
+      const token = await AsyncStorage.getItem('token');
+      const res = await axios.get(`${Base_Url.customercount}?seller_id=${sellerId}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+          'Content-Type': 'application/json',
         }
-    };
+      });
+      if (res?.data?.success) {
+        setusercount(res?.data?.count);
+      }
+    } catch (error: any) {
+      console.log(error.message);
+    }
+  };
+
+  // seller review 
+  const sellerreview = async (sellerId:any) => {
+    try {
+      const token = await AsyncStorage.getItem('token');
+      const res = await axios.get(`${Base_Url.sellerReview}?seller_id=${sellerId}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+          'Content-Type': 'application/json',
+        }
+      });
+      console.log(res);
+      if (res?.data?.success) {
+        setRatingdata(res?.data);
+      }
+    } catch (error: any) {
+      console.log(error.message);
+    }
+  };
+
+  useEffect(() => {
+    sellerreview(seller.id);
+    sellerCustomer(seller.id);
+  }, []);
 
   useEffect(() => {
     if (seller?.id) {
@@ -94,14 +164,41 @@ const Seller = () => {
     }
   }, [seller?.id]);
 
+  // Handle image error for product thumbnail
+  const handleImageError = (productId: number) => {
+    setImageErrors(prev => ({
+      ...prev,
+      [productId]: true
+    }));
+  };
+
+  // Get product image source with fallback
+  const getProductImageSource = (item: Product) => {
+    // Check if image has error or thumbnail_path is invalid
+    if (imageErrors[item.id] || !item?.thumbnail_path) {
+      return IMAGES?.imgplaceholder;
+    }
+    
+    // Construct image URL
+    let imageUrl = '';
+    if (item.thumbnail_path.startsWith('storage')) {
+      imageUrl = `${base_url}/${item.thumbnail_path}`;
+    } else {
+      imageUrl = `${base_url}/storage/app/public/product/thumbnail/${item.thumbnail_path}`;
+    }
+    
+    return { uri: imageUrl };
+  };
+
   const bannerImage =
     shop?.banner && typeof shop.banner === 'string'
       ? shop.banner.startsWith('storage')
         ? { uri: `${base_url}/${shop?.banner}` }
         : { uri: `${base_url}/storage/app/public/shop/banner/${shop?.banner}` }
       : IMAGES?.imgplaceholder;
+
   const sellerImage = seller?.image
-    ? shop.banner.startsWith('storage')
+    ? seller.image.startsWith('storage')
       ? { uri: `${base_url}/${seller?.image}` }
       : { uri: `${base_url}/storage/app/public/seller/${seller?.image}` }
     : IMAGES?.imgplaceholder;
@@ -119,7 +216,6 @@ const Seller = () => {
       Linking.openURL(`tel:${phoneNumber}`);
     }
   };
-
   // Handle dynamic email linking
   const handleEmailPress = () => {
     const targetEmail = shopEmail || sellerEmail;
@@ -198,38 +294,38 @@ const Seller = () => {
             {seller?.f_name || ''} {seller?.l_name || seller?.name || ''}
           </Text>
           <View style={styles.joindate}>
-
-          <Text style={styles.ratingBelow}>
-            {/* ⭐ {seller?.rating || 'N/A'} ({seller?.reviews_count || 0} {t('reviews')}) */}
-            {t('from')}{formatLocalDate(seller?.created_at)}
-          </Text>
+            <Text style={styles.ratingBelow}>
+              {t('from')}{formatLocalDate(seller?.created_at)}
+            </Text>
           </View>
         </View>
 
         {/* Shop details */}
-        {/* <View style={styles.sellerinfosection}>
+        <View style={styles.sellerinfosection}>
           <View style={styles.infobox}>
             <View style={{ flexDirection: 'row', paddingHorizontal: horizontalScale(5) }}>
               <VectorIcon style={styles.icon} name='help-circle' type='Feather' />
               <CustomText type='title' fontWeight='bold'>{t("sellerRating")}</CustomText>
             </View>
-            <View style={{ alignItems:'center', flexDirection:'row',marginVertical:verticalScale(10), paddingHorizontal: horizontalScale(5) }}>
+            <View style={{ alignItems: 'center', flexDirection: 'row', marginVertical: verticalScale(10), paddingHorizontal: horizontalScale(5) }}>
               <VectorIcon style={styles.icon} name='star' type='AntDesign' />
-              <CustomText type='title' fontWeight={'bold'} >{t("4.7")}</CustomText>
+              <CustomText type='title' fontWeight={'bold'} >{ratingdata?.averageRating}</CustomText>
             </View>
-
-            <CustomText type='subTitle' fontWeight={'bold'} >{t("% 99 positive Rating")}</CustomText>
+            <CustomText type='subTitle' fontWeight={'bold'}>
+              {ratingdata?.positivePercentage != null
+                ? `${ratingdata.positivePercentage}% ${t('positiverating')}`
+                : t('% positive Rating')}
+            </CustomText>
           </View>
           <View style={styles.infobox}>
-              <CustomText type='title' fontWeight={'bold'} >{t("customers")}</CustomText>
-              <CustomText type='title' fontWeight={'bold'} style={{marginVertical:verticalScale(10)}}>{t("4.7")}</CustomText>
-              <CustomText type='subTitle' fontWeight={'bold'} >{t("Over the last 90 days")}</CustomText>
-            
+            <CustomText type='title' fontWeight={'bold'} >{t("customers")}</CustomText>
+            <CustomText type='title' fontWeight={'bold'} style={{ marginVertical: verticalScale(10) }}>
+              {formatUserCount(usercount)}
+            </CustomText>
+            <CustomText type='subTitle' fontWeight={'bold'} >{t("Overlastdays")}</CustomText>
           </View>
+        </View>
 
-        </View> */}
-
-        
         {seller?.address && (
           <View style={styles.infoBox}>
             <Text style={styles.infoLabel}>{t('sellerAddress')}</Text>
@@ -244,15 +340,14 @@ const Seller = () => {
           {(seller?.email || shop?.email) && (
             <Text style={styles.infoText}>{shopEmail || sellerEmail}</Text>
           )}
-        {/* Popular Products */}
-
         </View>
-         <View style={styles.sectionHeader}>
-          <Text style={styles.sectionTitle}>{t('popularProducts')}</Text>
 
+        {/* Popular Products */}
+        <View style={styles.sectionHeader}>
+          <Text style={styles.sectionTitle}>{t('popularProducts')}</Text>
         </View>
         {loadingProducts ? (
-          <ActivityIndicator style={{ marginVertical: 18 }} size="large" color={COLORS.appColor || '#2563eb'} />
+          <ActivityIndicator style={{ marginVertical: 18 }} size="large" color={COLORS.btnbg} />
         ) : (
           <FlatList
             data={popularProducts}
@@ -260,23 +355,26 @@ const Seller = () => {
             showsHorizontalScrollIndicator={false}
             keyExtractor={item => item.id?.toString()}
             renderItem={({ item }: { item: Product }) => (
-
               <View style={styles.productCard}>
-                {item?.thumbnail_path ? (
+                <View style={styles.productImageWrapper}>
                   <Image
-                    source={{ uri: `${base_url}/${item?.thumbnail_path}` }}
+                    source={getProductImageSource(item)}
                     style={styles.productImagePlaceholder}
                     resizeMode="cover"
+                    onError={() => handleImageError(item.id)}
+                    // Show placeholder while loading
+                    defaultSource={IMAGES?.imgplaceholder}
                   />
-                ) : (
-                  <View style={styles.productImagePlaceholder} />
-                )}
-                <Text style={styles.productName}>{item?.name}</Text>
+                 
+                  
+                </View>
+                <Text style={styles.productName} numberOfLines={2}>
+                  {item?.name}
+                </Text>
                 <Text style={styles.productPrice}>
                   {item?.unit_price ? ` ﷼  ${item?.unit_price}` : ''}
                 </Text>
               </View>
-
             )}
             contentContainerStyle={{ paddingHorizontal: 16 }}
             ListEmptyComponent={
@@ -286,9 +384,6 @@ const Seller = () => {
             }
           />
         )}
-
-        {/* Seller address & contact */}
-        
       </ScrollView>
     </SafeAreaView>
   );
@@ -325,11 +420,11 @@ const styles = StyleSheet.create({
   placeholder: {
     width: 40,
   },
-  joindate:{
-    backgroundColor:COLORS.btnbg,
-    paddingHorizontal:verticalScale(10),
-    paddingVertical:verticalScale(5),
-    borderRadius:6,
+  joindate: {
+    backgroundColor: COLORS.btnbg,
+    paddingHorizontal: verticalScale(10),
+    paddingVertical: verticalScale(5),
+    borderRadius: 6,
   },
   container: { flex: 1, backgroundColor: COLORS.white },
   headerImage: {
@@ -338,7 +433,6 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     alignSelf: 'center'
   },
-
   iconProfileRow: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -374,7 +468,6 @@ const styles = StyleSheet.create({
     borderColor: COLORS.white,
     backgroundColor: '#eee',
   },
-
   profileTextBelow: {
     alignItems: 'flex-end',
     marginRight: 32,
@@ -388,11 +481,10 @@ const styles = StyleSheet.create({
   },
   ratingBelow: {
     color: COLORS.white,
-    fontWeight:'bold',
+    fontWeight: 'bold',
     marginTop: 2,
     textAlign: 'right',
   },
-
   sectionHeader: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -402,7 +494,6 @@ const styles = StyleSheet.create({
   },
   sectionTitle: { fontSize: 18, fontWeight: 'bold' },
   viewAll: { color: '#2563eb', fontWeight: 'bold' },
-
   productCard: {
     width: 120,
     backgroundColor: '#f6f6f6',
@@ -411,16 +502,39 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 12,
   },
+  productImageWrapper: {
+    position: 'relative',
+    width: 80,
+    height: 80,
+    borderRadius: 8,
+    marginBottom: 8,
+    backgroundColor: '#e0e0e0',
+  },
   productImagePlaceholder: {
     width: 80,
     height: 80,
-    backgroundColor: '#e0e0e0',
     borderRadius: 8,
-    marginBottom: 8,
   },
-  productName: { fontWeight: '600', fontSize: 15, textAlign: 'center' },
-  productPrice: { color: '#2563eb', marginTop: 4, textAlign: 'center' },
-
+  imageLoader: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  productName: { 
+    fontWeight: '600', 
+    fontSize: 15, 
+    textAlign: 'center',
+    marginTop: 4,
+  },
+  productPrice: { 
+    color: '#2563eb', 
+    marginTop: 4, 
+    textAlign: 'center' 
+  },
   infoBox: {
     backgroundColor: '#f6f6f6',
     marginHorizontal: 16,
@@ -432,16 +546,15 @@ const styles = StyleSheet.create({
   infoText: { color: COLORS.reviewcmt },
   sellerinfosection: {
     flexDirection: 'row',
-    justifyContent:'space-around',
+    justifyContent: 'space-around',
   },
   infobox: {
     backgroundColor: COLORS.white,
     elevation: 4,
     height: verticalScale(120),
-    alignSelf:'center',
-    padding:horizontalScale(20),
-    borderRadius:9,
-    // margin:verticalScale(20)
+    alignSelf: 'center',
+    padding: horizontalScale(20),
+    borderRadius: 9,
   },
   icon: {
     marginRight: horizontalScale(10)

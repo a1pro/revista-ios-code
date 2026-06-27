@@ -291,7 +291,7 @@ const CheckoutScreen: React.FC = () => {
         <Text style={styles.headerTitle}>{t('orderSummary')}</Text>
         <View style={styles.placeholder} />
       </View>
-
+  
       <ScrollView contentContainerStyle={styles.container}>
         <View style={{
           backgroundColor: isPremium ? '#E8F5E9' : '#FFF3E0',

@@ -244,7 +244,7 @@ const LatestProduct: React.FC<LatestProductProps> = ({ searchQuery = '' }) => {
             size={20}
             type="Ionicons"
             name="arrow-forward"
-            color={COLORS.appColor || COLORS.text2}
+            color={COLORS.btnbg }
             style={styles.viewAllIcon}
           />
         </TouchableOpacity>
@@ -287,7 +287,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   viewAllText: {
-    color: COLORS.appColor,
+    color: COLORS.btnbg,
     fontWeight: '600',
     fontSize: 14,
   },

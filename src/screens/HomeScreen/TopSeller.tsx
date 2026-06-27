@@ -43,6 +43,7 @@ const TopSeller: React.FC<props> = () => {
           'Content-Type': 'application/json',
         },
       });
+      // console.log("top seller ",res)
       if (res.data) {
         setSellers(res.data);
       } else {
@@ -163,7 +164,13 @@ const TopSeller: React.FC<props> = () => {
         <Text style={styles.headerTitle}>{t('topSellers')}</Text>
         <TouchableOpacity style={styles.viewAllBtn} onPress={() => navigation.navigate('AllSellerScreen' as never)}>
           <Text style={styles.viewAllText}>{t('seeAll')}</Text>
-          <Text style={styles.arrow}>→</Text>
+          <VectorIcon
+            size={20}
+            type="Ionicons"
+            name="arrow-forward"
+            color={COLORS.btnbg }
+            style={styles.viewAllIcon}
+          />
         </TouchableOpacity>
       </View>
       <FlatList
@@ -206,6 +213,9 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     fontSize: 14,
     marginRight:verticalScale(4)
+  },
+   viewAllIcon: {
+    marginLeft: 4,
   },
   arrow: {
     fontSize: 18,

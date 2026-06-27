@@ -159,7 +159,7 @@ const Magzine = ({ navigation }: any) => {
         const response = await axios.get(Base_Url.magzinecategory, {
           headers: { Authorization: `Bearer ${token}` },
         });
-
+        console.log('res of magzine category::: ',response)
         setCategories(response.data);
         setFilteredCategories(response.data);
 
@@ -191,7 +191,7 @@ const Magzine = ({ navigation }: any) => {
             headers: { Authorization: `Bearer ${token}` },
           },
         );
-
+console.log('res of magzine product::::', response)
         const items: ProductItem[] = (response.data.products || []).map(
           (item: any) => ({
             id: item.id,

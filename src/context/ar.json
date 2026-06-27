@@ -247,6 +247,8 @@
   "primeuser": "المميز",
   "express": "سريع",
   "rateProduct": "قيّم هذا المنتج",
+  "rateseller": "بائع الأسعار",
+  "optional": "اختياري",
   "backToorders": "العودة إلى الطلبات",
   "deliveredPanding": "المنتج لم يتم تسليمه بعد",
   "noReviewsPending": "لا توجد تقييمات معلقة",
@@ -298,5 +300,17 @@
 "includedCategories": "التصنيفات المشمولة",
 "chooseYourPlan": "اختر خطتك",
 "startMembership": "ابدأ العضوية",
-"subscriptionRenewText": "يتم تجديد الاشتراكات تلقائيًا حتى الإلغاء."
+"subscriptionRenewText": "يتم تجديد الاشتراكات تلقائيًا حتى الإلغاء.",
+"positiverating": "تقييم إيجابي",
+  "submitted": "تم الإرسال",
+  "submitReview": "إرسال التقييم",
+  "sellerReviewPlaceholder": "شارك تجربتك مع هذا البائع...",
+  "rateSeller": "قيّم البائع",
+  "rateSellerNow": "قيّم البائع الآن",
+  "sellerReviewCompleted": "✓ تم إكمال تقييم البائع",
+  "submitProductReview": "إرسال تقييم المنتج",
+  "Overlastdays": "خلال الـ 90 يومًا الماضية",
+   "sellerFeedbackRequired": "يرجى تقديم تقييم للبائع",
+  "feedback": "تقييم",
+  "sellerReviewSubmitted": "تم إرسال تقييم البائع بنجاح!"
 }

@@ -3,7 +3,6 @@
 import React, { useState, useCallback} from 'react';
 import {
   View,
-  SafeAreaView,
   Image,
   ScrollView,
   TextInput,
@@ -30,7 +29,7 @@ import BrandedProducts from '../BrandedProduct/BrandedProducts';
 import CategorySection from '../CategorySection/CategorySection';
 import CategorySection2 from '../CategorySection/CategorySection2';
 import { t } from 'i18next';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 
 
 type CartItem = {

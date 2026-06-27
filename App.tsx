@@ -30,9 +30,6 @@ LogBox.ignoreAllLogs();
 // CHECK NATIVE MODULES
 // ==========================================
 
-// Log available native modules for debugging
-console.log('📱 Available Native Modules:', Object.keys(NativeModules));
-
 // Check if required native modules are available
 const isNativeModuleAvailable = (moduleName: string): boolean => {
   return !!NativeModules[moduleName];
@@ -132,7 +129,7 @@ const setupAxiosInterceptors = () => {
         switch (status) {
           case 401:
             // Unauthorized - clear token and redirect to login
-            console.log('🔒 Session expired. Please login again.');
+            // console.log('🔒 Session expired. Please login again.');
             AsyncStorage.removeItem('authToken');
             break;
           case 500:
@@ -157,10 +154,10 @@ const setupAxiosInterceptors = () => {
   i18n.on('languageChanged', lng => {
     const cleanLanguage = getCleanLanguage();
     axios.defaults.headers.common['Accept-Language'] = cleanLanguage;
-    console.log(`🌐 Language updated to: ${cleanLanguage}`);
+    // console.log(`🌐 Language updated to: ${cleanLanguage}`);
   });
 
-  console.log('✅ Axios interceptors configured successfully');
+  // console.log('✅ Axios interceptors configured successfully');
 };
 
 // ==========================================
@@ -236,11 +233,11 @@ const initializeMyFatoorah = async (): Promise<boolean> => {
     }
 
     const initialized = await MyFatoorahService.initialize();
-    if (initialized) {
-      console.log('✅ MyFatoorahService initialized successfully');
-    } else {
-      console.warn('⚠️ MyFatoorahService initialization returned false');
-    }
+    // if (initialized) {
+    //   console.log('✅ MyFatoorahService initialized successfully');
+    // } else {
+    //   console.warn('⚠️ MyFatoorahService initialization returned false');
+    // }
     return initialized;
   } catch (error) {
     console.warn('⚠️ MyFatoorahService initialization failed:', error);
@@ -261,7 +258,7 @@ export default function App() {
 
     const initializeApp = async () => {
       try {
-        console.log('🚀 Initializing app...');
+        // console.log('🚀 Initializing app...');
 
         // 1. Request permissions (skip if module not available)
         let hasPermissions = true;
@@ -285,11 +282,11 @@ export default function App() {
         // 3. Set initial language header
         const initialLanguage = getCleanLanguage();
         axios.defaults.headers.common['Accept-Language'] = initialLanguage;
-        console.log(`🌐 Initial language set to: ${initialLanguage}`);
+        // console.log(`🌐 Initial language set to: ${initialLanguage}`);
 
         // 4. App is ready
         setAppReady(true);
-        console.log('✅ App initialized successfully');
+        // console.log('✅ App initialized successfully');
       } catch (error) {
         console.error('❌ App initialization failed:', error);
 

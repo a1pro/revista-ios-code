@@ -67,10 +67,7 @@ console.log(error)
   return (
     <KeyboardAvoidingContainer>
       <SafeAreaView style={styles.container}>
-        {/* <ImageBackground
-          source={IMAGES.loginimg}
-          resizeMode="cover"
-          style={{ flex: 1, width: '100%', height: '100%' }}> */}
+       
           <View style={styles.mainView}>
             <CustomText
               type="heading"

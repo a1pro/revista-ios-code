@@ -9,7 +9,6 @@ import {
   View,
   Text,
   Image,
-  SafeAreaView,
   TouchableOpacity,
   ScrollView,
   TextInput,
@@ -26,7 +25,7 @@ import IMAGES from '../../assets/images';
 import VectorIcon from '../../components/VectorIcon';
 import COLORS from '../../utils/Colors';
 import { addCartItem } from '../../redux/slice/cartSlice';
-import { useDispatch} from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { addFavourite, removeFavourite } from '../../redux/slice/favouriteSlice';
 import { AppDispatch } from '../../redux/store';
 import { base_url, Base_Url } from '../../utils/ApiUrl';
@@ -38,7 +37,8 @@ import ImageViewer from 'react-native-image-zoom-viewer';
 import { isUserPremium, primeicon } from '../../utils/premimumuser';
 import Subscriptionstyle from '../../components/Subscriptionstyle';
 import style from './style';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
+import SafeImage from '../../components/SafeImage';
 
 interface prime {
   id: number;
@@ -81,6 +81,8 @@ const ProductDetails: React.FC<Props> = ({ route, navigation }) => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [icon, setprimeicon] = useState<prime | null>(null);
   const [isFavoriteLocal, setIsFavoriteLocal] = useState(false);
+  const [loaded, setLoaded] = useState<boolean>(false);
+
   const { t } = useTranslation();
   const primeIcon = async () => {
     const prime = await primeicon();
@@ -100,7 +102,7 @@ const ProductDetails: React.FC<Props> = ({ route, navigation }) => {
       if (colorMatch?.image_name) {
         arr.push(`${base_url}/${colorMatch.image_name}`);
       }
-    } 
+    }
 
     if (Array.isArray(product?.images) && product.images.length > 0) {
       product.images.forEach((img: any) => {
@@ -303,7 +305,7 @@ const ProductDetails: React.FC<Props> = ({ route, navigation }) => {
   };
 
   const handleAddToCart = async () => {
-    // if (!checkvalidate()) return;
+    if (!checkvalidate()) return;
     try {
       setCartLoading(true);
       const token = await AsyncStorage.getItem('token');
@@ -336,7 +338,7 @@ const ProductDetails: React.FC<Props> = ({ route, navigation }) => {
           guest_id: 1,
         },
       });
-// console.log(res)
+      // console.log(res)
       if (res.data && res.data.message === 'Successfully added!') {
         dispatch(addCartItem({ ...product, quantity }));
         Toast.show({
@@ -609,22 +611,29 @@ const ProductDetails: React.FC<Props> = ({ route, navigation }) => {
     uri: string;
     imageStyle: any;
   }) => {
-    const [loading, setLoading] = useState(true);
 
     return (
-      <View style={style.lazyImageContainer}>
-        {loading && (
-          <View style={style.loaderContainer}>
-            <Image source={IMAGES.imgplaceholder} style={style.placeholderImage} resizeMode="cover" />
-            {/* <Loader size="large" /> */}
-          </View>
+      <View style={[style.lazyImageContainer, imageStyle]}>
+
+        {/* 1. Placeholder (ONLY when not loaded) */}
+        {!loaded && (
+          <Image
+            source={IMAGES.imgplaceholder}
+            style={[imageStyle, { position: 'absolute' }]}
+            resizeMode="cover"
+          />
         )}
+
+        {/* 2. Real image (ONLY after load) */}
         <Image
           source={{ uri }}
-          style={imageStyle}
+          style={[
+            imageStyle,
+            { opacity: loaded ? 1 : 0 },
+          ]}
           resizeMode="contain"
-          onLoadStart={() => setLoading(true)}
-          onLoadEnd={() => setLoading(false)}
+          onLoadEnd={() => setLoaded(true)}
+          fadeDuration={0} // 👈 IMPORTANT (removes Android flicker)
         />
       </View>
     );
@@ -632,8 +641,8 @@ const ProductDetails: React.FC<Props> = ({ route, navigation }) => {
 
 
 
-const currentStock = Number(product?.current_stock) || 0;
-const isOutOfStock = currentStock <= 0;
+  const currentStock = Number(product?.current_stock) || 0;
+  const isOutOfStock = currentStock <= 0;
   return (
     <SafeAreaView style={[style.container, {
       paddingBottom: insets.bottom
@@ -884,8 +893,12 @@ const isOutOfStock = currentStock <= 0;
                 onPress={() =>
                   navigation.push('ProductDetails', { product: item })
                 }>
-                <Image
-                  source={{ uri: `${base_url}/${(item as { thumbnail: string })?.thumbnail}` }}
+                <SafeImage
+                  uri={
+                    (item as { thumbnail: string })?.thumbnail
+                      ? `${base_url}/${(item as { thumbnail: string }).thumbnail}`
+                      : null
+                  }
                   style={style.similarImage}
                   resizeMode="cover"
                 />

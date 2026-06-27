@@ -20,6 +20,7 @@ import { useTranslation } from 'react-i18next';
 import COLORS from '../../utils/Colors';
 import IMAGES from '../../assets/images';
 import { isUserPremium } from '../../utils/premimumuser';
+import VectorIcon from '../../components/VectorIcon';
 
 type SubCategory = {
   id: number;
@@ -209,7 +210,13 @@ const CategorySection: React.FC<Props> = () => {
           <Text style={styles.header}>{t('allCategories')}</Text>
           <TouchableOpacity style={styles.seeAllRow} onPress={() => navigation.navigate('AllCategories')}>
             <Text style={styles.seeAll}>{t('seeAll')}</Text>
-            <Text style={styles.arrow}>→</Text>
+            <VectorIcon
+            size={20}
+            type="Ionicons"
+            name="arrow-forward"
+            color={COLORS.btnbg }
+            style={styles.viewAllIcon}
+          />
           </TouchableOpacity>
         </View>
         <View style={styles.emptyContainer}>
@@ -225,7 +232,13 @@ const CategorySection: React.FC<Props> = () => {
         <Text style={styles.header}>{t('allCategories')}</Text>
         <TouchableOpacity style={styles.seeAllRow} onPress={() => navigation.navigate('AllCategories')}>
           <Text style={styles.seeAll}>{t('seeAll')}</Text>
-          <Text style={styles.arrow}>→</Text>
+         <VectorIcon
+            size={20}
+            type="Ionicons"
+            name="arrow-forward"
+            color={COLORS.btnbg }
+            style={styles.viewAllIcon}
+          />
         </TouchableOpacity>
       </View>
       
@@ -292,6 +305,9 @@ const styles = StyleSheet.create({
   arrow: {
     fontSize: 18,
     color: COLORS.btnbg,
+  },
+   viewAllIcon: {
+    marginLeft: 4,
   },
   flatListContent: {
     paddingHorizontal: 8,

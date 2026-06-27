@@ -43,7 +43,7 @@ const Invoice: React.FC<Props> = ({ route, navigation }) => {
   const invoiceData: InvoiceData = route.params as unknown as InvoiceData;
   const [primemember, setPrimemember] = useState<number>(1);
   const [curency, setcurency] = useState<string>('﷼');
-  const [supportcontect, setsupportcontect] = useState<string>('support@revista.com | +1 (555) 123-4567');
+  const [supportcontect, setsupportcontect] = useState<string>('support@revista.com | +966 50 040 6369');
 
   const primeIcon = async () => {
     const prime = await primeicon();
@@ -76,12 +76,12 @@ const Invoice: React.FC<Props> = ({ route, navigation }) => {
   const getPaymentStatusColor = (status: string) => {
     switch (status.toLowerCase()) {
       case 'paid':
-        return '#10B981'; // green
+        return '#10B981'; 
       case 'pending':
       case 'unpaid':
-        return '#F59E0B'; // orange
+        return '#F59E0B';
       default:
-        return '#6B7280'; // gray
+        return '#6B7280';
     }
   };
 

@@ -41,4 +41,9 @@ export const Base_Url = {
   primemember:`${Api_url}products/membershipIcon`,
   submitreview:`${Api_url}products/review/submit`,
   relatedproduct:`${Api_url}products/related-products`,
+  sellerReviewAdd:`${Api_url}seller/add/review`,
+  sellerReviewCount:`${Api_url}seller/count/review`,
+  customercount:`${Api_url}seller/count/review`,
+  sellerReview:`${Api_url}seller/list/review`,
+  
 };
