@@ -263,7 +263,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.white,
   },
   saveBtn: {
-    backgroundColor: COLORS.appColor,
+    backgroundColor: COLORS.btnbg,
     padding: 14,
     marginTop: 30,
     borderRadius: 6,

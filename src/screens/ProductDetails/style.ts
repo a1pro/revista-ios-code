@@ -6,7 +6,63 @@ const style = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: COLORS.white,
-    },
+    },colorWrapper: {
+  position: 'relative',
+  marginRight: 10,
+  marginBottom: 10,
+  width: 40,
+  height: 40,
+  borderRadius: 20,
+  overflow: 'hidden',
+},
+
+sizeWrapper: {
+  position: 'relative',
+  marginRight: 10,
+  marginBottom: 10,
+},
+
+outOfStockOverlay: {
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  right: 0,
+  bottom: 0,
+  justifyContent: 'center',
+  alignItems: 'center',
+  borderRadius: 20,
+  backgroundColor: 'rgba(255, 255, 255, 0.4)',
+},
+
+sizeOutOfStockOverlay: {
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  right: 0,
+  bottom: 0,
+  justifyContent: 'center',
+  alignItems: 'center',
+  borderRadius: 5,
+  backgroundColor: 'rgba(255, 255, 255, 0.4)',
+},
+
+diagonalLine1: {
+  position: 'absolute',
+  width: '140%',
+  height: 2.5,
+  backgroundColor: 'red',
+  transform: [{ rotate: '45deg' }],
+  borderRadius: 2,
+},
+
+diagonalLine2: {
+  position: 'absolute',
+  width: '140%',
+  height: 2.5,
+  backgroundColor: 'red',
+  transform: [{ rotate: '-45deg' }],
+  borderRadius: 2,
+},
     placeholderImage:{
         height: '80%',
         width: '60%',

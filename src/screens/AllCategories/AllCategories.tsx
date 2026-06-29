@@ -115,6 +115,7 @@ const AllCategories: React.FC<Props> = ({ navigation }) => {
       is_membership?: number;
     }) => ({
       id: cat.id,
+      name: cat.name,
       title: cat.name,
       image: cat.icon,
       icon: cat.icon,
@@ -128,6 +129,7 @@ const AllCategories: React.FC<Props> = ({ navigation }) => {
         is_membership?: number;
       }) => ({
         id: sub.id,
+        name: sub.name,
         title: sub.name,
         image: sub.icon,
         icon: sub.icon,
