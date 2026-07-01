@@ -1,7 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
 import {
-  SafeAreaView,
   StyleSheet,
   Image,
   TextInput,
@@ -20,6 +19,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import COLORS from '../../utils/Colors';
 import Loader from '../../components/Loader';
 import { t } from 'i18next';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 interface Category {
   id: number;
@@ -148,7 +148,6 @@ const Magzine = ({ navigation }: any) => {
   const [selectedCategoryId, setSelectedCategoryId] = useState<number | null>(null);
   const [loadingProducts, setLoadingProducts] = useState<boolean>(false);
 
-  console.log(products);
 
   useEffect(() => {
     const fetchCategories = async () => {
@@ -159,7 +158,6 @@ const Magzine = ({ navigation }: any) => {
         const response = await axios.get(Base_Url.magzinecategory, {
           headers: { Authorization: `Bearer ${token}` },
         });
-        console.log('res of magzine category::: ',response)
         setCategories(response.data);
         setFilteredCategories(response.data);
 
@@ -191,7 +189,6 @@ const Magzine = ({ navigation }: any) => {
             headers: { Authorization: `Bearer ${token}` },
           },
         );
-console.log('res of magzine product::::', response)
         const items: ProductItem[] = (response.data.products || []).map(
           (item: any) => ({
             id: item.id,

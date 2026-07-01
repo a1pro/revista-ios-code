@@ -7,7 +7,6 @@ import {
   TouchableOpacity,
   StyleSheet,
   Dimensions,
-  SafeAreaView,
   ImageBackground,
   ScrollView,
   RefreshControl,
@@ -25,6 +24,7 @@ import { CustomText } from '../../components/CustomText';
 import { isUserPremium } from '../../utils/premimumuser';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useFocusEffect } from '@react-navigation/native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 type Category = {
   id: number;
@@ -351,7 +351,7 @@ const AllCategories: React.FC<Props> = ({ navigation }) => {
                   style={styles.card}
                   activeOpacity={0.7}
                   onPress={() => {
-                    navigation.navigate('SubCategories', { category: item });
+                    navigation.navigate('HandmadeSubcategories', { category: item });
                   }}
                 >
                   <View style={styles.imageContainer}>

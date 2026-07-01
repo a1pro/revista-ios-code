@@ -24,7 +24,7 @@ const isMyFatoorahAvailable = () => {
   }
 };
 
-const API_KEY = process.env.MYFATOORAH_API_KEY || '';
+const API_KEY = 'SK_KWT_NY2ViaWQhjQSWMXCzqZAzqXHHXYYIF0Uk73JtGAztkiecUZuy39uMd1ShSvbjBOx';
 const COUNTRY = MFCountry.SAUDIARABIA;
 const ENVIRONMENT = MFEnvironment.TEST;
 
@@ -32,14 +32,14 @@ let isSDKInitialized = false;
 
 export const initializeMyFatoorah = async (): Promise<boolean> => {
   try {
-    // Check if API key is available
     if (!API_KEY) {
       console.warn('⚠️ MYFATOORAH_API_KEY environment variable is not set');
       return false;
     }
-
-    // Check if SDK is already initialized
-    if (isSDKInitialized) {
+console.log('444444444')
+// Check if SDK is already initialized
+if (isSDKInitialized) {
+      console.log('475964748')
       return true;
     }
 
@@ -52,10 +52,9 @@ export const initializeMyFatoorah = async (): Promise<boolean> => {
     // Initialize the SDK
     await MFSDK.init(API_KEY, COUNTRY, ENVIRONMENT);
     isSDKInitialized = true;
-    console.log('✅ MyFatoorah SDK initialized successfully');
     return true;
   } catch (error) {
-    console.error('❌ MyFatoorah SDK initialization failed:', error);
+    console.error('MyFatoorah SDK initialization failed:', error);
     // Don't throw - just return false
     return false;
   }

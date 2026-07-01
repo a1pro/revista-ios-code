@@ -71,9 +71,7 @@ const BrandedProducts: React.FC = () => {
           guest_id: 1,
         },
       });
-      // console.log(res.data)
       if (res?.data?.data) {
-
         setProducts(res.data.data);
       } else {
         setProducts([]);
@@ -92,7 +90,6 @@ const BrandedProducts: React.FC = () => {
 
 
   const renderItem = ({ item }: { item: Product }) => (
-
     <TouchableOpacity
       onPress={() => (navigation.navigate as any)('BrandedProductSubCategories', { category: item })}
     >

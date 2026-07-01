@@ -128,8 +128,7 @@ const setupAxiosInterceptors = () => {
 
         switch (status) {
           case 401:
-            // Unauthorized - clear token and redirect to login
-            // console.log('🔒 Session expired. Please login again.');
+           
             AsyncStorage.removeItem('authToken');
             break;
           case 500:
@@ -154,10 +153,8 @@ const setupAxiosInterceptors = () => {
   i18n.on('languageChanged', lng => {
     const cleanLanguage = getCleanLanguage();
     axios.defaults.headers.common['Accept-Language'] = cleanLanguage;
-    // console.log(`🌐 Language updated to: ${cleanLanguage}`);
   });
 
-  // console.log('✅ Axios interceptors configured successfully');
 };
 
 // ==========================================
@@ -226,18 +223,13 @@ const requestAppPermissions = async (): Promise<boolean> => {
 
 const initializeMyFatoorah = async (): Promise<boolean> => {
   try {
-    // Check if MyFatoorah native module is available
     if (!NativeModules.MyFatoorahService) {
       console.warn('⚠️ MyFatoorahService native module not available');
       return false;
     }
 
     const initialized = await MyFatoorahService.initialize();
-    // if (initialized) {
-    //   console.log('✅ MyFatoorahService initialized successfully');
-    // } else {
-    //   console.warn('⚠️ MyFatoorahService initialization returned false');
-    // }
+   
     return initialized;
   } catch (error) {
     console.warn('⚠️ MyFatoorahService initialization failed:', error);
@@ -258,9 +250,7 @@ export default function App() {
 
     const initializeApp = async () => {
       try {
-        // console.log('🚀 Initializing app...');
 
-        // 1. Request permissions (skip if module not available)
         let hasPermissions = true;
         try {
           hasPermissions = await requestAppPermissions();
@@ -282,11 +272,9 @@ export default function App() {
         // 3. Set initial language header
         const initialLanguage = getCleanLanguage();
         axios.defaults.headers.common['Accept-Language'] = initialLanguage;
-        // console.log(`🌐 Initial language set to: ${initialLanguage}`);
 
         // 4. App is ready
         setAppReady(true);
-        // console.log('✅ App initialized successfully');
       } catch (error) {
         console.error('❌ App initialization failed:', error);
 

@@ -29,7 +29,6 @@ const LoginScreen: React.FC<Props> = ({ navigation }) => {
   const { t } = useTranslation();
   const handleLogin = async (values: { email: string; password: string }) => {
     try {
-      console.log(values)
     
       const res = await axios({
         method: 'post',
@@ -49,7 +48,6 @@ const LoginScreen: React.FC<Props> = ({ navigation }) => {
         });
         navigation.replace('Dashboard');
       } else {
-        console.log(res)
       }
     } catch (error: any) {
 console.log(error)

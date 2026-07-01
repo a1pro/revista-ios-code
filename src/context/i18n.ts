@@ -22,7 +22,6 @@ const getDeviceLanguage = (): string => {
       language = nativeLanguage.split('_')[0].split('-')[0];
     }
 
-    // Validate language is supported
     if (language !== 'en' && language !== 'ar') {
       language = 'en';
     }
@@ -46,7 +45,6 @@ i18n
     interpolation: {
       escapeValue: false,
     },
-    // Prevent language detection from adding quality values
     detection: {
       order: ['navigator'],
       caches: [],
@@ -55,7 +53,6 @@ i18n
     preload: [],
   });
 
-// Export helper for getting clean language
 export const getCleanLanguage = (): string => {
   let language = i18n.language || 'en';
   if (language.includes(';')) language = language.split(';')[0].trim();

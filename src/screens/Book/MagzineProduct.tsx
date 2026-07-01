@@ -37,7 +37,6 @@ const MagzineProduct: React.FC = () => {
   const [products, setProducts] = useState<MagazineProduct[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const navigation = useNavigation();
-console.log(products)
   useEffect(() => {
     const fetchProducts = async () => {
       try {
@@ -56,7 +55,6 @@ console.log(products)
             },
           }
         );
-        console.log(response)
         setProducts(response.data.products || []);
       } catch (error) {
         console.error('Failed to fetch products:', error);

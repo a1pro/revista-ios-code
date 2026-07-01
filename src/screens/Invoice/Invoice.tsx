@@ -193,7 +193,6 @@ const getStatusColor = (status: string) => {
       return () => subscription.remove();
     }, [navigation])
   );
-// console.log(invoiceData)
   return (
     
     <SafeAreaView style={styles.container}>

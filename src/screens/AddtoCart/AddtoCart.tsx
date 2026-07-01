@@ -6,7 +6,6 @@ import {
   FlatList,
   Image,
   TouchableOpacity,
-  SafeAreaView,
   Text,
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -21,6 +20,8 @@ import { useTranslation } from 'react-i18next';
 import Loader from '../../components/Loader';
 import { useFocusEffect, useNavigation, useRoute } from '@react-navigation/native';
 import IMAGES from '../../assets/images';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import COLORS from '../../utils/Colors';
 
 interface CartItem {
   id: number;
@@ -55,51 +56,71 @@ interface Address {
 const AddtoCart: React.FC = () => {
   const route = useRoute<any>();
   const selectedAddress = route.params?.selectedAddress || null;
+  const navigation = useNavigation();
 
   const [selectedshippingAddress, setShippingAddress] = useState<Address | null>(null);
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
   const [addresses, setAddresses] = useState<Address[]>([]);
-  const [imageError, setImageError] = useState<boolean>(false);
-    const [imageLoaded, setImageLoaded] = useState<boolean>(false);
+  const [imageIndex, setImageIndex] = useState<Record<number, number>>({});
+  const [imageLoadStatus, setImageLoadStatus] = useState<Record<number, { loaded: boolean; error: boolean }>>({});
   const [, setError] = useState<string>('');
   const { t } = useTranslation();
-  const navigation = useNavigation();
+  const isFetchingRef = React.useRef(false);
   useEffect(() => {
     if (selectedAddress) {
       setShippingAddress(selectedAddress);
     }
   }, [selectedAddress]);
 
-
   const getTotalQuantity = () => {
     return cartItems.reduce((total, item) => total + item.quantity, 0);
   };
+  const getImageSource = (item: CartItem) => {
+    const index = imageIndex[item.id] || 0;
 
+    const images = [
+      item.thumbnail ? `${base_url}/${item.thumbnail}` : null,
+      item.images?.[0] ? `${base_url}/${item.images[0]}` : null,
+    ].filter(Boolean);
+
+    return images[index] ? { uri: images[index]! } : IMAGES.imgplaceholder;
+  };
+  const handleImageError = (itemId: number) => {
+    setImageIndex(prev => {
+      const current = prev[itemId] || 0;
+      return {
+        ...prev,
+        [itemId]: current + 1, // move to next image
+      };
+    });
+  };
+  
   const fetchCart = async () => {
+    if (isFetchingRef.current) return; // prevent duplicate calls
+    isFetchingRef.current = true;
+
     setLoading(true);
+
     try {
       const token = await AsyncStorage.getItem('token');
 
-      if (token) {
-        const res = await axios.get(Base_Url.getcart, {
-          headers: { Authorization: `Bearer ${token}` },
-          params: { guest_id: 1 },
-        });
+      if (!token) return;
 
-        // console.log(cartItems)
-        setCartItems(Array.isArray(res?.data) ? res?.data : []);
-      } else {
-        return;
-      }
+      const res = await axios.get(Base_Url.getcart, {
+        headers: { Authorization: `Bearer ${token}` },
+        params: { guest_id: 1 },
+      });
+
+      setCartItems(Array.isArray(res?.data) ? res.data : []);
 
     } catch (err) {
       console.log('Error fetching cart:', err);
     } finally {
       setLoading(false);
+      isFetchingRef.current = false;
     }
   };
-  // console.log("cart list :",cartItems)
   useFocusEffect(
     useCallback(() => {
       fetchCart();
@@ -136,10 +157,6 @@ const AddtoCart: React.FC = () => {
     fetchAddresses();
   }, []);
 
-
-
-
-
   const updateCartItem = async (itemId: number, newQuantity: number): Promise<boolean> => {
     try {
       const token = await AsyncStorage.getItem('token');
@@ -154,7 +171,6 @@ const AddtoCart: React.FC = () => {
 
       const item = cartItems.find(i => i.id === itemId);
       if (!item) { return false; }
-
 
       const payload = {
         key: item.id,
@@ -195,7 +211,6 @@ const AddtoCart: React.FC = () => {
     let newQuantity: number;
 
     if (type === 'increment') {
-
       const currentStock = item?.current_stock ?? 0;
       const maxAllowed = Math.min(currentStock);
       if (item.quantity >= maxAllowed) {
@@ -212,7 +227,6 @@ const AddtoCart: React.FC = () => {
     }
 
     const oldQuantity = item.quantity;
-    // eslint-disable-next-line @typescript-eslint/no-shadow
     setCartItems(prev => prev.map(item =>
       item.id === id ? { ...item, quantity: newQuantity } : item
     ));
@@ -242,6 +256,12 @@ const AddtoCart: React.FC = () => {
       });
       if (res.data && (res.data === 'Successfully removed' || res.data.message === 'Successfully removed')) {
         setCartItems((prev) => prev.filter((cartItem) => cartItem.id !== id));
+        // Clean up image status for removed item
+        setImageLoadStatus(prev => {
+          const newStatus = { ...prev };
+          delete newStatus[id];
+          return newStatus;
+        });
         Toast.show({
           type: 'success',
           text1: t('success'),
@@ -272,8 +292,8 @@ const AddtoCart: React.FC = () => {
       setLoading(false);
     }
   };
-  const validateCheckout = () => {
 
+  const validateCheckout = () => {
     if (!cartItems || cartItems.length === 0) {
       Toast.show({
         type: 'error',
@@ -294,7 +314,6 @@ const AddtoCart: React.FC = () => {
       return false;
     }
 
-
     if (!shippingAddress) {
       Toast.show({
         type: 'error',
@@ -304,13 +323,11 @@ const AddtoCart: React.FC = () => {
       return false;
     }
 
-
     if (!shippingAddress.address || !shippingAddress.city || !shippingAddress.contact_person_name) {
       Toast.show({
         type: 'error',
         text1: t('invalidAddress'),
         text2: t('pleaseUpdateAddress'),
-
       });
       return false;
     }
@@ -319,7 +336,6 @@ const AddtoCart: React.FC = () => {
   };
 
   const handleCheckout = () => {
-
     if (!validateCheckout()) {
       return;
     }
@@ -329,6 +345,7 @@ const AddtoCart: React.FC = () => {
       address: shippingAddress,
     });
   };
+
   const clearCart = async () => {
     setLoading(true);
     try {
@@ -344,6 +361,7 @@ const AddtoCart: React.FC = () => {
       );
       if (res.data && (res.data === 'Successfully removed' || res.data.message === 'Successfully removed')) {
         setCartItems([]);
+        setImageLoadStatus({});
         Toast.show({
           type: 'success',
           text1: t('success'),
@@ -378,42 +396,41 @@ const AddtoCart: React.FC = () => {
   const getTotal = (): number => {
     return cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
   };
+
   const shippingAddress: Address | null = selectedshippingAddress !== null
     ? selectedshippingAddress
     : addresses.find(addr => addr.address_type?.toLowerCase() === 'home') || null;
 
-  const renderItem = ({ item }: { item: CartItem }) => {
-    
+  const handleImageLoad = (itemId: number) => {
+    setImageLoadStatus(prev => ({
+      ...prev,
+      [itemId]: { loaded: true, error: false }
+    }));
+  };
 
+  
+
+  const renderItem = ({ item }: { item: CartItem }) => {
+    const imageStatus = imageLoadStatus[item.id] || { loaded: false, error: false };
     const imageSource = item.thumbnail
       ? `${base_url}/${item.thumbnail}`
-      : item.images && item.images.length > 0
-        ? item.images[0]
+      : item?.images[0]
+        ? `${base_url}/${item.images[0]}`
         : IMAGES.imgplaceholder;
+
+    // Show placeholder only if image failed to load OR if there's no valid image source
+    const showPlaceholder = imageStatus.error ||
+      (!item.thumbnail && (!item.images || item.images.length === 0));
 
     return (
       <View style={styles.cartItemRow}>
         <View style={styles.imageContainer}>
           <Image
-          resizeMode='contain'
-            source={imageSource ? { uri: imageSource } : IMAGES.imgplaceholder}
-            defaultSource={IMAGES.imgplaceholder}
+            resizeMode="contain"
+            source={getImageSource(item)}
             style={styles.cartImage}
-            onLoad={() => {
-              setImageLoaded(true);
-              setImageError(false);
-            }}
-            onError={() => {
-              setImageError(true);
-              setImageLoaded(false);
-            }}
+            onError={() => handleImageError(item.id)}
           />
-          {!imageLoaded && imageSource && (
-            <Image
-              source={IMAGES.imgplaceholder}
-              style={[styles.cartImage, styles.placeholderImage]}
-            />
-          )}
         </View>
         <View style={{ flex: 1, marginLeft: 10 }}>
           <CustomText numberOfLines={1} style={styles.cartTitle}>
@@ -449,7 +466,6 @@ const AddtoCart: React.FC = () => {
         <>
           <Text style={styles.header}>{t('cartheader')}</Text>
           <TouchableOpacity onPress={() => (navigation.navigate as any)('SaveAddress')}>
-
             <View style={styles.addressContainer}>
               <View style={{ flex: 1 }}>
                 <CustomText style={styles.addressLabel}>{t('shippingAddress')}</CustomText>
@@ -464,15 +480,18 @@ const AddtoCart: React.FC = () => {
                 )}
               </View>
               <TouchableOpacity onPress={() => (navigation.navigate as any)('Address', { address: shippingAddress })}>
-                <Icon name="edit" size={20} color="#007bff" />
+                <Icon name="edit" size={20} color={COLORS.btnbg} />
               </TouchableOpacity>
             </View>
           </TouchableOpacity>
 
-
           <Text style={styles.cartItemCountText}>{t('itemcart')} {getTotalQuantity()}</Text>
 
-          <FlatList data={cartItems} keyExtractor={(item) => item.id.toString()} renderItem={renderItem} />
+          <FlatList
+            data={cartItems}
+            keyExtractor={(item) => item.id.toString()}
+            renderItem={renderItem}
+          />
 
           <Text style={styles.totalText}>
             {t('total')}: ﷼ {getTotal().toFixed(2)}
@@ -480,17 +499,10 @@ const AddtoCart: React.FC = () => {
 
           <View style={styles.footer}>
             <TouchableOpacity
-              style={[
-                styles.checkoutBtn,
-              ]}
+              style={[styles.checkoutBtn]}
               onPress={handleCheckout}
-
             >
-              <CustomText
-                style={[
-                  styles.checkoutText,
-                ]}
-              >
+              <CustomText style={[styles.checkoutText]}>
                 {t('checkout')}
               </CustomText>
             </TouchableOpacity>

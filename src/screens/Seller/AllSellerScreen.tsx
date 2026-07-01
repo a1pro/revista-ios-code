@@ -45,7 +45,6 @@ const AllSellerScreen: React.FC = () => {
   const fetchSellers = async () => {
     try {
       const res = await axios.get(Base_Url.allseller);
-      console.log(res.data)
       if (res.data) {setSellers(res.data);}
 
     } catch (error) {

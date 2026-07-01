@@ -65,7 +65,6 @@ const LatestProduct: React.FC<LatestProductProps> = ({ searchQuery = '' }) => {
     const prime = await primeicon();
     setprimeicon(prime.data[0]);
   };
-
   const fetchProducts = async () => {
     try {
       const token = await AsyncStorage.getItem('token');
@@ -83,16 +82,20 @@ const LatestProduct: React.FC<LatestProductProps> = ({ searchQuery = '' }) => {
           guest_id: 1,
         },
       });
-      // console.log("res of latest product : ", res.data)
-      if (res?.data?.data && res?.data?.data?.products) {
-        setAllProducts(res.data.data.products);
-        filterProducts(res.data.data.products, searchQuery);
+
+
+      if (res?.data?.data?.products) {
+        const availableProducts = res.data.data.products.filter(
+          (product: any) => Number(product.current_stock) >= 1
+        );
+
+        setAllProducts(availableProducts);
+        filterProducts(availableProducts, searchQuery);
       }
     } catch (error) {
       console.log('Error fetching products:', error);
     }
   };
-
   const filterProducts = (products: Product[], query: string) => {
     if (!query) {
       setFilteredProducts(products);
@@ -160,28 +163,28 @@ const LatestProduct: React.FC<LatestProductProps> = ({ searchQuery = '' }) => {
       <TouchableOpacity onPress={() => (navigation.navigate as any)('ProductDetails', { product: { ...item } })}>
         <View style={styles.card}>
           <View style={styles.imageContainer}>
-  {/* Network image */}
-  <Image
-    source={imageSource}
-    style={styles.productImage}
-    resizeMode="contain"
-    onLoad={() =>
-      setLoadedImages(prev => ({
-        ...prev,
-        [item.id]: true,
-      }))
-    }
-  />
+            {/* Network image */}
+            <Image
+              source={imageSource}
+              style={styles.productImage}
+              resizeMode="contain"
+              onLoad={() =>
+                setLoadedImages(prev => ({
+                  ...prev,
+                  [item.id]: true,
+                }))
+              }
+            />
 
-  {/* Placeholder image: show only if network image NOT loaded yet */}
-  {!loadedImages[item.id] && (
-    <Image
-      source={IMAGES.imgplaceholder}
-      style={[styles.productImage, { position: 'absolute' }]}
-      resizeMode="contain"
-    />
-  )}
-</View>
+            {/* Placeholder image: show only if network image NOT loaded yet */}
+            {!loadedImages[item.id] && (
+              <Image
+                source={IMAGES.imgplaceholder}
+                style={[styles.productImage, { position: 'absolute' }]}
+                resizeMode="contain"
+              />
+            )}
+          </View>
 
           <View style={styles.nameandicon}>
             <Text style={styles.productTitle} numberOfLines={1} ellipsizeMode="tail">{item.name}</Text>
@@ -244,7 +247,7 @@ const LatestProduct: React.FC<LatestProductProps> = ({ searchQuery = '' }) => {
             size={20}
             type="Ionicons"
             name="arrow-forward"
-            color={COLORS.btnbg }
+            color={COLORS.btnbg}
             style={styles.viewAllIcon}
           />
         </TouchableOpacity>

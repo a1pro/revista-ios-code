@@ -30,7 +30,6 @@ import AllLatestProducts from '../screens/AllLatestProducts/AllLatestProducts';
 import HandmadeSubcategories from '../screens/AllCategories/HandmadeSubcategories';
 import HandmadeProducts from '../screens/Details/HandmadeProducts';
 import BrandedProductSubCategories from '../screens/AllCategories/BrandedProductSubCategories';
-import Subscription from '../components/Subscription';
 import Subscriptionscreen from '../screens/Subscription/Subscriptionscreen';
 import PaymentScreen from '../screens/payment/PaymentScreen';
 import Invoice from '../screens/Invoice/Invoice';
@@ -38,6 +37,7 @@ import ProductReviewScreen from '../screens/productreview/ProductReviewScreen';
 import ForgotPass from '../screens/ForgotPassword/ForgotPass';
 import Privacy from '../screens/privacypolicy/Privacy';
 import ProfileInformation from '../screens/Profile/ProfileInformation';
+import AddtoCart from '../screens/AddtoCart/AddtoCart';
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
 const AppNavigator = () => (
@@ -146,6 +146,11 @@ const AppNavigator = () => (
           options={{ headerShown: false }}
         />
         <Stack.Screen
+          name="AddtoCart"
+          component={AddtoCart}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
           name="ChatScreen"
           component={ChatScreen}
           options={{ headerShown: false }}
@@ -215,7 +220,7 @@ const AppNavigator = () => (
           component={ProfileInformation}
           options={{ headerShown: false }}
         />
-        
+
       </Stack.Navigator>
 
     </SafeAreaProvider>

@@ -6,7 +6,6 @@ import {
   Image,
   TouchableOpacity,
   StyleSheet,
-  SafeAreaView,
 } from 'react-native';
 import { useFocusEffect, useNavigation } from '@react-navigation/native';
 import axios from 'axios';
@@ -17,6 +16,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { t } from 'i18next';
 import COLORS from '../../utils/Colors';
 import IMAGES from '../../assets/images';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 
 type Props = NativeStackScreenProps<RootStackParamList, 'CategorySection2'>;

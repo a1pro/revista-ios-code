@@ -50,7 +50,6 @@ const EditProfile: React.FC<Props> = ({ navigation, route }) => {
   useEffect(() => {
     if (route.params?.userData) {
       const user = route.params.userData;
-console.log('userinfo:', user)
       setName(user.f_name || '');
       setLastName(user.l_name || '');
       setPhoneNumber(user.phone || '');
@@ -139,7 +138,6 @@ console.log('userinfo:', user)
       } as any);
     }
 
-    console.log('FORM DATA =>', formData);
 
     const response = await axios.post(
       Base_Url.updateProfile,
@@ -153,7 +151,6 @@ console.log('userinfo:', user)
       },
     );
 
-    console.log('SUCCESS =>', response.data);
 
     Toast.show({
       type: 'success',

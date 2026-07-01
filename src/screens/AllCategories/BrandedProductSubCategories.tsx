@@ -6,7 +6,6 @@ import {
   TouchableOpacity,
   StyleSheet,
   Image,
-  SafeAreaView,
 } from 'react-native';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../../types';
@@ -19,6 +18,7 @@ import { useTranslation } from 'react-i18next';
 import { base_url } from '../../utils/ApiUrl';
 import { isUserPremium, primeicon } from '../../utils/premimumuser';
 import Subscriptionstyle from '../../components/Subscriptionstyle';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 interface prime {
   id: number;
@@ -40,7 +40,6 @@ const BrandedProductSubCategories: React.FC<Props> = ({ route, navigation }) => 
   const [icon, setprimeicon] = useState<prime | null>(null);
   const [loadedImages, setLoadedImages] = useState<{ [key: number]: boolean }>({});
   const { t } = useTranslation();
-  // console.log(category)
   const primeIcon = async () => {
     const prime = await primeicon();
     setprimeicon(prime.data[0]);
@@ -91,7 +90,6 @@ const BrandedProductSubCategories: React.FC<Props> = ({ route, navigation }) => 
     const price = Number(item.unit_price) || 0;
     const discount = Number(item.discount) || 0;
     const discountType = item?.discount_type || 'percentage';
-    console.log(item)
     let displayPrice = price;
     let showDiscountPrice = false;
     let showSubscribeMessage = false;
@@ -102,10 +100,7 @@ const BrandedProductSubCategories: React.FC<Props> = ({ route, navigation }) => 
     } else if (!ispremimum && discount > 0) {
       showSubscribeMessage = true;
     }
-    //  const imageSource = item?.thumbnail
-    //     ? { uri: `${base_url}/${item.thumbnail}` }
-    //     : IMAGES.imgplaceholder;
-
+   
     return (
       <TouchableOpacity
         style={styles.productCard}

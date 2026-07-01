@@ -71,7 +71,6 @@ const WishList: React.FC<Props> = ({ navigation }) => {
           Authorization: `Bearer ${token}`,
         },
       });
-      // console.log(response.data)
       setWishlistItems(response.data);
       setError(null);
     } catch (err) {
