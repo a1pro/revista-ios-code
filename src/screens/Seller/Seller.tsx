@@ -144,7 +144,6 @@ const Seller = () => {
           'Content-Type': 'application/json',
         }
       });
-      console.log(res);
       if (res?.data?.success) {
         setRatingdata(res?.data);
       }

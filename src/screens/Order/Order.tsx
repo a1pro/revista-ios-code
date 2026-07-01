@@ -34,7 +34,6 @@ const Order: React.FC<Props> = ({ navigation }) => {
         const res = await axios.get(Base_Url.getorder, {
           headers: { Authorization: `Bearer ${token}` },
         });
-        // console.log(res)
         setorders(res?.data?.data || []);
       }
     } catch (error) {

@@ -6,7 +6,6 @@ import {
   TouchableOpacity,
   StyleSheet,
   Image,
-  SafeAreaView,
 } from 'react-native';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../../types';
@@ -14,6 +13,9 @@ import IMAGES from '../../assets/images';
 import VectorIcon from '../../components/VectorIcon';
 import COLORS from '../../utils/Colors';
 import { useTranslation } from 'react-i18next';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { base_url } from '../../utils/ApiUrl';
+import SafeImage from '../../components/SafeImage';
 
 const SUBCATEGORY_IMAGE_MAP: Record<string, any> = {
   'test abaya': IMAGES.imgplaceholder,
@@ -25,22 +27,25 @@ const SUBCATEGORY_IMAGE_MAP: Record<string, any> = {
 type Props = NativeStackScreenProps<RootStackParamList, 'HandmadeSubcategories'>;
 
 const HandmadeSubcategories: React.FC<Props> = ({ route, navigation }) => {
-    const { category } = (route.params as any ) || null;
+  const { category } = (route.params as any) || null;
   const { t } = useTranslation();
 
   const renderSubCategory = ({ item }: any) => {
-    // Always use static images mapped by name here
     const staticImage = SUBCATEGORY_IMAGE_MAP[item.name?.toLowerCase()];
-    const imageSource = staticImage || (IMAGES as any ).default;
+    const imageSource = item.icon
 
     return (
       <TouchableOpacity
         onPress={() => {
-         (navigation as any ).navigate('HandmadeProducts', { subcategory: item, products: item.products || [] });
-      }}
+          (navigation as any).navigate('HandmadeProducts', { subcategory: item, products: item.products || [] });
+        }}
         style={styles.subCategory}
       >
-        <Image source={imageSource} style={styles.subCategoryImage} />
+        <SafeImage
+          uri={item.icon ? `${base_url}/${item.icon}` : null}
+          style={styles.subCategoryImage}
+          resizeMode="cover"
+        />
         <Text style={styles.subCategoryText}>{item.name}</Text>
       </TouchableOpacity>
     );

@@ -49,7 +49,6 @@ const RegisterScreen: React.FC<Props> = ({ navigation }) => {
           phone: values.phoneNumber,
         },
       });
-console.log(res)
       if (res?.data) {
         await AsyncStorage.setItem('token', res?.data.token);
         Toast.show({

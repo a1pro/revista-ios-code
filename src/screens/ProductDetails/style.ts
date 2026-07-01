@@ -6,64 +6,67 @@ const style = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: COLORS.white,
-    },colorWrapper: {
-  position: 'relative',
-  marginRight: 10,
-  marginBottom: 10,
-  width: 40,
-  height: 40,
-  borderRadius: 20,
-  overflow: 'hidden',
-},
+    }, colorWrapper: {
+        position: 'relative',
+        marginRight: 10,
+        marginBottom: 10,
+        width: 30,
+        height: 30,
+        borderRadius: 20,
+        overflow: 'hidden',
+    },
 
-sizeWrapper: {
-  position: 'relative',
-  marginRight: 10,
-  marginBottom: 10,
-},
+    sizeWrapper: {
+        position: 'relative',
+        marginRight: 10,
+        marginBottom: 10,
+    },
 
-outOfStockOverlay: {
-  position: 'absolute',
-  top: 0,
-  left: 0,
-  right: 0,
-  bottom: 0,
-  justifyContent: 'center',
-  alignItems: 'center',
-  borderRadius: 20,
-  backgroundColor: 'rgba(255, 255, 255, 0.4)',
-},
+    outOfStockOverlay: {
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderRadius: 20,
+        backgroundColor: 'rgba(7, 7, 7, 0.4)',
+        borderWidth:3,
+        borderColor:COLORS.red
+    },
 
-sizeOutOfStockOverlay: {
-  position: 'absolute',
-  top: 0,
-  left: 0,
-  right: 0,
-  bottom: 0,
-  justifyContent: 'center',
-  alignItems: 'center',
-  borderRadius: 5,
-  backgroundColor: 'rgba(255, 255, 255, 0.4)',
-},
+    sizeOutOfStockOverlay: {
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderWidth:1,
+        borderRadius: 5,
+        backgroundColor: COLORS.red,
+    },
 
-diagonalLine1: {
-  position: 'absolute',
-  width: '140%',
-  height: 2.5,
-  backgroundColor: 'red',
-  transform: [{ rotate: '45deg' }],
-  borderRadius: 2,
-},
+    // diagonalLine1: {
+    //     position: 'absolute',
+    //     width: '140%',
+    //     height: 2.5,
+    //     backgroundColor: 'red',
+    //     transform: [{ rotate: '45deg' }],
+    //     borderRadius: 2,
+    // },
 
-diagonalLine2: {
-  position: 'absolute',
-  width: '140%',
-  height: 2.5,
-  backgroundColor: 'red',
-  transform: [{ rotate: '-45deg' }],
-  borderRadius: 2,
-},
-    placeholderImage:{
+    diagonalLine2: {
+        position: 'absolute',
+        width: '140%',
+        height: 2.5,
+        backgroundColor: COLORS.red,
+        transform: [{ rotate: '-45deg' }],
+        borderRadius: 2,
+    },
+    placeholderImage: {
         height: '80%',
         width: '60%',
         borderRadius: 40,
@@ -103,7 +106,7 @@ diagonalLine2: {
     },
     productName: {
         fontSize: 20,
-        width:"80%",
+        width: "80%",
         fontWeight: 'bold',
         marginBottom: 8,
         color: COLORS.black,
@@ -142,7 +145,7 @@ diagonalLine2: {
         color: COLORS.black,
         marginLeft: verticalScale(20),
     },
-    
+
     detailsText: {
         fontSize: 15,
         color: COLORS.textColor,
@@ -471,7 +474,7 @@ diagonalLine2: {
         justifyContent: 'center',
         alignItems: 'center',
     },
-    
+
 
     modalBackdrop: {
         flex: 1,

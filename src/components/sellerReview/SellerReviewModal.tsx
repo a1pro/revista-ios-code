@@ -89,7 +89,6 @@ const SellerReviewModal: React.FC<SellerReviewModalProps> = ({
                 message: message.trim(),
                 rating: rating,
             };
-            console.log(payload)
             const response = await axios.post(
                 Base_Url.sellerReviewAdd,
                 payload,
@@ -100,7 +99,6 @@ const SellerReviewModal: React.FC<SellerReviewModalProps> = ({
                     },
                 }
             );
-            console.log('res: ', response)
             if (response.data && response.data.success) {
                 Toast.show({
                     type: 'success',

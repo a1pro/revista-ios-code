@@ -32,7 +32,6 @@ const BannerSlider: React.FC = () => {
 
         setBannerImages(images);
       } else {
-        console.log('Empty or invalid banner data, using default images');
         setBannerImages([]);
       }
     } catch (error) {

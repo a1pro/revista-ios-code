@@ -8,7 +8,6 @@ import {
   TouchableOpacity,
   StyleSheet,
   ActivityIndicator,
-  SafeAreaView,
 } from 'react-native';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../../types';
@@ -21,6 +20,7 @@ import COLORS from '../../utils/Colors';
 import IMAGES from '../../assets/images';
 import { isUserPremium } from '../../utils/premimumuser';
 import VectorIcon from '../../components/VectorIcon';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 type SubCategory = {
   id: number;

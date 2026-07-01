@@ -420,7 +420,6 @@ const ProductReviewScreen: React.FC = () => {
     // Check if seller review should be shown (only on the first product of each seller)
     const showSellerReview = shouldShowSellerReview(sellerId);
     const sellerReviewDisplay = getSellerReviewDisplay(sellerId);
-console.log(item)
     return (
       <View style={styles.productCard}>
         {/* Product Header */}
