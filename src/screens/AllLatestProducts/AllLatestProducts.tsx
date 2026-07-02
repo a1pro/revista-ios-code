@@ -21,6 +21,7 @@ import { useTranslation } from 'react-i18next';
 import { isUserPremium, primeicon } from '../../utils/premimumuser';
 import Subscriptionstyle from '../../components/Subscriptionstyle';
 import Loader from '../../components/Loader';
+import SafeImage from '../../components/SafeImage';
 
 const { width } = Dimensions.get('window');
 const CARD_WIDTH = (width - 40) / 2;
@@ -52,6 +53,7 @@ const AllLatestProducts: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [ispremimum, setispremimum] = useState<boolean>(false);
   const [icon, setprimeicon] = useState<prime | null>(null);
+  const [imageMap, setImageMap] = useState<{ [key: number]: string | null }>({});
   const navigation = useNavigation();
   const { t } = useTranslation();
   const primeIcon = async () => {
@@ -80,7 +82,11 @@ const AllLatestProducts: React.FC = () => {
 
 
       if (res?.data?.data && res?.data?.data?.products) {
-        setAllProducts(res?.data?.data?.products);
+        const availableProducts = res.data.data.products.filter(
+          (product: any) => Number(product.current_stock) >= 1
+        );
+
+        setAllProducts(availableProducts);
       }
     } catch (error) {
       console.log('Error fetching products:', error);
@@ -111,12 +117,26 @@ const AllLatestProducts: React.FC = () => {
   }, []);
   const renderProduct = ({ item }: { item: Product }) => {
     let imageSource;
+    const thumbnailUrl = item?.thumbnail
+      ? `${base_url}/${item.thumbnail}`
+      : null;
 
-    if (item?.thumbnail) {
-      imageSource = { uri: `${base_url}/${item.thumbnail}` };
-    } else{
-      imageSource = { uri: `${base_url}/${item.images[0]}` };
-    }
+    const imageUrl =
+      item?.images?.length > 0
+        ? `${base_url}/${item.images[0]}`
+        : null;
+
+    const currentImage =
+      imageMap[item.id] ??
+      thumbnailUrl ??
+      imageUrl;
+    // if (item?.thumbnail) {
+    //   imageSource = { uri: `${base_url}/${item.thumbnail}` };
+    // } else if (item?.images && item.images.length > 0) {
+    //   imageSource = { uri: `${base_url}/${item.images[0]}` };
+    // } else {
+    //   imageSource = IMAGES.imgplaceholder;
+    // }
     const price = Number(item.unit_price) || 0;
     const discount = Number(item.discount) || 0;
     const discountType = item?.discount_type || 'percent';
@@ -131,17 +151,17 @@ const AllLatestProducts: React.FC = () => {
       showDiscountPrice = true;
     }
     const showSubscribeMessage = !ispremimum && discount > 0;
-     const showPrimeUserSection = ispremimum;
+    const showPrimeUserSection = ispremimum;
     return (
       <TouchableOpacity
         onPress={() =>
-          (navigation as any ).navigate('ProductDetails', { product: item })
+          (navigation as any).navigate('ProductDetails', { product: item })
         }
         style={styles.cardContainer}
       >
         <View style={styles.card}>
-          <Image
-            source={imageSource}
+          <SafeImage
+            uri={currentImage}
             style={styles.productImage}
             resizeMode="contain"
           />
@@ -194,7 +214,7 @@ const AllLatestProducts: React.FC = () => {
                   textAlign: 'center',
                   marginTop: 2,
                 }}>
-                 {t('nonprime')} {discountType === 'flat' ? ` ${discount} ﷼ ` : discount + '%'} off
+                  {t('nonprime')} {discountType === 'flat' ? ` ${discount} ﷼ ` : discount + '%'} off
                 </Text>
               </View>
             ) : (
@@ -208,8 +228,8 @@ const AllLatestProducts: React.FC = () => {
               </Text>
             )}
           </View>
-           {showPrimeUserSection && (
-            <Subscriptionstyle/>
+          {showPrimeUserSection && (
+            <Subscriptionstyle />
           )}
         </View>
       </TouchableOpacity>
@@ -218,7 +238,7 @@ const AllLatestProducts: React.FC = () => {
   if (loading) {
     return (
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Loader size="large"  />
+        <Loader size="large" />
       </View>
     );
   }
