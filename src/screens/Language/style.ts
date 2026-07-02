@@ -13,6 +13,10 @@ const styles = StyleSheet.create({
     top: verticalScale(25),
     color: '#111',
   },
+  centerContent: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
    backButton: {
     position: 'absolute',
     left: 20,
