@@ -1,6 +1,6 @@
 
 import React, { useCallback, useEffect, useState } from 'react';
-import { View, TouchableOpacity, SafeAreaView, BackHandler, ScrollView, Image, Text, FlatList } from 'react-native';
+import { View, TouchableOpacity, BackHandler, ScrollView, Image, Text, FlatList } from 'react-native';
 import { RootStackParamList } from '../../types';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import styles from './style';
@@ -17,6 +17,7 @@ import { Base_Url } from '../../utils/ApiUrl';
 import Toast from 'react-native-toast-message';
 import { PaymentPurpose } from '../../service/paymentTypes';
 import Loader from '../../components/Loader';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Subscriptionscreen'>;
 
@@ -96,18 +97,6 @@ const Subscriptionscreen: React.FC<Props> = ({ navigation, route }) => {
         return () => subscription.remove();
     }, [handleBackPress]);
 
-    // Hook 2: Monitor selected plan changes
-    // useEffect(() => {
-    //     if (selectedPlanData) {
-    //         console.log('Selected Plan Changed:', {
-    //             planName: selectedPlanData.name,
-    //             categories: selectedPlanData.plan_categories,
-    //             features: selectedPlanData.features
-    //         });
-    //     }
-    // }, [selectedPlanData]);
-
-    // Hook 3: Fetch subscription plans
     useEffect(() => {
         fetchSubscriptionPlans();
     }, []);

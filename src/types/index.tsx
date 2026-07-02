@@ -62,25 +62,12 @@ export interface Order {
   paymentMethod: string;
   paymentStatus?: 'pending' | 'paid' | 'failed';
 }
-
-// MagazineProduct type (if needed)
-// export interface MagazineProduct {
-//   id: string;
-//   name: string;
-//   image: any;
-//   price: number;
-//   // Add other magazine product properties
-// }
-
 export type RootStackParamList = {
   Splash: undefined;
   Welcome: undefined;
   Login: undefined;
   Register: undefined;
-  ForgotPass:undefined
-  // Forgot: undefined;
-  // NewPassword: undefined;
-  // PasswordRecovery: undefined;
+  ForgotPass:undefined;
   BannerSlider: undefined;
   Home: undefined;
   Dashboard: undefined;

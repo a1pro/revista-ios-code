@@ -118,7 +118,7 @@ console.log(error)
                       keyboardType='default'
                       value={values.password}
                       placeholder="Password"
-                      type="password"
+                      type="password" 
                       onChangeText={handleChange('password')}
                       onBlur={handleBlur('password')}
                       error={touched.password ? errors.password : ''}

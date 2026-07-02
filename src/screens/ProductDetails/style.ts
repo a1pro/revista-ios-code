@@ -49,14 +49,7 @@ const style = StyleSheet.create({
         backgroundColor: COLORS.red,
     },
 
-    // diagonalLine1: {
-    //     position: 'absolute',
-    //     width: '140%',
-    //     height: 2.5,
-    //     backgroundColor: 'red',
-    //     transform: [{ rotate: '45deg' }],
-    //     borderRadius: 2,
-    // },
+   
 
     diagonalLine2: {
         position: 'absolute',

@@ -312,5 +312,10 @@
   "Overlastdays": "خلال الـ 90 يومًا الماضية",
    "sellerFeedbackRequired": "يرجى تقديم تقييم للبائع",
   "feedback": "تقييم",
-  "sellerReviewSubmitted": "تم إرسال تقييم البائع بنجاح!"
+  "sellerReviewSubmitted": "تم إرسال تقييم البائع بنجاح!",
+   "Sports": "الرياضة",
+  "Science": "العلوم",
+  "Travel": "السفر",
+  "dammamRestront": "مطعم الدمام",
+  "Sport": "رياضة"
 }
