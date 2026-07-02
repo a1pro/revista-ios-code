@@ -358,7 +358,7 @@ import {AuthProvider} from './src/context/AuthContext';
 import Toast from 'react-native-toast-message';
 import {I18nextProvider} from 'react-i18next';
 import i18n from './src/context/i18n';
-import {StripeProvider} from '@stripe/stripe-react-native';
+
 import {MyFatoorahService} from './src/service/MyFatoorahService';
 import {t} from 'i18next';
 import {SafeAreaProvider, SafeAreaView} from 'react-native-safe-area-context';
@@ -537,7 +537,6 @@ const setupAxiosInterceptors = () => {
 
         switch (status) {
           case 401:
-           
             AsyncStorage.removeItem('authToken');
             break;
           case 500:
@@ -563,7 +562,6 @@ const setupAxiosInterceptors = () => {
     const cleanLanguage = getCleanLanguage();
     axios.defaults.headers.common['Accept-Language'] = cleanLanguage;
   });
-
 };
 
 // ==========================================
@@ -638,7 +636,7 @@ const initializeMyFatoorah = async (): Promise<boolean> => {
     }
 
     const initialized = await MyFatoorahService.initialize();
-   
+
     return initialized;
   } catch (error) {
     console.warn('⚠️ MyFatoorahService initialization failed:', error);
@@ -723,23 +721,21 @@ export default function App() {
       <I18nextProvider i18n={i18n}>
         <SafeAreaProvider>
           <AuthProvider>
-            <StripeProvider publishableKey="pk_test_51JZY5CSCqlwwKkyVzOcjCof5WPcRz6oBX4QWBRyGdMHe8dd6MjpDfFV1W5iWf5qhSHJmPrlFcRY4NOZzsiWU1XRH00xlas7QiI">
-              <GestureHandlerRootView style={{flex: 1}}>
-                <StatusBar
-                  backgroundColor={isDarkMode ? '#1a1a1a' : '#F8F9FA'}
-                  barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-                  translucent={false}
-                />
-                <SafeAreaView
-                  style={{
-                    flex: 1,
-                    backgroundColor: isDarkMode ? '#1a1a1a' : '#F8F9FA',
-                  }}>
-                  <AppNavigator />
-                </SafeAreaView>
-                <Toast />
-              </GestureHandlerRootView>
-            </StripeProvider>
+            <GestureHandlerRootView style={{flex: 1}}>
+              <StatusBar
+                backgroundColor={isDarkMode ? '#1a1a1a' : '#F8F9FA'}
+                barStyle={isDarkMode ? 'light-content' : 'dark-content'}
+                translucent={false}
+              />
+              <SafeAreaView
+                style={{
+                  flex: 1,
+                  backgroundColor: isDarkMode ? '#1a1a1a' : '#F8F9FA',
+                }}>
+                <AppNavigator />
+              </SafeAreaView>
+              <Toast />
+            </GestureHandlerRootView>
           </AuthProvider>
         </SafeAreaProvider>
       </I18nextProvider>

@@ -1,0 +1,1497 @@
+diff --git a/node_modules/myfatoorah-reactnative/android/build/.transforms/0580fab29e9cd3dcc0aba59f0837894b/results.bin b/node_modules/myfatoorah-reactnative/android/build/.transforms/0580fab29e9cd3dcc0aba59f0837894b/results.bin
+new file mode 100644
+index 0000000..0d259dd
+--- /dev/null
++++ b/node_modules/myfatoorah-reactnative/android/build/.transforms/0580fab29e9cd3dcc0aba59f0837894b/results.bin
+@@ -0,0 +1 @@
++o/classes
+diff --git a/node_modules/myfatoorah-reactnative/android/build/.transforms/0580fab29e9cd3dcc0aba59f0837894b/transformed/classes/classes_dex/classes.dex b/node_modules/myfatoorah-reactnative/android/build/.transforms/0580fab29e9cd3dcc0aba59f0837894b/transformed/classes/classes_dex/classes.dex
+new file mode 100644
+index 0000000..ffa2903
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/.transforms/0580fab29e9cd3dcc0aba59f0837894b/transformed/classes/classes_dex/classes.dex differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/results.bin b/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/results.bin
+new file mode 100644
+index 0000000..7ed749e
+--- /dev/null
++++ b/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/results.bin
+@@ -0,0 +1 @@
++o/bundleLibRuntimeToDirDebug
+diff --git a/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/BuildConfig.dex b/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/BuildConfig.dex
+new file mode 100644
+index 0000000..87f5b31
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/BuildConfig.dex differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/MFPackage.dex b/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/MFPackage.dex
+new file mode 100644
+index 0000000..20ecd47
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/MFPackage.dex differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/cardview/IMFCardViewManager.dex b/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/cardview/IMFCardViewManager.dex
+new file mode 100644
+index 0000000..6d86435
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/cardview/IMFCardViewManager.dex differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/cardview/MFCardViewManager.dex b/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/cardview/MFCardViewManager.dex
+new file mode 100644
+index 0000000..012c4b2
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/cardview/MFCardViewManager.dex differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/googlepay/GooglePayButtonConstantsModule$Companion.dex b/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/googlepay/GooglePayButtonConstantsModule$Companion.dex
+new file mode 100644
+index 0000000..6919daa
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/googlepay/GooglePayButtonConstantsModule$Companion.dex differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/googlepay/GooglePayButtonConstantsModule.dex b/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/googlepay/GooglePayButtonConstantsModule.dex
+new file mode 100644
+index 0000000..e36eccd
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/googlepay/GooglePayButtonConstantsModule.dex differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/googlepay/IMFGooglePayManager.dex b/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/googlepay/IMFGooglePayManager.dex
+new file mode 100644
+index 0000000..b1bdbf1
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/googlepay/IMFGooglePayManager.dex differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/googlepay/MFGPayInitProvider$onCreate$1.dex b/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/googlepay/MFGPayInitProvider$onCreate$1.dex
+new file mode 100644
+index 0000000..94d5b7b
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/googlepay/MFGPayInitProvider$onCreate$1.dex differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/googlepay/MFGPayInitProvider.dex b/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/googlepay/MFGPayInitProvider.dex
+new file mode 100644
+index 0000000..38271c4
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/googlepay/MFGPayInitProvider.dex differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/googlepay/MFGPayModule.dex b/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/googlepay/MFGPayModule.dex
+new file mode 100644
+index 0000000..dac1005
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/googlepay/MFGPayModule.dex differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/googlepay/MFGooglePayButton.dex b/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/googlepay/MFGooglePayButton.dex
+new file mode 100644
+index 0000000..c2d66b6
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/googlepay/MFGooglePayButton.dex differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/googlepay/MFGooglePayLauncherHolder.dex b/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/googlepay/MFGooglePayLauncherHolder.dex
+new file mode 100644
+index 0000000..5649f25
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/googlepay/MFGooglePayLauncherHolder.dex differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/googlepay/MFGooglePayManager.dex b/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/googlepay/MFGooglePayManager.dex
+new file mode 100644
+index 0000000..87b7bff
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/googlepay/MFGooglePayManager.dex differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/models/MFDirectPaymentRequest.dex b/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/models/MFDirectPaymentRequest.dex
+new file mode 100644
+index 0000000..724219a
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/models/MFDirectPaymentRequest.dex differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/models/MFGooglePayRequest.dex b/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/models/MFGooglePayRequest.dex
+new file mode 100644
+index 0000000..228eef3
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/models/MFGooglePayRequest.dex differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/sdkhelper/IMFModule.dex b/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/sdkhelper/IMFModule.dex
+new file mode 100644
+index 0000000..4c270f0
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/sdkhelper/IMFModule.dex differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/sdkhelper/MFModule.dex b/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/sdkhelper/MFModule.dex
+new file mode 100644
+index 0000000..397c5d2
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/sdkhelper/MFModule.dex differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/utils/MFConstants.dex b/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/utils/MFConstants.dex
+new file mode 100644
+index 0000000..a012741
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/utils/MFConstants.dex differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/utils/MFExtentionsKt.dex b/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/utils/MFExtentionsKt.dex
+new file mode 100644
+index 0000000..30b3d5e
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/utils/MFExtentionsKt.dex differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/utils/MFFontFamilyDeserializer.dex b/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/utils/MFFontFamilyDeserializer.dex
+new file mode 100644
+index 0000000..29b0864
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/utils/MFFontFamilyDeserializer.dex differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/utils/MFGPayConstants.dex b/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/utils/MFGPayConstants.dex
+new file mode 100644
+index 0000000..564031a
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/utils/MFGPayConstants.dex differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/utils/MFJsonAdapterHelper.dex b/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/utils/MFJsonAdapterHelper.dex
+new file mode 100644
+index 0000000..5407e44
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/myfatoorahreactnative/utils/MFJsonAdapterHelper.dex differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/desugar_graph.bin b/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/desugar_graph.bin
+new file mode 100644
+index 0000000..601f245
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/.transforms/7e88090b922515e33f62be0aee3beb71/transformed/bundleLibRuntimeToDirDebug/desugar_graph.bin differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/generated/source/buildConfig/debug/com/myfatoorahreactnative/BuildConfig.java b/node_modules/myfatoorah-reactnative/android/build/generated/source/buildConfig/debug/com/myfatoorahreactnative/BuildConfig.java
+new file mode 100644
+index 0000000..a0e0871
+--- /dev/null
++++ b/node_modules/myfatoorah-reactnative/android/build/generated/source/buildConfig/debug/com/myfatoorahreactnative/BuildConfig.java
+@@ -0,0 +1,12 @@
++/**
++ * Automatically generated file. DO NOT MODIFY
++ */
++package com.myfatoorahreactnative;
++
++public final class BuildConfig {
++  public static final boolean DEBUG = Boolean.parseBoolean("true");
++  public static final String LIBRARY_PACKAGE_NAME = "com.myfatoorahreactnative";
++  public static final String BUILD_TYPE = "debug";
++  // Field from default config.
++  public static final boolean IS_NEW_ARCHITECTURE_ENABLED = true;
++}
+diff --git a/node_modules/myfatoorah-reactnative/android/build/generated/source/codegen/jni/CMakeLists.txt b/node_modules/myfatoorah-reactnative/android/build/generated/source/codegen/jni/CMakeLists.txt
+new file mode 100644
+index 0000000..56ab460
+--- /dev/null
++++ b/node_modules/myfatoorah-reactnative/android/build/generated/source/codegen/jni/CMakeLists.txt
+@@ -0,0 +1,28 @@
++# Copyright (c) Meta Platforms, Inc. and affiliates.
++#
++# This source code is licensed under the MIT license found in the
++# LICENSE file in the root directory of this source tree.
++
++cmake_minimum_required(VERSION 3.13)
++set(CMAKE_VERBOSE_MAKEFILE on)
++
++file(GLOB react_codegen_SRCS CONFIGURE_DEPENDS *.cpp react/renderer/components/MyfatoorahReactnative/*.cpp)
++
++add_library(
++  react_codegen_MyfatoorahReactnative
++  OBJECT
++  ${react_codegen_SRCS}
++)
++
++target_include_directories(react_codegen_MyfatoorahReactnative PUBLIC . react/renderer/components/MyfatoorahReactnative)
++
++target_link_libraries(
++  react_codegen_MyfatoorahReactnative
++  fbjni
++  jsi
++  # We need to link different libraries based on whether we are building rncore or not, that's necessary
++  # because we want to break a circular dependency between react_codegen_rncore and reactnative
++  reactnative
++)
++
++target_compile_reactnative_options(react_codegen_MyfatoorahReactnative PRIVATE)
+diff --git a/node_modules/myfatoorah-reactnative/android/build/generated/source/codegen/jni/MyfatoorahReactnative-generated.cpp b/node_modules/myfatoorah-reactnative/android/build/generated/source/codegen/jni/MyfatoorahReactnative-generated.cpp
+new file mode 100644
+index 0000000..186a443
+--- /dev/null
++++ b/node_modules/myfatoorah-reactnative/android/build/generated/source/codegen/jni/MyfatoorahReactnative-generated.cpp
+@@ -0,0 +1,22 @@
++
++/**
++ * This code was generated by [react-native-codegen](https://www.npmjs.com/package/react-native-codegen).
++ *
++ * Do not edit this file as changes may cause incorrect behavior and will be lost
++ * once the code is regenerated.
++ *
++ * @generated by codegen project: GenerateModuleJniCpp.js
++ */
++
++#include "MyfatoorahReactnative.h"
++
++namespace facebook::react {
++
++
++
++std::shared_ptr<TurboModule> MyfatoorahReactnative_ModuleProvider(const std::string &moduleName, const JavaTurboModule::InitParams &params) {
++
++  return nullptr;
++}
++
++} // namespace facebook::react
+diff --git a/node_modules/myfatoorah-reactnative/android/build/generated/source/codegen/jni/MyfatoorahReactnative.h b/node_modules/myfatoorah-reactnative/android/build/generated/source/codegen/jni/MyfatoorahReactnative.h
+new file mode 100644
+index 0000000..954219f
+--- /dev/null
++++ b/node_modules/myfatoorah-reactnative/android/build/generated/source/codegen/jni/MyfatoorahReactnative.h
+@@ -0,0 +1,24 @@
++
++/**
++ * This code was generated by [react-native-codegen](https://www.npmjs.com/package/react-native-codegen).
++ *
++ * Do not edit this file as changes may cause incorrect behavior and will be lost
++ * once the code is regenerated.
++ *
++ * @generated by codegen project: GenerateModuleJniH.js
++ */
++
++#pragma once
++
++#include <ReactCommon/JavaTurboModule.h>
++#include <ReactCommon/TurboModule.h>
++#include <jsi/jsi.h>
++
++namespace facebook::react {
++
++
++
++JSI_EXPORT
++std::shared_ptr<TurboModule> MyfatoorahReactnative_ModuleProvider(const std::string &moduleName, const JavaTurboModule::InitParams &params);
++
++} // namespace facebook::react
+diff --git a/node_modules/myfatoorah-reactnative/android/build/generated/source/codegen/jni/react/renderer/components/MyfatoorahReactnative/ComponentDescriptors.cpp b/node_modules/myfatoorah-reactnative/android/build/generated/source/codegen/jni/react/renderer/components/MyfatoorahReactnative/ComponentDescriptors.cpp
+new file mode 100644
+index 0000000..a257921
+--- /dev/null
++++ b/node_modules/myfatoorah-reactnative/android/build/generated/source/codegen/jni/react/renderer/components/MyfatoorahReactnative/ComponentDescriptors.cpp
+@@ -0,0 +1,22 @@
++
++/**
++ * This code was generated by [react-native-codegen](https://www.npmjs.com/package/react-native-codegen).
++ *
++ * Do not edit this file as changes may cause incorrect behavior and will be lost
++ * once the code is regenerated.
++ *
++ * @generated by codegen project: GenerateComponentDescriptorCpp.js
++ */
++
++#include <react/renderer/components/MyfatoorahReactnative/ComponentDescriptors.h>
++#include <react/renderer/core/ConcreteComponentDescriptor.h>
++#include <react/renderer/componentregistry/ComponentDescriptorProviderRegistry.h>
++
++namespace facebook::react {
++
++void MyfatoorahReactnative_registerComponentDescriptorsFromCodegen(
++  std::shared_ptr<const ComponentDescriptorProviderRegistry> registry) {
++
++}
++
++} // namespace facebook::react
+diff --git a/node_modules/myfatoorah-reactnative/android/build/generated/source/codegen/jni/react/renderer/components/MyfatoorahReactnative/ComponentDescriptors.h b/node_modules/myfatoorah-reactnative/android/build/generated/source/codegen/jni/react/renderer/components/MyfatoorahReactnative/ComponentDescriptors.h
+new file mode 100644
+index 0000000..9860d2f
+--- /dev/null
++++ b/node_modules/myfatoorah-reactnative/android/build/generated/source/codegen/jni/react/renderer/components/MyfatoorahReactnative/ComponentDescriptors.h
+@@ -0,0 +1,24 @@
++
++/**
++ * This code was generated by [react-native-codegen](https://www.npmjs.com/package/react-native-codegen).
++ *
++ * Do not edit this file as changes may cause incorrect behavior and will be lost
++ * once the code is regenerated.
++ *
++ * @generated by codegen project: GenerateComponentDescriptorH.js
++ */
++
++#pragma once
++
++#include <react/renderer/components/MyfatoorahReactnative/ShadowNodes.h>
++#include <react/renderer/core/ConcreteComponentDescriptor.h>
++#include <react/renderer/componentregistry/ComponentDescriptorProviderRegistry.h>
++
++namespace facebook::react {
++
++
++
++void MyfatoorahReactnative_registerComponentDescriptorsFromCodegen(
++  std::shared_ptr<const ComponentDescriptorProviderRegistry> registry);
++
++} // namespace facebook::react
+diff --git a/node_modules/myfatoorah-reactnative/android/build/generated/source/codegen/jni/react/renderer/components/MyfatoorahReactnative/EventEmitters.cpp b/node_modules/myfatoorah-reactnative/android/build/generated/source/codegen/jni/react/renderer/components/MyfatoorahReactnative/EventEmitters.cpp
+new file mode 100644
+index 0000000..8e11e3a
+--- /dev/null
++++ b/node_modules/myfatoorah-reactnative/android/build/generated/source/codegen/jni/react/renderer/components/MyfatoorahReactnative/EventEmitters.cpp
+@@ -0,0 +1,16 @@
++
++/**
++ * This code was generated by [react-native-codegen](https://www.npmjs.com/package/react-native-codegen).
++ *
++ * Do not edit this file as changes may cause incorrect behavior and will be lost
++ * once the code is regenerated.
++ *
++ * @generated by codegen project: GenerateEventEmitterCpp.js
++ */
++
++#include <react/renderer/components/MyfatoorahReactnative/EventEmitters.h>
++
++
++namespace facebook::react {
++
++} // namespace facebook::react
+diff --git a/node_modules/myfatoorah-reactnative/android/build/generated/source/codegen/jni/react/renderer/components/MyfatoorahReactnative/EventEmitters.h b/node_modules/myfatoorah-reactnative/android/build/generated/source/codegen/jni/react/renderer/components/MyfatoorahReactnative/EventEmitters.h
+new file mode 100644
+index 0000000..2845a63
+--- /dev/null
++++ b/node_modules/myfatoorah-reactnative/android/build/generated/source/codegen/jni/react/renderer/components/MyfatoorahReactnative/EventEmitters.h
+@@ -0,0 +1,17 @@
++
++/**
++ * This code was generated by [react-native-codegen](https://www.npmjs.com/package/react-native-codegen).
++ *
++ * Do not edit this file as changes may cause incorrect behavior and will be lost
++ * once the code is regenerated.
++ *
++ * @generated by codegen project: GenerateEventEmitterH.js
++ */
++#pragma once
++
++#include <react/renderer/components/view/ViewEventEmitter.h>
++
++
++namespace facebook::react {
++
++} // namespace facebook::react
+diff --git a/node_modules/myfatoorah-reactnative/android/build/generated/source/codegen/jni/react/renderer/components/MyfatoorahReactnative/MyfatoorahReactnativeJSI.h b/node_modules/myfatoorah-reactnative/android/build/generated/source/codegen/jni/react/renderer/components/MyfatoorahReactnative/MyfatoorahReactnativeJSI.h
+new file mode 100644
+index 0000000..ec16260
+--- /dev/null
++++ b/node_modules/myfatoorah-reactnative/android/build/generated/source/codegen/jni/react/renderer/components/MyfatoorahReactnative/MyfatoorahReactnativeJSI.h
+@@ -0,0 +1,19 @@
++/**
++ * This code was generated by [react-native-codegen](https://www.npmjs.com/package/react-native-codegen).
++ *
++ * Do not edit this file as changes may cause incorrect behavior and will be lost
++ * once the code is regenerated.
++ *
++ * @generated by codegen project: GenerateModuleH.js
++ */
++
++#pragma once
++
++#include <ReactCommon/TurboModule.h>
++#include <react/bridging/Bridging.h>
++
++namespace facebook::react {
++
++
++
++} // namespace facebook::react
+diff --git a/node_modules/myfatoorah-reactnative/android/build/generated/source/codegen/jni/react/renderer/components/MyfatoorahReactnative/Props.cpp b/node_modules/myfatoorah-reactnative/android/build/generated/source/codegen/jni/react/renderer/components/MyfatoorahReactnative/Props.cpp
+new file mode 100644
+index 0000000..46056b0
+--- /dev/null
++++ b/node_modules/myfatoorah-reactnative/android/build/generated/source/codegen/jni/react/renderer/components/MyfatoorahReactnative/Props.cpp
+@@ -0,0 +1,19 @@
++
++/**
++ * This code was generated by [react-native-codegen](https://www.npmjs.com/package/react-native-codegen).
++ *
++ * Do not edit this file as changes may cause incorrect behavior and will be lost
++ * once the code is regenerated.
++ *
++ * @generated by codegen project: GeneratePropsCpp.js
++ */
++
++#include <react/renderer/components/MyfatoorahReactnative/Props.h>
++#include <react/renderer/core/PropsParserContext.h>
++#include <react/renderer/core/propsConversions.h>
++
++namespace facebook::react {
++
++
++
++} // namespace facebook::react
+diff --git a/node_modules/myfatoorah-reactnative/android/build/generated/source/codegen/jni/react/renderer/components/MyfatoorahReactnative/Props.h b/node_modules/myfatoorah-reactnative/android/build/generated/source/codegen/jni/react/renderer/components/MyfatoorahReactnative/Props.h
+new file mode 100644
+index 0000000..870864b
+--- /dev/null
++++ b/node_modules/myfatoorah-reactnative/android/build/generated/source/codegen/jni/react/renderer/components/MyfatoorahReactnative/Props.h
+@@ -0,0 +1,18 @@
++
++/**
++ * This code was generated by [react-native-codegen](https://www.npmjs.com/package/react-native-codegen).
++ *
++ * Do not edit this file as changes may cause incorrect behavior and will be lost
++ * once the code is regenerated.
++ *
++ * @generated by codegen project: GeneratePropsH.js
++ */
++#pragma once
++
++
++
++namespace facebook::react {
++
++
++
++} // namespace facebook::react
+diff --git a/node_modules/myfatoorah-reactnative/android/build/generated/source/codegen/jni/react/renderer/components/MyfatoorahReactnative/ShadowNodes.cpp b/node_modules/myfatoorah-reactnative/android/build/generated/source/codegen/jni/react/renderer/components/MyfatoorahReactnative/ShadowNodes.cpp
+new file mode 100644
+index 0000000..e976da8
+--- /dev/null
++++ b/node_modules/myfatoorah-reactnative/android/build/generated/source/codegen/jni/react/renderer/components/MyfatoorahReactnative/ShadowNodes.cpp
+@@ -0,0 +1,17 @@
++
++/**
++ * This code was generated by [react-native-codegen](https://www.npmjs.com/package/react-native-codegen).
++ *
++ * Do not edit this file as changes may cause incorrect behavior and will be lost
++ * once the code is regenerated.
++ *
++ * @generated by codegen project: GenerateShadowNodeCpp.js
++ */
++
++#include <react/renderer/components/MyfatoorahReactnative/ShadowNodes.h>
++
++namespace facebook::react {
++
++
++
++} // namespace facebook::react
+diff --git a/node_modules/myfatoorah-reactnative/android/build/generated/source/codegen/jni/react/renderer/components/MyfatoorahReactnative/ShadowNodes.h b/node_modules/myfatoorah-reactnative/android/build/generated/source/codegen/jni/react/renderer/components/MyfatoorahReactnative/ShadowNodes.h
+new file mode 100644
+index 0000000..2c099d3
+--- /dev/null
++++ b/node_modules/myfatoorah-reactnative/android/build/generated/source/codegen/jni/react/renderer/components/MyfatoorahReactnative/ShadowNodes.h
+@@ -0,0 +1,23 @@
++
++/**
++ * This code was generated by [react-native-codegen](https://www.npmjs.com/package/react-native-codegen).
++ *
++ * Do not edit this file as changes may cause incorrect behavior and will be lost
++ * once the code is regenerated.
++ *
++ * @generated by codegen project: GenerateShadowNodeH.js
++ */
++
++#pragma once
++
++#include <react/renderer/components/MyfatoorahReactnative/EventEmitters.h>
++#include <react/renderer/components/MyfatoorahReactnative/Props.h>
++#include <react/renderer/components/MyfatoorahReactnative/States.h>
++#include <react/renderer/components/view/ConcreteViewShadowNode.h>
++#include <jsi/jsi.h>
++
++namespace facebook::react {
++
++
++
++} // namespace facebook::react
+diff --git a/node_modules/myfatoorah-reactnative/android/build/generated/source/codegen/jni/react/renderer/components/MyfatoorahReactnative/States.cpp b/node_modules/myfatoorah-reactnative/android/build/generated/source/codegen/jni/react/renderer/components/MyfatoorahReactnative/States.cpp
+new file mode 100644
+index 0000000..781a54c
+--- /dev/null
++++ b/node_modules/myfatoorah-reactnative/android/build/generated/source/codegen/jni/react/renderer/components/MyfatoorahReactnative/States.cpp
+@@ -0,0 +1,16 @@
++
++/**
++ * This code was generated by [react-native-codegen](https://www.npmjs.com/package/react-native-codegen).
++ *
++ * Do not edit this file as changes may cause incorrect behavior and will be lost
++ * once the code is regenerated.
++ *
++ * @generated by codegen project: GenerateStateCpp.js
++ */
++#include <react/renderer/components/MyfatoorahReactnative/States.h>
++
++namespace facebook::react {
++
++
++
++} // namespace facebook::react
+diff --git a/node_modules/myfatoorah-reactnative/android/build/generated/source/codegen/jni/react/renderer/components/MyfatoorahReactnative/States.h b/node_modules/myfatoorah-reactnative/android/build/generated/source/codegen/jni/react/renderer/components/MyfatoorahReactnative/States.h
+new file mode 100644
+index 0000000..2e55bce
+--- /dev/null
++++ b/node_modules/myfatoorah-reactnative/android/build/generated/source/codegen/jni/react/renderer/components/MyfatoorahReactnative/States.h
+@@ -0,0 +1,20 @@
++/**
++ * This code was generated by [react-native-codegen](https://www.npmjs.com/package/react-native-codegen).
++ *
++ * Do not edit this file as changes may cause incorrect behavior and will be lost
++ * once the code is regenerated.
++ *
++ * @generated by codegen project: GenerateStateH.js
++ */
++#pragma once
++
++#include <react/renderer/core/StateData.h>
++#ifdef RN_SERIALIZABLE_STATE
++#include <folly/dynamic.h>
++#endif
++
++namespace facebook::react {
++
++
++
++} // namespace facebook::react
+\ No newline at end of file
+diff --git a/node_modules/myfatoorah-reactnative/android/build/generated/source/codegen/schema.json b/node_modules/myfatoorah-reactnative/android/build/generated/source/codegen/schema.json
+new file mode 100644
+index 0000000..c845b54
+--- /dev/null
++++ b/node_modules/myfatoorah-reactnative/android/build/generated/source/codegen/schema.json
+@@ -0,0 +1 @@
++{"libraryName":"","modules":{}}
+\ No newline at end of file
+diff --git a/node_modules/myfatoorah-reactnative/android/build/intermediates/aapt_friendly_merged_manifests/debug/processDebugManifest/aapt/AndroidManifest.xml b/node_modules/myfatoorah-reactnative/android/build/intermediates/aapt_friendly_merged_manifests/debug/processDebugManifest/aapt/AndroidManifest.xml
+new file mode 100644
+index 0000000..9b2e01f
+--- /dev/null
++++ b/node_modules/myfatoorah-reactnative/android/build/intermediates/aapt_friendly_merged_manifests/debug/processDebugManifest/aapt/AndroidManifest.xml
+@@ -0,0 +1,14 @@
++<?xml version="1.0" encoding="utf-8"?>
++<manifest xmlns:android="http://schemas.android.com/apk/res/android"
++    package="com.myfatoorahreactnative" >
++
++    <uses-sdk android:minSdkVersion="24" />
++
++    <application>
++        <provider
++            android:name="com.myfatoorahreactnative.googlepay.MFGPayInitProvider"
++            android:authorities="dollar_openBracket_applicationId_closeBracket.mfgpayinitprovider"
++            android:exported="false" />
++    </application>
++
++</manifest>
+\ No newline at end of file
+diff --git a/node_modules/myfatoorah-reactnative/android/build/intermediates/aapt_friendly_merged_manifests/debug/processDebugManifest/aapt/output-metadata.json b/node_modules/myfatoorah-reactnative/android/build/intermediates/aapt_friendly_merged_manifests/debug/processDebugManifest/aapt/output-metadata.json
+new file mode 100644
+index 0000000..711b162
+--- /dev/null
++++ b/node_modules/myfatoorah-reactnative/android/build/intermediates/aapt_friendly_merged_manifests/debug/processDebugManifest/aapt/output-metadata.json
+@@ -0,0 +1,18 @@
++{
++  "version": 3,
++  "artifactType": {
++    "type": "AAPT_FRIENDLY_MERGED_MANIFESTS",
++    "kind": "Directory"
++  },
++  "applicationId": "com.myfatoorahreactnative",
++  "variantName": "debug",
++  "elements": [
++    {
++      "type": "SINGLE",
++      "filters": [],
++      "attributes": [],
++      "outputFile": "AndroidManifest.xml"
++    }
++  ],
++  "elementType": "File"
++}
+\ No newline at end of file
+diff --git a/node_modules/myfatoorah-reactnative/android/build/intermediates/aar_metadata/debug/writeDebugAarMetadata/aar-metadata.properties b/node_modules/myfatoorah-reactnative/android/build/intermediates/aar_metadata/debug/writeDebugAarMetadata/aar-metadata.properties
+new file mode 100644
+index 0000000..1211b1e
+--- /dev/null
++++ b/node_modules/myfatoorah-reactnative/android/build/intermediates/aar_metadata/debug/writeDebugAarMetadata/aar-metadata.properties
+@@ -0,0 +1,6 @@
++aarFormatVersion=1.0
++aarMetadataVersion=1.0
++minCompileSdk=1
++minCompileSdkExtension=0
++minAndroidGradlePluginVersion=1.0.0
++coreLibraryDesugaringEnabled=false
+diff --git a/node_modules/myfatoorah-reactnative/android/build/intermediates/annotation_processor_list/debug/javaPreCompileDebug/annotationProcessors.json b/node_modules/myfatoorah-reactnative/android/build/intermediates/annotation_processor_list/debug/javaPreCompileDebug/annotationProcessors.json
+new file mode 100644
+index 0000000..9e26dfe
+--- /dev/null
++++ b/node_modules/myfatoorah-reactnative/android/build/intermediates/annotation_processor_list/debug/javaPreCompileDebug/annotationProcessors.json
+@@ -0,0 +1 @@
++{}
+\ No newline at end of file
+diff --git a/node_modules/myfatoorah-reactnative/android/build/intermediates/compile_library_classes_jar/debug/bundleLibCompileToJarDebug/classes.jar b/node_modules/myfatoorah-reactnative/android/build/intermediates/compile_library_classes_jar/debug/bundleLibCompileToJarDebug/classes.jar
+new file mode 100644
+index 0000000..78f8109
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/intermediates/compile_library_classes_jar/debug/bundleLibCompileToJarDebug/classes.jar differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/intermediates/compile_r_class_jar/debug/generateDebugRFile/R.jar b/node_modules/myfatoorah-reactnative/android/build/intermediates/compile_r_class_jar/debug/generateDebugRFile/R.jar
+new file mode 100644
+index 0000000..37af9ab
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/intermediates/compile_r_class_jar/debug/generateDebugRFile/R.jar differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/intermediates/compile_symbol_list/debug/generateDebugRFile/R.txt b/node_modules/myfatoorah-reactnative/android/build/intermediates/compile_symbol_list/debug/generateDebugRFile/R.txt
+new file mode 100644
+index 0000000..e69de29
+diff --git a/node_modules/myfatoorah-reactnative/android/build/intermediates/data_binding_base_class_log_artifact/debug/dataBindingGenBaseClassesDebug/out/com.myfatoorahreactnative-binding_classes.json b/node_modules/myfatoorah-reactnative/android/build/intermediates/data_binding_base_class_log_artifact/debug/dataBindingGenBaseClassesDebug/out/com.myfatoorahreactnative-binding_classes.json
+new file mode 100644
+index 0000000..2bea446
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/intermediates/data_binding_base_class_log_artifact/debug/dataBindingGenBaseClassesDebug/out/com.myfatoorahreactnative-binding_classes.json differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/intermediates/incremental/dataBindingGenBaseClassesDebug/base_builder_log.json b/node_modules/myfatoorah-reactnative/android/build/intermediates/incremental/dataBindingGenBaseClassesDebug/base_builder_log.json
+new file mode 100644
+index 0000000..dca24b2
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/intermediates/incremental/dataBindingGenBaseClassesDebug/base_builder_log.json differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/intermediates/incremental/debug/packageDebugResources/compile-file-map.properties b/node_modules/myfatoorah-reactnative/android/build/intermediates/incremental/debug/packageDebugResources/compile-file-map.properties
+new file mode 100644
+index 0000000..6ef91ba
+--- /dev/null
++++ b/node_modules/myfatoorah-reactnative/android/build/intermediates/incremental/debug/packageDebugResources/compile-file-map.properties
+@@ -0,0 +1 @@
++#Thu Jul 02 13:57:54 IST 2026
+diff --git a/node_modules/myfatoorah-reactnative/android/build/intermediates/incremental/debug/packageDebugResources/merger.xml b/node_modules/myfatoorah-reactnative/android/build/intermediates/incremental/debug/packageDebugResources/merger.xml
+new file mode 100644
+index 0000000..17358dc
+--- /dev/null
++++ b/node_modules/myfatoorah-reactnative/android/build/intermediates/incremental/debug/packageDebugResources/merger.xml
+@@ -0,0 +1,2 @@
++<?xml version="1.0" encoding="utf-8"?>
++<merger version="3"><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="main$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/eweba1/Desktop/revista-ios-code/node_modules/myfatoorah-reactnative/android/src/main/res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="main" generated-set="main$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/eweba1/Desktop/revista-ios-code/node_modules/myfatoorah-reactnative/android/src/main/res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/eweba1/Desktop/revista-ios-code/node_modules/myfatoorah-reactnative/android/src/debug/res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug" generated-set="debug$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/eweba1/Desktop/revista-ios-code/node_modules/myfatoorah-reactnative/android/src/debug/res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="generated$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/eweba1/Desktop/revista-ios-code/node_modules/myfatoorah-reactnative/android/build/generated/res/resValues/debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="generated" generated-set="generated$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/eweba1/Desktop/revista-ios-code/node_modules/myfatoorah-reactnative/android/build/generated/res/resValues/debug"/></dataSet><mergedItems/></merger>
+\ No newline at end of file
+diff --git a/node_modules/myfatoorah-reactnative/android/build/intermediates/incremental/mergeDebugAssets/merger.xml b/node_modules/myfatoorah-reactnative/android/build/intermediates/incremental/mergeDebugAssets/merger.xml
+new file mode 100644
+index 0000000..f044189
+--- /dev/null
++++ b/node_modules/myfatoorah-reactnative/android/build/intermediates/incremental/mergeDebugAssets/merger.xml
+@@ -0,0 +1,2 @@
++<?xml version="1.0" encoding="utf-8"?>
++<merger version="3"><dataSet config="main" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/eweba1/Desktop/revista-ios-code/node_modules/myfatoorah-reactnative/android/src/main/assets"/></dataSet><dataSet config="debug" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/eweba1/Desktop/revista-ios-code/node_modules/myfatoorah-reactnative/android/src/debug/assets"/></dataSet><dataSet config="generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/eweba1/Desktop/revista-ios-code/node_modules/myfatoorah-reactnative/android/build/intermediates/shader_assets/debug/compileDebugShaders/out"/></dataSet></merger>
+\ No newline at end of file
+diff --git a/node_modules/myfatoorah-reactnative/android/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml b/node_modules/myfatoorah-reactnative/android/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml
+new file mode 100644
+index 0000000..a3fd4e9
+--- /dev/null
++++ b/node_modules/myfatoorah-reactnative/android/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml
+@@ -0,0 +1,2 @@
++<?xml version="1.0" encoding="utf-8"?>
++<merger version="3"><dataSet config="main" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/eweba1/Desktop/revista-ios-code/node_modules/myfatoorah-reactnative/android/src/main/jniLibs"/></dataSet><dataSet config="debug" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/eweba1/Desktop/revista-ios-code/node_modules/myfatoorah-reactnative/android/src/debug/jniLibs"/></dataSet></merger>
+\ No newline at end of file
+diff --git a/node_modules/myfatoorah-reactnative/android/build/intermediates/incremental/mergeDebugShaders/merger.xml b/node_modules/myfatoorah-reactnative/android/build/intermediates/incremental/mergeDebugShaders/merger.xml
+new file mode 100644
+index 0000000..5768880
+--- /dev/null
++++ b/node_modules/myfatoorah-reactnative/android/build/intermediates/incremental/mergeDebugShaders/merger.xml
+@@ -0,0 +1,2 @@
++<?xml version="1.0" encoding="utf-8"?>
++<merger version="3"><dataSet config="main" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/eweba1/Desktop/revista-ios-code/node_modules/myfatoorah-reactnative/android/src/main/shaders"/></dataSet><dataSet config="debug" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/eweba1/Desktop/revista-ios-code/node_modules/myfatoorah-reactnative/android/src/debug/shaders"/></dataSet></merger>
+\ No newline at end of file
+diff --git a/node_modules/myfatoorah-reactnative/android/build/intermediates/java_res/debug/processDebugJavaRes/out/META-INF/myfatoorah-reactnative_debug.kotlin_module b/node_modules/myfatoorah-reactnative/android/build/intermediates/java_res/debug/processDebugJavaRes/out/META-INF/myfatoorah-reactnative_debug.kotlin_module
+new file mode 100644
+index 0000000..8ee52c3
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/intermediates/java_res/debug/processDebugJavaRes/out/META-INF/myfatoorah-reactnative_debug.kotlin_module differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/myfatoorahreactnative/BuildConfig.class b/node_modules/myfatoorah-reactnative/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/myfatoorahreactnative/BuildConfig.class
+new file mode 100644
+index 0000000..96b07e4
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/myfatoorahreactnative/BuildConfig.class differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/myfatoorahreactnative/MFPackage.class b/node_modules/myfatoorah-reactnative/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/myfatoorahreactnative/MFPackage.class
+new file mode 100644
+index 0000000..d0cbe33
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/myfatoorahreactnative/MFPackage.class differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/myfatoorahreactnative/cardview/IMFCardViewManager.class b/node_modules/myfatoorah-reactnative/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/myfatoorahreactnative/cardview/IMFCardViewManager.class
+new file mode 100644
+index 0000000..79ccee8
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/myfatoorahreactnative/cardview/IMFCardViewManager.class differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/myfatoorahreactnative/cardview/MFCardViewManager.class b/node_modules/myfatoorah-reactnative/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/myfatoorahreactnative/cardview/MFCardViewManager.class
+new file mode 100644
+index 0000000..edd82d8
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/myfatoorahreactnative/cardview/MFCardViewManager.class differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/myfatoorahreactnative/googlepay/IMFGooglePayManager.class b/node_modules/myfatoorah-reactnative/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/myfatoorahreactnative/googlepay/IMFGooglePayManager.class
+new file mode 100644
+index 0000000..227d39d
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/myfatoorahreactnative/googlepay/IMFGooglePayManager.class differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/myfatoorahreactnative/googlepay/MFGooglePayManager.class b/node_modules/myfatoorah-reactnative/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/myfatoorahreactnative/googlepay/MFGooglePayManager.class
+new file mode 100644
+index 0000000..f37197f
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/myfatoorahreactnative/googlepay/MFGooglePayManager.class differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/myfatoorahreactnative/models/MFDirectPaymentRequest.class b/node_modules/myfatoorah-reactnative/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/myfatoorahreactnative/models/MFDirectPaymentRequest.class
+new file mode 100644
+index 0000000..3b74ad7
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/myfatoorahreactnative/models/MFDirectPaymentRequest.class differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/myfatoorahreactnative/models/MFGooglePayRequest.class b/node_modules/myfatoorah-reactnative/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/myfatoorahreactnative/models/MFGooglePayRequest.class
+new file mode 100644
+index 0000000..0c516e0
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/myfatoorahreactnative/models/MFGooglePayRequest.class differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/myfatoorahreactnative/sdkhelper/IMFModule.class b/node_modules/myfatoorah-reactnative/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/myfatoorahreactnative/sdkhelper/IMFModule.class
+new file mode 100644
+index 0000000..12133d2
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/myfatoorahreactnative/sdkhelper/IMFModule.class differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/myfatoorahreactnative/sdkhelper/MFModule.class b/node_modules/myfatoorah-reactnative/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/myfatoorahreactnative/sdkhelper/MFModule.class
+new file mode 100644
+index 0000000..1d73b2c
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/myfatoorahreactnative/sdkhelper/MFModule.class differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/myfatoorahreactnative/utils/MFJsonAdapterHelper.class b/node_modules/myfatoorah-reactnative/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/myfatoorahreactnative/utils/MFJsonAdapterHelper.class
+new file mode 100644
+index 0000000..406d6a2
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/myfatoorahreactnative/utils/MFJsonAdapterHelper.class differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/intermediates/local_only_symbol_list/debug/parseDebugLocalResources/R-def.txt b/node_modules/myfatoorah-reactnative/android/build/intermediates/local_only_symbol_list/debug/parseDebugLocalResources/R-def.txt
+new file mode 100644
+index 0000000..78ac5b8
+--- /dev/null
++++ b/node_modules/myfatoorah-reactnative/android/build/intermediates/local_only_symbol_list/debug/parseDebugLocalResources/R-def.txt
+@@ -0,0 +1,2 @@
++R_DEF: Internal format may change without notice
++local
+diff --git a/node_modules/myfatoorah-reactnative/android/build/intermediates/manifest_merge_blame_file/debug/processDebugManifest/manifest-merger-blame-debug-report.txt b/node_modules/myfatoorah-reactnative/android/build/intermediates/manifest_merge_blame_file/debug/processDebugManifest/manifest-merger-blame-debug-report.txt
+new file mode 100644
+index 0000000..1240631
+--- /dev/null
++++ b/node_modules/myfatoorah-reactnative/android/build/intermediates/manifest_merge_blame_file/debug/processDebugManifest/manifest-merger-blame-debug-report.txt
+@@ -0,0 +1,19 @@
++1<?xml version="1.0" encoding="utf-8"?>
++2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
++3    package="com.myfatoorahreactnative" >
++4
++5    <uses-sdk android:minSdkVersion="24" />
++6
++7    <application>
++7-->/Users/eweba1/Desktop/revista-ios-code/node_modules/myfatoorah-reactnative/android/src/main/AndroidManifest.xml:2:3-7:17
++8        <provider
++8-->/Users/eweba1/Desktop/revista-ios-code/node_modules/myfatoorah-reactnative/android/src/main/AndroidManifest.xml:3:5-6:34
++9            android:name="com.myfatoorahreactnative.googlepay.MFGPayInitProvider"
++9-->/Users/eweba1/Desktop/revista-ios-code/node_modules/myfatoorah-reactnative/android/src/main/AndroidManifest.xml:4:7-76
++10            android:authorities="${applicationId}.mfgpayinitprovider"
++10-->/Users/eweba1/Desktop/revista-ios-code/node_modules/myfatoorah-reactnative/android/src/main/AndroidManifest.xml:5:7-64
++11            android:exported="false" />
++11-->/Users/eweba1/Desktop/revista-ios-code/node_modules/myfatoorah-reactnative/android/src/main/AndroidManifest.xml:6:7-31
++12    </application>
++13
++14</manifest>
+diff --git a/node_modules/myfatoorah-reactnative/android/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml b/node_modules/myfatoorah-reactnative/android/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml
+new file mode 100644
+index 0000000..525c65b
+--- /dev/null
++++ b/node_modules/myfatoorah-reactnative/android/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml
+@@ -0,0 +1,14 @@
++<?xml version="1.0" encoding="utf-8"?>
++<manifest xmlns:android="http://schemas.android.com/apk/res/android"
++    package="com.myfatoorahreactnative" >
++
++    <uses-sdk android:minSdkVersion="24" />
++
++    <application>
++        <provider
++            android:name="com.myfatoorahreactnative.googlepay.MFGPayInitProvider"
++            android:authorities="${applicationId}.mfgpayinitprovider"
++            android:exported="false" />
++    </application>
++
++</manifest>
+\ No newline at end of file
+diff --git a/node_modules/myfatoorah-reactnative/android/build/intermediates/navigation_json/debug/extractDeepLinksDebug/navigation.json b/node_modules/myfatoorah-reactnative/android/build/intermediates/navigation_json/debug/extractDeepLinksDebug/navigation.json
+new file mode 100644
+index 0000000..0637a08
+--- /dev/null
++++ b/node_modules/myfatoorah-reactnative/android/build/intermediates/navigation_json/debug/extractDeepLinksDebug/navigation.json
+@@ -0,0 +1 @@
++[]
+\ No newline at end of file
+diff --git a/node_modules/myfatoorah-reactnative/android/build/intermediates/nested_resources_validation_report/debug/generateDebugResources/nestedResourcesValidationReport.txt b/node_modules/myfatoorah-reactnative/android/build/intermediates/nested_resources_validation_report/debug/generateDebugResources/nestedResourcesValidationReport.txt
+new file mode 100644
+index 0000000..08f4ebe
+--- /dev/null
++++ b/node_modules/myfatoorah-reactnative/android/build/intermediates/nested_resources_validation_report/debug/generateDebugResources/nestedResourcesValidationReport.txt
+@@ -0,0 +1 @@
++0 Warning/Error
+\ No newline at end of file
+diff --git a/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/META-INF/myfatoorah-reactnative_debug.kotlin_module b/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/META-INF/myfatoorah-reactnative_debug.kotlin_module
+new file mode 100644
+index 0000000..8ee52c3
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/META-INF/myfatoorah-reactnative_debug.kotlin_module differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/BuildConfig.class b/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/BuildConfig.class
+new file mode 100644
+index 0000000..96b07e4
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/BuildConfig.class differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/MFPackage.class b/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/MFPackage.class
+new file mode 100644
+index 0000000..d0cbe33
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/MFPackage.class differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/cardview/IMFCardViewManager.class b/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/cardview/IMFCardViewManager.class
+new file mode 100644
+index 0000000..79ccee8
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/cardview/IMFCardViewManager.class differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/cardview/MFCardViewManager.class b/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/cardview/MFCardViewManager.class
+new file mode 100644
+index 0000000..edd82d8
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/cardview/MFCardViewManager.class differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/googlepay/GooglePayButtonConstantsModule$Companion.class b/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/googlepay/GooglePayButtonConstantsModule$Companion.class
+new file mode 100644
+index 0000000..013cf3c
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/googlepay/GooglePayButtonConstantsModule$Companion.class differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/googlepay/GooglePayButtonConstantsModule.class b/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/googlepay/GooglePayButtonConstantsModule.class
+new file mode 100644
+index 0000000..0af5a5b
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/googlepay/GooglePayButtonConstantsModule.class differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/googlepay/IMFGooglePayManager.class b/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/googlepay/IMFGooglePayManager.class
+new file mode 100644
+index 0000000..227d39d
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/googlepay/IMFGooglePayManager.class differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/googlepay/MFGPayInitProvider$onCreate$1.class b/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/googlepay/MFGPayInitProvider$onCreate$1.class
+new file mode 100644
+index 0000000..1f24849
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/googlepay/MFGPayInitProvider$onCreate$1.class differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/googlepay/MFGPayInitProvider.class b/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/googlepay/MFGPayInitProvider.class
+new file mode 100644
+index 0000000..636f9ce
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/googlepay/MFGPayInitProvider.class differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/googlepay/MFGPayModule.class b/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/googlepay/MFGPayModule.class
+new file mode 100644
+index 0000000..38feb5a
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/googlepay/MFGPayModule.class differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/googlepay/MFGooglePayButton.class b/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/googlepay/MFGooglePayButton.class
+new file mode 100644
+index 0000000..7f288da
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/googlepay/MFGooglePayButton.class differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/googlepay/MFGooglePayLauncherHolder.class b/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/googlepay/MFGooglePayLauncherHolder.class
+new file mode 100644
+index 0000000..7eef93a
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/googlepay/MFGooglePayLauncherHolder.class differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/googlepay/MFGooglePayManager.class b/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/googlepay/MFGooglePayManager.class
+new file mode 100644
+index 0000000..f37197f
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/googlepay/MFGooglePayManager.class differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/models/MFDirectPaymentRequest.class b/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/models/MFDirectPaymentRequest.class
+new file mode 100644
+index 0000000..3b74ad7
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/models/MFDirectPaymentRequest.class differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/models/MFGooglePayRequest.class b/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/models/MFGooglePayRequest.class
+new file mode 100644
+index 0000000..0c516e0
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/models/MFGooglePayRequest.class differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/sdkhelper/IMFModule.class b/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/sdkhelper/IMFModule.class
+new file mode 100644
+index 0000000..12133d2
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/sdkhelper/IMFModule.class differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/sdkhelper/MFModule.class b/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/sdkhelper/MFModule.class
+new file mode 100644
+index 0000000..1d73b2c
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/sdkhelper/MFModule.class differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/utils/MFConstants.class b/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/utils/MFConstants.class
+new file mode 100644
+index 0000000..2aafdb0
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/utils/MFConstants.class differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/utils/MFExtentionsKt.class b/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/utils/MFExtentionsKt.class
+new file mode 100644
+index 0000000..7998959
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/utils/MFExtentionsKt.class differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/utils/MFFontFamilyDeserializer.class b/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/utils/MFFontFamilyDeserializer.class
+new file mode 100644
+index 0000000..1b1fe86
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/utils/MFFontFamilyDeserializer.class differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/utils/MFGPayConstants.class b/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/utils/MFGPayConstants.class
+new file mode 100644
+index 0000000..89ba568
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/utils/MFGPayConstants.class differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/utils/MFJsonAdapterHelper.class b/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/utils/MFJsonAdapterHelper.class
+new file mode 100644
+index 0000000..406d6a2
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/myfatoorahreactnative/utils/MFJsonAdapterHelper.class differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_jar/debug/bundleLibRuntimeToJarDebug/classes.jar b/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_jar/debug/bundleLibRuntimeToJarDebug/classes.jar
+new file mode 100644
+index 0000000..ec9b8a0
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/intermediates/runtime_library_classes_jar/debug/bundleLibRuntimeToJarDebug/classes.jar differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/intermediates/symbol_list_with_package_name/debug/generateDebugRFile/package-aware-r.txt b/node_modules/myfatoorah-reactnative/android/build/intermediates/symbol_list_with_package_name/debug/generateDebugRFile/package-aware-r.txt
+new file mode 100644
+index 0000000..ad04e42
+--- /dev/null
++++ b/node_modules/myfatoorah-reactnative/android/build/intermediates/symbol_list_with_package_name/debug/generateDebugRFile/package-aware-r.txt
+@@ -0,0 +1 @@
++com.myfatoorahreactnative
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab
+new file mode 100644
+index 0000000..5fefd30
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.keystream b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.keystream
+new file mode 100644
+index 0000000..849b59a
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.keystream differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.keystream.len b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.keystream.len
+new file mode 100644
+index 0000000..2439530
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.keystream.len differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.len b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.len
+new file mode 100644
+index 0000000..9e27f73
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.len differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.values.at b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.values.at
+new file mode 100644
+index 0000000..22914e9
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.values.at differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab_i b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab_i
+new file mode 100644
+index 0000000..dcdecea
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab_i differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab_i.len b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab_i.len
+new file mode 100644
+index 0000000..131e265
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab_i.len differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab
+new file mode 100644
+index 0000000..84e4bd2
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.keystream b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.keystream
+new file mode 100644
+index 0000000..1e7ac8f
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.keystream differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.keystream.len b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.keystream.len
+new file mode 100644
+index 0000000..a9790a0
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.keystream.len differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.len b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.len
+new file mode 100644
+index 0000000..eb0b8a0
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.len differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.values.at b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.values.at
+new file mode 100644
+index 0000000..56876a5
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.values.at differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab_i b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab_i
+new file mode 100644
+index 0000000..1031baa
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab_i differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab_i.len b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab_i.len
+new file mode 100644
+index 0000000..131e265
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab_i.len differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab
+new file mode 100644
+index 0000000..3957045
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream
+new file mode 100644
+index 0000000..1e7ac8f
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream.len b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream.len
+new file mode 100644
+index 0000000..a9790a0
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream.len differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.len b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.len
+new file mode 100644
+index 0000000..eb0b8a0
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.len differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values.at b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values.at
+new file mode 100644
+index 0000000..e2bd46f
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values.at differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i
+new file mode 100644
+index 0000000..1031baa
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i.len b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i.len
+new file mode 100644
+index 0000000..131e265
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i.len differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/constants.tab b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/constants.tab
+new file mode 100644
+index 0000000..fe42976
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/constants.tab differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/constants.tab.keystream b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/constants.tab.keystream
+new file mode 100644
+index 0000000..315f145
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/constants.tab.keystream differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/constants.tab.keystream.len b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/constants.tab.keystream.len
+new file mode 100644
+index 0000000..90c90ce
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/constants.tab.keystream.len differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/constants.tab.len b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/constants.tab.len
+new file mode 100644
+index 0000000..01bdaa1
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/constants.tab.len differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/constants.tab.values.at b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/constants.tab.values.at
+new file mode 100644
+index 0000000..7721a14
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/constants.tab.values.at differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/constants.tab_i b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/constants.tab_i
+new file mode 100644
+index 0000000..aa07917
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/constants.tab_i differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/constants.tab_i.len b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/constants.tab_i.len
+new file mode 100644
+index 0000000..131e265
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/constants.tab_i.len differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab
+new file mode 100644
+index 0000000..8e12727
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream
+new file mode 100644
+index 0000000..3a9f597
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream.len b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream.len
+new file mode 100644
+index 0000000..02f37c8
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream.len differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.len b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.len
+new file mode 100644
+index 0000000..a541356
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.len differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.values.at b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.values.at
+new file mode 100644
+index 0000000..69f6c28
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.values.at differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab_i b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab_i
+new file mode 100644
+index 0000000..fd8c229
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab_i differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab_i.len b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab_i.len
+new file mode 100644
+index 0000000..131e265
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab_i.len differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab
+new file mode 100644
+index 0000000..bdf584a
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab.keystream b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab.keystream
+new file mode 100644
+index 0000000..aea9418
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab.keystream differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab.keystream.len b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab.keystream.len
+new file mode 100644
+index 0000000..2409504
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab.keystream.len differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab.len b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab.len
+new file mode 100644
+index 0000000..2a17e6e
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab.len differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab.values.at b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab.values.at
+new file mode 100644
+index 0000000..46d6744
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab.values.at differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab_i b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab_i
+new file mode 100644
+index 0000000..cbf4ef7
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab_i differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab_i.len b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab_i.len
+new file mode 100644
+index 0000000..131e265
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab_i.len differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab
+new file mode 100644
+index 0000000..bf928f2
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.keystream b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.keystream
+new file mode 100644
+index 0000000..600d0c2
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.keystream differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.keystream.len b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.keystream.len
+new file mode 100644
+index 0000000..89cabdb
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.keystream.len differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.len b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.len
+new file mode 100644
+index 0000000..a541356
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.len differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.values.at b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.values.at
+new file mode 100644
+index 0000000..a6b7273
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.values.at differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab_i b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab_i
+new file mode 100644
+index 0000000..c77e7b4
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab_i differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab_i.len b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab_i.len
+new file mode 100644
+index 0000000..131e265
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab_i.len differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab
+new file mode 100644
+index 0000000..67cdf14
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream
+new file mode 100644
+index 0000000..849b59a
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream.len b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream.len
+new file mode 100644
+index 0000000..2439530
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream.len differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.len b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.len
+new file mode 100644
+index 0000000..9e27f73
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.len differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.values.at b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.values.at
+new file mode 100644
+index 0000000..bdaba4c
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.values.at differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab_i b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab_i
+new file mode 100644
+index 0000000..dcdecea
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab_i differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab_i.len b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab_i.len
+new file mode 100644
+index 0000000..131e265
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab_i.len differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab
+new file mode 100644
+index 0000000..ed31daf
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.keystream b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.keystream
+new file mode 100644
+index 0000000..244630a
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.keystream differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.keystream.len b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.keystream.len
+new file mode 100644
+index 0000000..3993eb4
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.keystream.len differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.len b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.len
+new file mode 100644
+index 0000000..93a595b
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.len differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.values.at b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.values.at
+new file mode 100644
+index 0000000..c5456d5
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.values.at differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab_i b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab_i
+new file mode 100644
+index 0000000..20f4011
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab_i differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab_i.len b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab_i.len
+new file mode 100644
+index 0000000..131e265
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab_i.len differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab
+new file mode 100644
+index 0000000..9ef749a
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.keystream b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.keystream
+new file mode 100644
+index 0000000..4a576ca
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.keystream differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.keystream.len b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.keystream.len
+new file mode 100644
+index 0000000..babac56
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.keystream.len differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.len b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.len
+new file mode 100644
+index 0000000..ec8f944
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.len differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.values.at b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.values.at
+new file mode 100644
+index 0000000..9db538d
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.values.at differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab_i b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab_i
+new file mode 100644
+index 0000000..57df16a
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab_i differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab_i.len b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab_i.len
+new file mode 100644
+index 0000000..131e265
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab_i.len differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/counters.tab b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/counters.tab
+new file mode 100644
+index 0000000..888a92d
+--- /dev/null
++++ b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/counters.tab
+@@ -0,0 +1,2 @@
++6
++0
+\ No newline at end of file
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab
+new file mode 100644
+index 0000000..18bc8a2
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.keystream b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.keystream
+new file mode 100644
+index 0000000..849b59a
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.keystream differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.keystream.len b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.keystream.len
+new file mode 100644
+index 0000000..2439530
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.keystream.len differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.len b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.len
+new file mode 100644
+index 0000000..9e27f73
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.len differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.values.at b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.values.at
+new file mode 100644
+index 0000000..87c4282
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.values.at differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab_i b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab_i
+new file mode 100644
+index 0000000..dcdecea
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab_i differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab_i.len b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab_i.len
+new file mode 100644
+index 0000000..131e265
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab_i.len differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab
+new file mode 100644
+index 0000000..7187779
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.keystream b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.keystream
+new file mode 100644
+index 0000000..3d5fe7a
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.keystream differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.keystream.len b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.keystream.len
+new file mode 100644
+index 0000000..fa902fa
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.keystream.len differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.len b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.len
+new file mode 100644
+index 0000000..9e27f73
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.len differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.values.at b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.values.at
+new file mode 100644
+index 0000000..aab098c
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.values.at differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab_i b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab_i
+new file mode 100644
+index 0000000..b7dc911
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab_i differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab_i.len b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab_i.len
+new file mode 100644
+index 0000000..131e265
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab_i.len differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab
+new file mode 100644
+index 0000000..f2e6db7
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab.keystream b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab.keystream
+new file mode 100644
+index 0000000..217513d
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab.keystream differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab.keystream.len b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab.keystream.len
+new file mode 100644
+index 0000000..3aa3eb5
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab.keystream.len differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab.len b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab.len
+new file mode 100644
+index 0000000..ced41bb
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab.len differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab.values.at b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab.values.at
+new file mode 100644
+index 0000000..9a3f858
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab.values.at differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab_i b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab_i
+new file mode 100644
+index 0000000..44ef045
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab_i differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab_i.len b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab_i.len
+new file mode 100644
+index 0000000..131e265
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab_i.len differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/last-build.bin b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/last-build.bin
+new file mode 100644
+index 0000000..b60a797
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/cacheable/last-build.bin differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/classpath-snapshot/shrunk-classpath-snapshot.bin b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/classpath-snapshot/shrunk-classpath-snapshot.bin
+new file mode 100644
+index 0000000..2a7555f
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/classpath-snapshot/shrunk-classpath-snapshot.bin differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/local-state/build-history.bin b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/local-state/build-history.bin
+new file mode 100644
+index 0000000..523fe0a
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/kotlin/compileDebugKotlin/local-state/build-history.bin differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/outputs/logs/manifest-merger-debug-report.txt b/node_modules/myfatoorah-reactnative/android/build/outputs/logs/manifest-merger-debug-report.txt
+new file mode 100644
+index 0000000..e80c2f2
+--- /dev/null
++++ b/node_modules/myfatoorah-reactnative/android/build/outputs/logs/manifest-merger-debug-report.txt
+@@ -0,0 +1,26 @@
++-- Merging decision tree log ---
++manifest
++ADDED from /Users/eweba1/Desktop/revista-ios-code/node_modules/myfatoorah-reactnative/android/src/main/AndroidManifest.xml:1:1-8:12
++INJECTED from /Users/eweba1/Desktop/revista-ios-code/node_modules/myfatoorah-reactnative/android/src/main/AndroidManifest.xml:1:1-8:12
++	package
++		INJECTED from /Users/eweba1/Desktop/revista-ios-code/node_modules/myfatoorah-reactnative/android/src/main/AndroidManifest.xml
++	xmlns:android
++		ADDED from /Users/eweba1/Desktop/revista-ios-code/node_modules/myfatoorah-reactnative/android/src/main/AndroidManifest.xml:1:11-69
++application
++ADDED from /Users/eweba1/Desktop/revista-ios-code/node_modules/myfatoorah-reactnative/android/src/main/AndroidManifest.xml:2:3-7:17
++provider#com.myfatoorahreactnative.googlepay.MFGPayInitProvider
++ADDED from /Users/eweba1/Desktop/revista-ios-code/node_modules/myfatoorah-reactnative/android/src/main/AndroidManifest.xml:3:5-6:34
++	android:authorities
++		ADDED from /Users/eweba1/Desktop/revista-ios-code/node_modules/myfatoorah-reactnative/android/src/main/AndroidManifest.xml:5:7-64
++	android:exported
++		ADDED from /Users/eweba1/Desktop/revista-ios-code/node_modules/myfatoorah-reactnative/android/src/main/AndroidManifest.xml:6:7-31
++	android:name
++		ADDED from /Users/eweba1/Desktop/revista-ios-code/node_modules/myfatoorah-reactnative/android/src/main/AndroidManifest.xml:4:7-76
++uses-sdk
++INJECTED from /Users/eweba1/Desktop/revista-ios-code/node_modules/myfatoorah-reactnative/android/src/main/AndroidManifest.xml reason: use-sdk injection requested
++INJECTED from /Users/eweba1/Desktop/revista-ios-code/node_modules/myfatoorah-reactnative/android/src/main/AndroidManifest.xml
++INJECTED from /Users/eweba1/Desktop/revista-ios-code/node_modules/myfatoorah-reactnative/android/src/main/AndroidManifest.xml
++	android:targetSdkVersion
++		INJECTED from /Users/eweba1/Desktop/revista-ios-code/node_modules/myfatoorah-reactnative/android/src/main/AndroidManifest.xml
++	android:minSdkVersion
++		INJECTED from /Users/eweba1/Desktop/revista-ios-code/node_modules/myfatoorah-reactnative/android/src/main/AndroidManifest.xml
+diff --git a/node_modules/myfatoorah-reactnative/android/build/tmp/compileDebugJavaWithJavac/previous-compilation-data.bin b/node_modules/myfatoorah-reactnative/android/build/tmp/compileDebugJavaWithJavac/previous-compilation-data.bin
+new file mode 100644
+index 0000000..11e0783
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/tmp/compileDebugJavaWithJavac/previous-compilation-data.bin differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/tmp/kotlin-classes/debug/META-INF/myfatoorah-reactnative_debug.kotlin_module b/node_modules/myfatoorah-reactnative/android/build/tmp/kotlin-classes/debug/META-INF/myfatoorah-reactnative_debug.kotlin_module
+new file mode 100644
+index 0000000..8ee52c3
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/tmp/kotlin-classes/debug/META-INF/myfatoorah-reactnative_debug.kotlin_module differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/tmp/kotlin-classes/debug/com/myfatoorahreactnative/googlepay/GooglePayButtonConstantsModule$Companion.class b/node_modules/myfatoorah-reactnative/android/build/tmp/kotlin-classes/debug/com/myfatoorahreactnative/googlepay/GooglePayButtonConstantsModule$Companion.class
+new file mode 100644
+index 0000000..013cf3c
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/tmp/kotlin-classes/debug/com/myfatoorahreactnative/googlepay/GooglePayButtonConstantsModule$Companion.class differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/tmp/kotlin-classes/debug/com/myfatoorahreactnative/googlepay/GooglePayButtonConstantsModule.class b/node_modules/myfatoorah-reactnative/android/build/tmp/kotlin-classes/debug/com/myfatoorahreactnative/googlepay/GooglePayButtonConstantsModule.class
+new file mode 100644
+index 0000000..0af5a5b
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/tmp/kotlin-classes/debug/com/myfatoorahreactnative/googlepay/GooglePayButtonConstantsModule.class differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/tmp/kotlin-classes/debug/com/myfatoorahreactnative/googlepay/MFGPayInitProvider$onCreate$1.class b/node_modules/myfatoorah-reactnative/android/build/tmp/kotlin-classes/debug/com/myfatoorahreactnative/googlepay/MFGPayInitProvider$onCreate$1.class
+new file mode 100644
+index 0000000..1f24849
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/tmp/kotlin-classes/debug/com/myfatoorahreactnative/googlepay/MFGPayInitProvider$onCreate$1.class differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/tmp/kotlin-classes/debug/com/myfatoorahreactnative/googlepay/MFGPayInitProvider.class b/node_modules/myfatoorah-reactnative/android/build/tmp/kotlin-classes/debug/com/myfatoorahreactnative/googlepay/MFGPayInitProvider.class
+new file mode 100644
+index 0000000..636f9ce
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/tmp/kotlin-classes/debug/com/myfatoorahreactnative/googlepay/MFGPayInitProvider.class differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/tmp/kotlin-classes/debug/com/myfatoorahreactnative/googlepay/MFGPayModule.class b/node_modules/myfatoorah-reactnative/android/build/tmp/kotlin-classes/debug/com/myfatoorahreactnative/googlepay/MFGPayModule.class
+new file mode 100644
+index 0000000..38feb5a
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/tmp/kotlin-classes/debug/com/myfatoorahreactnative/googlepay/MFGPayModule.class differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/tmp/kotlin-classes/debug/com/myfatoorahreactnative/googlepay/MFGooglePayButton.class b/node_modules/myfatoorah-reactnative/android/build/tmp/kotlin-classes/debug/com/myfatoorahreactnative/googlepay/MFGooglePayButton.class
+new file mode 100644
+index 0000000..7f288da
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/tmp/kotlin-classes/debug/com/myfatoorahreactnative/googlepay/MFGooglePayButton.class differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/tmp/kotlin-classes/debug/com/myfatoorahreactnative/googlepay/MFGooglePayLauncherHolder.class b/node_modules/myfatoorah-reactnative/android/build/tmp/kotlin-classes/debug/com/myfatoorahreactnative/googlepay/MFGooglePayLauncherHolder.class
+new file mode 100644
+index 0000000..7eef93a
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/tmp/kotlin-classes/debug/com/myfatoorahreactnative/googlepay/MFGooglePayLauncherHolder.class differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/tmp/kotlin-classes/debug/com/myfatoorahreactnative/utils/MFConstants.class b/node_modules/myfatoorah-reactnative/android/build/tmp/kotlin-classes/debug/com/myfatoorahreactnative/utils/MFConstants.class
+new file mode 100644
+index 0000000..2aafdb0
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/tmp/kotlin-classes/debug/com/myfatoorahreactnative/utils/MFConstants.class differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/tmp/kotlin-classes/debug/com/myfatoorahreactnative/utils/MFExtentionsKt.class b/node_modules/myfatoorah-reactnative/android/build/tmp/kotlin-classes/debug/com/myfatoorahreactnative/utils/MFExtentionsKt.class
+new file mode 100644
+index 0000000..7998959
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/tmp/kotlin-classes/debug/com/myfatoorahreactnative/utils/MFExtentionsKt.class differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/tmp/kotlin-classes/debug/com/myfatoorahreactnative/utils/MFFontFamilyDeserializer.class b/node_modules/myfatoorah-reactnative/android/build/tmp/kotlin-classes/debug/com/myfatoorahreactnative/utils/MFFontFamilyDeserializer.class
+new file mode 100644
+index 0000000..1b1fe86
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/tmp/kotlin-classes/debug/com/myfatoorahreactnative/utils/MFFontFamilyDeserializer.class differ
+diff --git a/node_modules/myfatoorah-reactnative/android/build/tmp/kotlin-classes/debug/com/myfatoorahreactnative/utils/MFGPayConstants.class b/node_modules/myfatoorah-reactnative/android/build/tmp/kotlin-classes/debug/com/myfatoorahreactnative/utils/MFGPayConstants.class
+new file mode 100644
+index 0000000..89ba568
+Binary files /dev/null and b/node_modules/myfatoorah-reactnative/android/build/tmp/kotlin-classes/debug/com/myfatoorahreactnative/utils/MFGPayConstants.class differ
+diff --git a/node_modules/myfatoorah-reactnative/src/GooglePay.tsx b/node_modules/myfatoorah-reactnative/src/GooglePay.tsx
+index 069bca7..ab1a26d 100644
+--- a/node_modules/myfatoorah-reactnative/src/GooglePay.tsx
++++ b/node_modules/myfatoorah-reactnative/src/GooglePay.tsx
+@@ -32,7 +32,17 @@ const styles = StyleSheet.create({
+ 
+ const { MFGPayModule: MFGPayNative } = NativeModules;
+ 
+-const MFEventEmitter = new NativeEventEmitter(MFGPayNative);
++// SAFE: Only create event emitter if module exists
++let MFEventEmitter = null;
++try {
++    if (NativeModules.MFGPayModule) {
++        MFEventEmitter = new NativeEventEmitter(NativeModules.MFGPayModule);
++    } else {
++        console.warn('⚠️ MFGPayModule not available, event emitter not created');
++    }
++} catch (error) {
++    console.warn('⚠️ Failed to create GooglePay event emitter:', error);
++}
+ 
+ const GooglePayButton = requireNativeComponent<IGooglePayButtonProps>('MFGooglePayButton');
+ 
+@@ -125,27 +135,31 @@ class MFGPayButton extends React.Component<IGooglePayButtonProps> implements IMF
+     }
+ 
+     private registerListener<T>(eventName: string, listener?: Listener<T>) {
+-        MFEventEmitter.removeAllListeners(eventName);
+-
+-        if (typeof listener === 'function') {
+-            MFEventEmitter.addListener(eventName, (data: T | string) => {
+-                let parsedData: T;
+-
+-                try {
+-                    if (
+-                        eventName === MFGPayConstants.GPayReceivedTokenEventName ||
+-                        eventName === MFGPayConstants.GPayInvoiceCreatedEventName
+-                    ) {
+-                        parsedData = data as T; // keep token as-is
+-                    } else {
+-                        parsedData = typeof data === 'string' ? modelParser<T>(data) : data;
++        if (MFEventEmitter) {
++            MFEventEmitter.removeAllListeners(eventName);
++
++            if (typeof listener === 'function') {
++                MFEventEmitter.addListener(eventName, (data: T | string) => {
++                    let parsedData: T;
++
++                    try {
++                        if (
++                            eventName === MFGPayConstants.GPayReceivedTokenEventName ||
++                            eventName === MFGPayConstants.GPayInvoiceCreatedEventName
++                        ) {
++                            parsedData = data as T; // keep token as-is
++                        } else {
++                            parsedData = typeof data === 'string' ? modelParser<T>(data) : data;
++                        }
++                    } catch {
++                        parsedData = data as T;
+                     }
+-                } catch {
+-                    parsedData = data as T;
+-                }
+ 
+-                listener(parsedData);
+-            });
++                    listener(parsedData);
++                });
++            }
++        } else {
++            console.warn(`⚠️ Event emitter not available for event: ${eventName}`);
+         }
+     }
+ 
+diff --git a/node_modules/myfatoorah-reactnative/src/index.tsx b/node_modules/myfatoorah-reactnative/src/index.tsx
+index 8b9a47b..0f24f26 100644
+--- a/node_modules/myfatoorah-reactnative/src/index.tsx
++++ b/node_modules/myfatoorah-reactnative/src/index.tsx
+@@ -70,7 +70,18 @@ const _proxy = new Proxy(
+   }
+ );
+ const MFModule = NativeModules.MFModule ? NativeModules.MFModule : _proxy;
+-const MFEventEmitter = new NativeEventEmitter(MFModule);
++
++// SAFE: Only create event emitter if module exists
++let MFEventEmitter = null;
++try {
++  if (NativeModules.MFModule) {
++    MFEventEmitter = new NativeEventEmitter(NativeModules.MFModule);
++  } else {
++    console.warn('⚠️ MFModule not available, event emitter not created');
++  }
++} catch (error) {
++  console.warn('⚠️ Failed to create MFEventEmitter:', error);
++}
+ 
+ interface IMFSDK {
+   init(apiKey: string, country: MFCountry, environment: MFEnvironment): void;
+@@ -163,8 +174,10 @@ class MyFatoorahReactNative implements IMFSDK {
+     return modelParser<MFInitiateSessionResponse>(jsonResponse);
+   }
+   private AddOnInvoiceCreatedListener(listener: (invoiceId: string) => void) {
+-    MFEventEmitter.removeAllListeners(MFConstants.InvoiceCreatedEventName);
+-    MFEventEmitter.addListener(MFConstants.InvoiceCreatedEventName, listener);
++    if (MFEventEmitter) {
++      MFEventEmitter.removeAllListeners(MFConstants.InvoiceCreatedEventName);
++      MFEventEmitter.addListener(MFConstants.InvoiceCreatedEventName, listener);
++    }
+   }
+   async getApplePayToken(request: MFApplePayRequest): Promise<MFApplePayToken> {
+     var jsonResponse = await MFModule.getApplePayToken(request);
+@@ -229,8 +242,10 @@ class MFCardPaymentView extends React.Component<ICardViewProps> implements IMFCa
+     return jsonResponse;
+   }
+   private AddOnCardBinChangedListener(listener: (bin: string) => void) {
+-    MFEventEmitter.removeAllListeners(MFConstants.CardBinChangedEventName);
+-    MFEventEmitter.addListener(MFConstants.CardBinChangedEventName, listener);
++    if (MFEventEmitter) {
++      MFEventEmitter.removeAllListeners(MFConstants.CardBinChangedEventName);
++      MFEventEmitter.addListener(MFConstants.CardBinChangedEventName, listener);
++    }
+   }
+   async pay(
+     executePaymentRequest: MFExecutePaymentRequest,
+@@ -246,8 +261,10 @@ class MFCardPaymentView extends React.Component<ICardViewProps> implements IMFCa
+   }
+ 
+   private AddOnInvoiceCreatedListener(listener: (invoiceId: string) => void) {
+-    MFEventEmitter.removeAllListeners(MFConstants.InvoiceCreatedEventName);
+-    MFEventEmitter.addListener(MFConstants.InvoiceCreatedEventName, listener);
++    if (MFEventEmitter) {
++      MFEventEmitter.removeAllListeners(MFConstants.InvoiceCreatedEventName);
++      MFEventEmitter.addListener(MFConstants.InvoiceCreatedEventName, listener);
++    }
+   }
+ 
+   render() {
+@@ -561,8 +578,10 @@ class MFApplePayButtonView extends React.Component<IApplePayProps> implements IM
+   }
+ 
+   private AddOnInvoiceCreatedListener(listener: (invoiceId: string) => void) {
+-    MFEventEmitter.removeAllListeners(MFConstants.InvoiceCreatedEventName);
+-    MFEventEmitter.addListener(MFConstants.InvoiceCreatedEventName, listener);
++    if (MFEventEmitter) {
++      MFEventEmitter.removeAllListeners(MFConstants.InvoiceCreatedEventName);
++      MFEventEmitter.addListener(MFConstants.InvoiceCreatedEventName, listener);
++    }
+   }
+ 
+   render() {
+@@ -617,14 +636,18 @@ class MFApplePayClass implements IMFApplePay {
+   }
+ 
+   private AddOnInvoiceCreatedListener(listener: (invoiceId: string) => void) {
+-    MFEventEmitter.removeAllListeners(MFConstants.InvoiceCreatedEventName);
+-    MFEventEmitter.addListener(MFConstants.InvoiceCreatedEventName, listener);
++    if (MFEventEmitter) {
++      MFEventEmitter.removeAllListeners(MFConstants.InvoiceCreatedEventName);
++      MFEventEmitter.addListener(MFConstants.InvoiceCreatedEventName, listener);
++    }
+   }
+ 
+   private AddOnApplePayLoadedListener(listener: (loaded: Boolean) => void) {
+     let onApplePayLoadedListener = 'applePayLoaded';
+-    MFEventEmitter.removeAllListeners(onApplePayLoadedListener);
+-    MFEventEmitter.addListener(onApplePayLoadedListener, listener);
++    if (MFEventEmitter) {
++      MFEventEmitter.removeAllListeners(onApplePayLoadedListener);
++      MFEventEmitter.addListener(onApplePayLoadedListener, listener);
++    }
+   }
+ }
+ 
