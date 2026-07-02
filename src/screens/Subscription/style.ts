@@ -9,14 +9,14 @@ const styles = StyleSheet.create({
   },
   benefitsRow: {
     justifyContent: 'space-between',
-    gap: horizontalScale(10), // Adds consistent spacing between cards
+    gap: horizontalScale(10), 
   },
   featureGridCard: {
     flex: 1,
     backgroundColor: COLORS.white,
     borderRadius: horizontalScale(12),
     padding: verticalScale(12),
-    marginHorizontal: 0, // Remove margin, use gap instead
+    marginHorizontal: 0,
     marginBottom: verticalScale(12),
     borderWidth: 1,
     borderColor: COLORS.bordercolor,
@@ -25,22 +25,22 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.05,
     shadowRadius: 4,
     elevation: 2,
-    minHeight: verticalScale(80), // Ensure minimum height
-    maxWidth: '48%', // Prevent cards from becoming too wide
+    minHeight: verticalScale(80), 
+    maxWidth: '48%',
   },
   featureGridIcon: {
     flexDirection: 'row',
     alignItems: 'center',
     marginBottom: verticalScale(5),
-    flexWrap: 'wrap', // Allow wrapping if needed
+    flexWrap: 'wrap',
   },
   featureGridTitle: {
     fontSize: responsiveFontSize(13),
     marginBottom: verticalScale(3),
     marginLeft: horizontalScale(6),
-    flex: 1, // Take remaining space
+    flex: 1,
     flexWrap: 'wrap',
-    textAlign: 'left', // Changed from center for better readability
+    textAlign: 'left', 
     lineHeight: verticalScale(18),
     fontWeight: '600',
     color: COLORS.textColor,
@@ -138,11 +138,6 @@ const styles = StyleSheet.create({
   benefitsList: {
     marginBottom: verticalScale(10),
   },
-  // benefitItem: {
-  //   flexDirection: 'row',
-  //   alignItems: 'center',
-  //   marginBottom: verticalScale(12),
-  // },
   benefitDot: {
     width: horizontalScale(8),
     height: horizontalScale(8),
@@ -189,7 +184,7 @@ const styles = StyleSheet.create({
   popularBadge: {
     position: 'absolute',
     top: verticalScale(-10),
-    // backgroundColor: COLORS.btnbg,
+    
     paddingHorizontal: horizontalScale(10),
     paddingVertical: verticalScale(4),
     borderRadius: horizontalScale(12),

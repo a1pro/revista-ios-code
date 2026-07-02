@@ -149,6 +149,8 @@ const Magzine = ({ navigation }: any) => {
   const [loadingProducts, setLoadingProducts] = useState<boolean>(false);
 
 
+
+         
   useEffect(() => {
     const fetchCategories = async () => {
       try {

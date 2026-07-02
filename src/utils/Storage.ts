@@ -15,9 +15,9 @@ export const getLocalStorageData = async (key: string) => {
 };
 
 export const storeLocalStorageData = async (key: string, value: any) => {
-  await AsyncStorage.setItem(key, JSON.stringify(value)); // Always store as JSON string
+  await AsyncStorage.setItem(key, JSON.stringify(value));
 };
 
 export const deleteLocalStorageData = async (key: string) => {
-  await AsyncStorage.removeItem(key); // Always store as JSON string
+  await AsyncStorage.removeItem(key); 
 };
