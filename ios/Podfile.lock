@@ -25,7 +25,7 @@ PODS:
     - ReactCommon/turbomodule/core
     - ReactNativeDependencies
     - Yoga
-  - MyFatoorah (2.1.1)
+  - MyFatoorah (2.1.3)
   - myfatoorah-reactnative (1.3.7):
     - MyFatoorah (~> 2.1.1)
     - React
@@ -2303,119 +2303,13 @@ PODS:
     - ReactCommon/turbomodule/core
     - ReactNativeDependencies
     - Yoga
-  - Stripe (25.15.0):
-    - StripeApplePay (= 25.15.0)
-    - StripeCore (= 25.15.0)
-    - StripeIssuing (= 25.15.0)
-    - StripePayments (= 25.15.0)
-    - StripePaymentsUI (= 25.15.0)
-    - StripeUICore (= 25.15.0)
-  - stripe-react-native (0.66.0):
-    - hermes-engine
-    - RCTRequired
-    - RCTTypeSafety
-    - React-Core
-    - React-Core-prebuilt
-    - React-debug
-    - React-Fabric
-    - React-featureflags
-    - React-graphics
-    - React-ImageManager
-    - React-jsi
-    - React-NativeModulesApple
-    - React-RCTFabric
-    - React-renderercss
-    - React-rendererdebug
-    - React-utils
-    - ReactCodegen
-    - ReactCommon/turbomodule/bridging
-    - ReactCommon/turbomodule/core
-    - ReactNativeDependencies
-    - stripe-react-native/Core (= 0.66.0)
-    - stripe-react-native/NewArch (= 0.66.0)
-    - Yoga
-  - stripe-react-native/Core (0.66.0):
-    - hermes-engine
-    - RCTRequired
-    - RCTTypeSafety
-    - React-Core
-    - React-Core-prebuilt
-    - React-debug
-    - React-Fabric
-    - React-featureflags
-    - React-graphics
-    - React-ImageManager
-    - React-jsi
-    - React-NativeModulesApple
-    - React-RCTFabric
-    - React-renderercss
-    - React-rendererdebug
-    - React-utils
-    - ReactCodegen
-    - ReactCommon/turbomodule/bridging
-    - ReactCommon/turbomodule/core
-    - ReactNativeDependencies
-    - Stripe (~> 25.15.0)
-    - StripeApplePay (~> 25.15.0)
-    - StripeFinancialConnections (~> 25.15.0)
-    - StripePayments (~> 25.15.0)
-    - StripePaymentSheet (~> 25.15.0)
-    - StripePaymentsUI (~> 25.15.0)
-    - Yoga
-  - stripe-react-native/NewArch (0.66.0):
-    - hermes-engine
-    - RCTRequired
-    - RCTTypeSafety
-    - React-Core
-    - React-Core-prebuilt
-    - React-debug
-    - React-Fabric
-    - React-featureflags
-    - React-graphics
-    - React-ImageManager
-    - React-jsi
-    - React-NativeModulesApple
-    - React-RCTFabric
-    - React-renderercss
-    - React-rendererdebug
-    - React-utils
-    - ReactCodegen
-    - ReactCommon/turbomodule/bridging
-    - ReactCommon/turbomodule/core
-    - ReactNativeDependencies
-    - Yoga
-  - StripeApplePay (25.15.0):
-    - StripeCore (= 25.15.0)
-  - StripeCore (25.15.0)
-  - StripeFinancialConnections (25.15.0):
-    - StripeCore (= 25.15.0)
-    - StripeUICore (= 25.15.0)
-  - StripeIssuing (25.15.0):
-    - StripeCore (= 25.15.0)
-    - StripePayments (= 25.15.0)
-    - StripePaymentsUI (= 25.15.0)
-  - StripePayments (25.15.0):
-    - StripeCore (= 25.15.0)
-    - StripePayments/Stripe3DS2 (= 25.15.0)
-  - StripePayments/Stripe3DS2 (25.15.0):
-    - StripeCore (= 25.15.0)
-  - StripePaymentSheet (25.15.0):
-    - StripeApplePay (= 25.15.0)
-    - StripeCore (= 25.15.0)
-    - StripePayments (= 25.15.0)
-    - StripePaymentsUI (= 25.15.0)
-  - StripePaymentsUI (25.15.0):
-    - StripeCore (= 25.15.0)
-    - StripePayments (= 25.15.0)
-    - StripeUICore (= 25.15.0)
-  - StripeUICore (25.15.0):
-    - StripeCore (= 25.15.0)
   - Yoga (0.0.0)
 
 DEPENDENCIES:
   - FBLazyVector (from `../node_modules/react-native/Libraries/FBLazyVector`)
   - hermes-engine (from `../node_modules/react-native/sdks/hermes-engine/hermes-engine.podspec`)
   - HtmlToPdf (from `../node_modules/react-native-html-to-pdf`)
+  - MyFatoorah (~> 2.1.1)
   - myfatoorah-reactnative (from `../node_modules/myfatoorah-reactnative`)
   - RCTDeprecation (from `../node_modules/react-native/ReactApple/Libraries/RCTFoundation/RCTDeprecation`)
   - RCTRequired (from `../node_modules/react-native/Libraries/Required`)
@@ -2506,21 +2400,11 @@ DEPENDENCIES:
   - RNShare (from `../node_modules/react-native-share`)
   - RNVectorIcons (from `../node_modules/react-native-vector-icons`)
   - RNWorklets (from `../node_modules/react-native-worklets`)
-  - "stripe-react-native (from `../node_modules/@stripe/stripe-react-native`)"
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
   trunk:
     - MyFatoorah
-    - Stripe
-    - StripeApplePay
-    - StripeCore
-    - StripeFinancialConnections
-    - StripeIssuing
-    - StripePayments
-    - StripePaymentSheet
-    - StripePaymentsUI
-    - StripeUICore
 
 EXTERNAL SOURCES:
   FBLazyVector:
@@ -2708,16 +2592,14 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-vector-icons"
   RNWorklets:
     :path: "../node_modules/react-native-worklets"
-  stripe-react-native:
-    :path: "../node_modules/@stripe/stripe-react-native"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
   FBLazyVector: c00c20551d40126351a6783c47ce75f5b374851b
-  hermes-engine: 8f8d7e84cd5425a0e59aff74f5515e0c7f3d1cff
+  hermes-engine: 5582a3dfd38845f97e5d058835915dec6d5caaec
   HtmlToPdf: 8c1ecd33ef886a541d0abbf53835cbf9ed88e778
-  MyFatoorah: 9e252f33a5a72b0f87d7923a7281d28083a49076
+  MyFatoorah: 9728a7eeafb46553198ce0831b1ef592b69ef8d2
   myfatoorah-reactnative: 43ce8c3bef57484652c9b24b5ea27af686e3878f
   RCTDeprecation: 3bb167081b134461cfeb875ff7ae1945f8635257
   RCTRequired: 74839f55d5058a133a0bc4569b0afec750957f64
@@ -2727,7 +2609,7 @@ SPEC CHECKSUMS:
   React: 1b1536b9099195944034e65b1830f463caaa8390
   React-callinvoker: 6dff6d17d1d6cc8fdf85468a649bafed473c65f5
   React-Core: 39ee05b5798296f433dd3c3624c57a187c1510e3
-  React-Core-prebuilt: 26ab7f5826a975784175be4fb655b73144e3cebc
+  React-Core-prebuilt: e58874989ba00c13e56ed8088f0381de91ec650a
   React-CoreModules: e78bfd2617075bc0e50c689df4a29232bd72ad82
   React-cxxreact: 3fe21801d46097cf74c3dff6953677bebc4a3c2a
   React-debug: e1f00fcd2cef58a2897471a6d76a4ef5f5f90c74
@@ -2797,7 +2679,7 @@ SPEC CHECKSUMS:
   ReactAppDependencyProvider: 706b65371b90b5cc797b6639e8979f2e5cecd6da
   ReactCodegen: ab01ebfffac5cda9140204eb872ed97c15df225f
   ReactCommon: 47ef95b0920948a0b54d7439f7452501eeeac071
-  ReactNativeDependencies: 8653c6be98624195bd4bde0d949e893700b9afa8
+  ReactNativeDependencies: 5759d23beca994b252d4b1c0577a1fe6849dcd19
   RNCAsyncStorage: 0f84413588571e74ef9cff6e3b669346e3abf9cb
   RNFS: 4ac0f0ea233904cb798630b3c077808c06931688
   RNGestureHandler: e6db458032096afb64c83dad48f3ae52d3cff12d
@@ -2807,18 +2689,8 @@ SPEC CHECKSUMS:
   RNShare: 43cee010ada075019148c7a6bac1ca71b074e1d7
   RNVectorIcons: 9d52f79c911eb6099a14b8135bd261ccef039fcb
   RNWorklets: 5aa790586e72b486a463ce96f0ff70da06cdf8fe
-  Stripe: 438c2683199eed851e3fca2ee0156904ff166ce0
-  stripe-react-native: 903a56ceda5188d941e71261248b5f608f336934
-  StripeApplePay: 983321574dc364226bef883994457d931289bcbc
-  StripeCore: 8645a446637112586f6a862d2a000e7d8f5fc988
-  StripeFinancialConnections: 66d4d828e5e47c674b2e539c5872414c2100e60a
-  StripeIssuing: 1b21db879c6ec8eaba89af69ea654ce29333d322
-  StripePayments: 1fe0ba59551bf2b5be62707694a2c40df01b195f
-  StripePaymentSheet: d706de7ac354470ada1d1e0fa82de2be3e08ba1d
-  StripePaymentsUI: 260125f3da77ba8010dcc89319da8549f94e7bd4
-  StripeUICore: dd9ff37d3236763162914d8f19edd0c0c3f54861
   Yoga: e83c3121d079541e69f3c5c623faaaf933fb5812
 
-PODFILE CHECKSUM: afb88819c355f6181fc25b4c12b326ad204d13fb
+PODFILE CHECKSUM: 1086771382329cf4f78c8dad3a99b74038d11639
 
 COCOAPODS: 1.16.2
