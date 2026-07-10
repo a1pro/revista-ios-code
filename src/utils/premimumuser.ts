@@ -137,7 +137,10 @@ export const primeicon = async () => {
   });
   return result?.data;
   } catch (error:any) {
-
-console.log(error);
+Toast.show({
+  type: 'error',
+  text1: t('error'),
+  text2: error?.response?.data?.message || error.message,
+});
   }
 };

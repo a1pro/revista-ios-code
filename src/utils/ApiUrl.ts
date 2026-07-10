@@ -45,5 +45,9 @@ export const Base_Url = {
   sellerReviewCount:`${Api_url}seller/count/review`,
   customercount:`${Api_url}seller/count/review`,
   sellerReview:`${Api_url}seller/list/review`,
+  countryApi:`${Api_url}location/countries`,
+  stateapi:`${Api_url}location/states`,
+  cityapi:`${Api_url}location/cities`,
+  zipcodeapi:`${Api_url}location/zipcodes`,
   
 };

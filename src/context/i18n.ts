@@ -3,7 +3,7 @@ import { initReactI18next } from 'react-i18next';
 import { NativeModules, Platform } from 'react-native';
 
 import en from './en.json';
-import ar from './ar.json';
+import sa from './ar.json';
 
 /**
  * Get device language in a clean format
@@ -22,7 +22,7 @@ const getDeviceLanguage = (): string => {
       language = nativeLanguage.split('_')[0].split('-')[0];
     }
 
-    if (language !== 'en' && language !== 'ar') {
+    if (language !== 'en' && language !== 'sa') {
       language = 'en';
     }
 
@@ -38,7 +38,7 @@ i18n
   .init({
     resources: {
       en: { translation: en },
-      ar: { translation: ar },
+      sa: { translation: sa },
     },
     lng: getDeviceLanguage(),
     fallbackLng: 'en',
@@ -59,7 +59,7 @@ export const getCleanLanguage = (): string => {
   if (language.includes(',')) language = language.split(',')[0].trim();
   if (language.includes('_')) language = language.split('_')[0];
   if (language.includes('-')) language = language.split('-')[0];
-  return (language === 'en' || language === 'ar') ? language : 'en';
+  return (language === 'en' || language === 'sa') ? language : 'en';
 };
 
 export default i18n;

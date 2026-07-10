@@ -30,6 +30,7 @@ import CategorySection from '../CategorySection/CategorySection';
 import CategorySection2 from '../CategorySection/CategorySection2';
 import { t } from 'i18next';
 import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
+import Toast from 'react-native-toast-message';
 
 
 type CartItem = {
@@ -61,8 +62,12 @@ const HomeScreen: React.FC<HomeProps> = ({ navigation }) => {
         params: { guest_id: 1 },
       });
       setCartItems(Array.isArray(res?.data) ? res?.data : []);
-    } catch (err) {
-      console.log('Error fetching cart:', err);
+    } catch (err:any) {
+      Toast.show({
+        type: 'error',
+        text1: t('error'),
+        text2: err?.response?.data?.message || err.message,
+      }); 
       setCartItems([]);
     } finally {
       setLoading(false);

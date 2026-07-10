@@ -114,8 +114,12 @@ const AddtoCart: React.FC = () => {
 
       setCartItems(Array.isArray(res?.data) ? res.data : []);
 
-    } catch (err) {
-      console.log('Error fetching cart:', err);
+    } catch (err:any) {
+      Toast.show({
+        type: 'error',
+        text1: t('error'),
+        text2: err?.response?.data?.message ,
+      });
     } finally {
       setLoading(false);
       isFetchingRef.current = false;
@@ -194,7 +198,6 @@ const AddtoCart: React.FC = () => {
         return false;
       }
     } catch (error: any) {
-      console.log('Update cart error:', error);
       Toast.show({
         type: 'error',
         text1: t('error'),

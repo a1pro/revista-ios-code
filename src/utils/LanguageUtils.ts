@@ -27,13 +27,13 @@ export const LanguageUtils = {
 
   // Apply language (change i18n and RTL settings)
   applyLanguage: (langKey: string) => {
-    const i18nLang = langKey === 'sa' ? 'ar' : langKey;
+    const i18nLang = langKey === 'sa' ? 'sa' : langKey;
     
     // Change i18n language
     i18n.changeLanguage(i18nLang);
     
     // Handle RTL for Arabic
-    const isRTL = i18nLang === 'ar';
+    const isRTL = i18nLang === 'sa';
     I18nManager.allowRTL(isRTL);
     I18nManager.forceRTL(isRTL);
     

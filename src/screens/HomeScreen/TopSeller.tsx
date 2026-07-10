@@ -20,6 +20,7 @@ import { useTranslation } from 'react-i18next';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../../types';
 import { verticalScale } from '../../utils/Metrics';
+import Toast from 'react-native-toast-message';
 const { width } = Dimensions.get('window');
 const CARD_WIDTH = width * 0.42;
 const CARD_HEIGHT = 250;
@@ -48,8 +49,12 @@ const TopSeller: React.FC<props> = () => {
       } else {
         setSellers([]);
       }
-    } catch (error) {
-      console.log('Error fetching sellers:', error);
+    } catch (error:any) {
+      Toast.show({
+        type: 'error',
+        text1: t('error'),
+        text2: error?.response?.data?.message || error.message,
+      });
     }
   };
 

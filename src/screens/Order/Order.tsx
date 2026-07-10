@@ -20,6 +20,7 @@ import { base_url, Base_Url } from '../../utils/ApiUrl';
 import axios from 'axios';
 import Loader from '../../components/Loader';
 import { t } from 'i18next';
+import Toast from 'react-native-toast-message';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Order'>;
 
@@ -36,8 +37,12 @@ const Order: React.FC<Props> = ({ navigation }) => {
         });
         setorders(res?.data?.data || []);
       }
-    } catch (error) {
-      console.log(error);
+    } catch (error:any) {
+      Toast.show({
+        type: 'error',
+        text1: t('error'),
+        text2: error?.response?.data?.message || error.message,
+      });
     } finally {
       setLoading(false);
     }
