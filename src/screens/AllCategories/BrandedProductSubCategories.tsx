@@ -197,7 +197,7 @@ const BrandedProductSubCategories: React.FC<Props> = ({ route, navigation }) => 
           </Text>
         )}
 
-        {ispremimum && <Subscriptionstyle />}
+        {ispremimum && <Subscriptionstyle expectedDeliveryTime={`Next ${item?.shipping_days} Days` || "Next 10 Days"} />}
       </TouchableOpacity>
     );
   };

@@ -35,7 +35,6 @@ const BannerSlider: React.FC = () => {
         setBannerImages([]);
       }
     } catch (error) {
-      console.log('BannerApi Error:', error);
       setBannerImages([]);
     }
   };

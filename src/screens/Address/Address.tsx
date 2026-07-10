@@ -1,22 +1,22 @@
+
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from 'react';
 import {
   View,
   TouchableOpacity,
-  SafeAreaView,
   StyleSheet,
   ScrollView,
   Text,
   Platform,
   PermissionsAndroid,
-  Modal,            
+  Modal,
   KeyboardAvoidingView,
+  Dimensions,
 } from 'react-native';
 import CustomInput from '../../components/CustomInput';
 import COLORS from '../../utils/Colors';
 import Geolocation from '@react-native-community/geolocation';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import CountryPicker, { Country } from 'react-native-country-picker-modal';
 import VectorIcon from '../../components/VectorIcon';
 import { RootStackParamList } from '../../types';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
@@ -25,6 +25,8 @@ import { useTranslation } from 'react-i18next';
 import { Base_Url } from '../../utils/ApiUrl';
 import axios from 'axios';
 import { useRoute } from '@react-navigation/native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { Dropdown } from 'react-native-element-dropdown';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Address'>;
 
@@ -33,29 +35,35 @@ const Address: React.FC<Props> = ({ navigation }) => {
   const [phone, setPhone] = useState('');
   const [billing, setBilling] = useState('Others');
   const [showBillingModal, setShowBillingModal] = useState(false);
-  const [country, setCountry] = useState<Country | null>(null);
-  const [showCountryPicker, setShowCountryPicker] = useState(false);
   const [city, setCity] = useState('');
   const [postcode, setPostcode] = useState('');
   const [address, setAddress] = useState('');
   const [latitude, setLatitude] = useState('');
   const [longitude, setLongitude] = useState('');
+  
+  const [countries, setCountries] = useState<any[]>([]);
+  const [states, setStates] = useState<any[]>([]);
+  const [cities, setCities] = useState<any[]>([]);
+  const [zipcodes, setZipcodes] = useState<any[]>([]);
 
+  const [selectedCountry, setSelectedCountry] = useState<any>(null);
+  const [selectedState, setSelectedState] = useState<any>(null);
+  const [selectedCity, setSelectedCity] = useState<any>(null);
+  const [selectedZip, setSelectedZip] = useState<any>(null);
+  
   const route = useRoute();
   const editAddress = (route.params as any)?.address || null;
-
+  
   const { t } = useTranslation();
+
+  // Get screen height for dropdown
+  const screenHeight = Dimensions.get('window').height;
+
   useEffect(() => {
     if (editAddress) {
       setName(editAddress.contact_person_name || '');
       setPhone(editAddress.phone || '');
       setBilling(editAddress.address_type || 'Others');
-
-      setCountry({
-        cca2: editAddress.country || '',
-        name: editAddress.country || '',
-      } as Country);
-
       setCity(editAddress.city || '');
       setPostcode(editAddress.zip || '');
       setAddress(editAddress.address || '');
@@ -63,7 +71,6 @@ const Address: React.FC<Props> = ({ navigation }) => {
       setLongitude(editAddress.longitude || '');
     }
   }, [editAddress]);
-
 
   useEffect(() => {
     if (editAddress) { return; }
@@ -95,9 +102,8 @@ const Address: React.FC<Props> = ({ navigation }) => {
     getLocation();
   }, [editAddress]);
 
-
   const handleSave = async () => {
-    if (!name || !phone || !billing || !country || !city || !postcode || !address) {
+    if (!name || !phone || !billing || !selectedCountry || !selectedCity || !selectedZip || !address) {
       Toast.show({
         type: 'error',
         text1: t('error'),
@@ -113,9 +119,10 @@ const Address: React.FC<Props> = ({ navigation }) => {
       contact_person_name: name,
       phone,
       address_type: billing,
-      country: country.name,
-      city,
-      zip: postcode,
+      country: selectedCountry?.name,
+      state: selectedState?.name,
+      city: selectedCity?.name,
+      zip: selectedZip?.zipcode,
       address,
       is_billing: 1,
       latitude,
@@ -137,13 +144,118 @@ const Address: React.FC<Props> = ({ navigation }) => {
         });
       }
     } catch (err) {
-      console.log(err);
       Toast.show({
         type: 'error',
         text1: t('error'),
         text2: t('failedToSaveAddress'),
       });
     }
+  };
+
+  useEffect(() => {
+    fetchCountries();
+  }, []);
+
+  // Fetch Countries
+  const fetchCountries = async () => {
+    try {
+      const response = await axios.get(Base_Url.countryApi);
+      if (response.data?.success === true || response.data?.status === 200) {
+        let countryData = [];
+        if (Array.isArray(response.data.data)) {
+          countryData = response.data.data;
+        } else if (response.data.data && typeof response.data.data === 'object') {
+          countryData = [response.data.data];
+        } else {
+          countryData = [];
+        }
+        setCountries(countryData);
+      }
+    } catch (error) {
+      Toast.show({
+        type: 'error',
+        text1: t('error'),
+        text2: 'Failed to fetch countries',
+      });
+    }
+  };
+
+  // Fetch States - Fixed to handle both 'success' and 'status' responses
+  const fetchStates = async (countryId: string) => {
+    try {
+      const response = await axios.get(
+        `${Base_Url.stateapi}/${countryId}`
+      );
+      
+      if (response.data?.success === true || response.data?.status === 200) {
+        const stateData = Array.isArray(response.data.data) ? response.data.data : [];
+        setStates(stateData);
+      } else {
+        setStates([]);
+      }
+    } catch (error) {
+      setStates([]);
+      Toast.show({
+        type: 'error',
+        text1: t('error'),
+        text2: 'Failed to fetch states',
+      });
+    }
+  };
+
+  // Fetch Cities - Fixed to handle both 'success' and 'status' responses
+  const fetchCities = async (stateId: string) => {
+    try {
+      const response = await axios.get(
+        `${Base_Url.cityapi}/${stateId}`
+      );
+      
+      if (response.data?.success === true || response.data?.status === 200) {
+        const cityData = Array.isArray(response.data.data) ? response.data.data : [];
+        setCities(cityData);
+      } else {
+        setCities([]);
+      }
+    } catch (error) {
+      setCities([]);
+      Toast.show({
+        type: 'error',
+        text1: t('error'),
+        text2: 'Failed to fetch cities',
+      });
+    }
+  };
+
+  // Fetch Zipcodes - Fixed to handle both 'success' and 'status' responses
+  const fetchZipcodes = async (cityId: string) => {
+    try {
+      const response = await axios.get(
+        `${Base_Url.zipcodeapi}/${cityId}`
+      );
+      
+      if (response.data?.success === true || response.data?.status === 200) {
+        const zipData = Array.isArray(response.data.data) ? response.data.data : [];
+        setZipcodes(zipData);
+      } else {
+        setZipcodes([]);
+      }
+    } catch (error) {
+      setZipcodes([]);
+      Toast.show({
+        type: 'error',
+        text1: t('error'),
+        text2: 'Failed to fetch zip codes',
+      });
+    }
+  };
+
+  // Custom render item for dropdown
+  const renderItem = (item: any) => {
+    return (
+      <View style={styles.itemContainer}>
+        <Text style={styles.itemText}>{item.name || item.zipcode}</Text>
+      </View>
+    );
   };
 
   return (
@@ -153,7 +265,11 @@ const Address: React.FC<Props> = ({ navigation }) => {
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
         keyboardVerticalOffset={Platform.OS === 'ios' ? 0 : 20}>
 
-        <ScrollView contentContainerStyle={styles.scroll}>
+        <ScrollView 
+          contentContainerStyle={styles.scroll}
+          keyboardShouldPersistTaps="handled"
+          showsVerticalScrollIndicator={true}>
+          
           <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
             <VectorIcon type="AntDesign" name="left" size={24} color={COLORS.textColor} />
           </TouchableOpacity>
@@ -171,20 +287,134 @@ const Address: React.FC<Props> = ({ navigation }) => {
             <Text>{billing}</Text>
           </TouchableOpacity>
 
-          <Text style={styles.label}>{t('country')} *</Text>
-          <TouchableOpacity style={styles.input} onPress={() => setShowCountryPicker(true)}>
-            <Text>
-              {typeof country?.name === 'string'
-                ? country.name
-                : 'Select Country'}
-            </Text>
-          </TouchableOpacity>
+          {/* Country Dropdown */}
+          <Text style={styles.label}>Country *</Text>
+          <View style={styles.dropdownContainer}>
+            <Dropdown
+              style={styles.dropdown}
+              placeholderStyle={styles.placeholderStyle}
+              selectedTextStyle={styles.selectedTextStyle}
+              itemTextStyle={styles.itemTextStyle}
+              data={countries}
+              labelField="name"
+              valueField="id"
+              placeholder={countries.length > 0 ? "Select Country" : "Loading countries..."}
+              value={selectedCountry?.id}
+              onChange={(item) => {
+                setSelectedCountry(item);
+                setSelectedState(null);
+                setSelectedCity(null);
+                setSelectedZip(null);
+                setStates([]);
+                setCities([]);
+                setZipcodes([]);
+                fetchStates(item.id);
+              }}
+              maxHeight={screenHeight * 0.5}
+              minHeight={200}
+              containerStyle={styles.dropdownListContainer}
+              itemContainerStyle={styles.dropdownItemContainer}
+              activeColor="#f0f0f0"
+              showsVerticalScrollIndicator={true}
+              renderItem={renderItem}
+              search={false}
+            />
+          </View>
 
-          <Text style={styles.label}>{t('city')} *</Text>
-          <CustomInput value={city} onChangeText={setCity} placeholder={t('enterCity')} style={styles.input} />
+          {/* State Dropdown - Removed disable prop to ensure it's always interactive */}
+          <Text style={styles.label}>State *</Text>
+          <View style={styles.dropdownContainer}>
+            <Dropdown
+              style={styles.dropdown}
+              placeholderStyle={styles.placeholderStyle}
+              selectedTextStyle={styles.selectedTextStyle}
+              itemTextStyle={styles.itemTextStyle}
+              data={states}
+              labelField="name"
+              valueField="id"
+              placeholder={states.length > 0 ? "Select State" : "No states available"}
+              value={selectedState?.id}
+              onChange={(item) => {
+                setSelectedState(item);
+                setSelectedCity(null);
+                setSelectedZip(null);
+                setCities([]);
+                setZipcodes([]);
+                fetchCities(item.id);
+              }}
+              maxHeight={screenHeight * 0.5}
+              minHeight={200}
+              containerStyle={styles.dropdownListContainer}
+              itemContainerStyle={styles.dropdownItemContainer}
+              activeColor="#f0f0f0"
+              showsVerticalScrollIndicator={true}
+              renderItem={renderItem}
+              search={false}
+            />
+          </View>
 
-          <Text style={styles.label}>{t('zipCode')} *</Text>
-          <CustomInput value={postcode} onChangeText={setPostcode} placeholder={t('enterZipCode')} keyboardType="numeric" style={styles.input} />
+          {/* City Dropdown */}
+          <Text style={styles.label}>City *</Text>
+          <View style={styles.dropdownContainer}>
+            <Dropdown
+              style={styles.dropdown}
+              placeholderStyle={styles.placeholderStyle}
+              selectedTextStyle={styles.selectedTextStyle}
+              itemTextStyle={styles.itemTextStyle}
+              data={cities}
+              labelField="name"
+              valueField="id"
+              placeholder={cities.length > 0 ? "Select City" : "No cities available"}
+              value={selectedCity?.id}
+              onChange={(item) => {
+                setSelectedCity(item);
+                setCity(item.name);
+                setSelectedZip(null);
+                setZipcodes([]);
+                fetchZipcodes(item.id);
+              }}
+              maxHeight={screenHeight * 0.5}
+              minHeight={200}
+              containerStyle={styles.dropdownListContainer}
+              itemContainerStyle={styles.dropdownItemContainer}
+              activeColor="#f0f0f0"
+              showsVerticalScrollIndicator={true}
+              renderItem={renderItem}
+              search={false}
+            />
+          </View>
+
+          {/* Zip Code Dropdown */}
+          <Text style={styles.label}>Zip Code *</Text>
+          <View style={styles.dropdownContainer}>
+            <Dropdown
+              style={styles.dropdown}
+              placeholderStyle={styles.placeholderStyle}
+              selectedTextStyle={styles.selectedTextStyle}
+              itemTextStyle={styles.itemTextStyle}
+              data={zipcodes}
+              labelField="zipcode"
+              valueField="id"
+              placeholder={zipcodes.length > 0 ? "Select Zip Code" : "No zip codes available"}
+              value={selectedZip?.id}
+              onChange={(item) => {
+                setSelectedZip(item);
+                setPostcode(item.zipcode);
+              }}
+              maxHeight={screenHeight * 0.5}
+              minHeight={200}
+              containerStyle={styles.dropdownListContainer}
+              itemContainerStyle={styles.dropdownItemContainer}
+              activeColor="#f0f0f0"
+              showsVerticalScrollIndicator={true}
+              renderItem={(item) => (
+                <View style={styles.itemContainer}>
+                  <Text style={styles.itemText}>{item.zipcode}</Text>
+                </View>
+              )}
+              search={false}
+            />
+          </View>
 
           <Text style={styles.label}>{t('address')} *</Text>
           <CustomInput value={address} onChangeText={setAddress} placeholder={t('enterAddress')} style={styles.input} />
@@ -193,7 +423,7 @@ const Address: React.FC<Props> = ({ navigation }) => {
             <Text style={styles.saveBtnText}>{t('saveChanges')}</Text>
           </TouchableOpacity>
 
-
+          {/* Billing Type Modal */}
           <Modal visible={showBillingModal} transparent animationType="slide">
             <TouchableOpacity style={styles.modalOverlay} onPress={() => setShowBillingModal(false)}>
               <View style={styles.modalContent}>
@@ -205,28 +435,9 @@ const Address: React.FC<Props> = ({ navigation }) => {
               </View>
             </TouchableOpacity>
           </Modal>
-          {showCountryPicker && (
-            <CountryPicker
-              withFilter
-              withFlag
-              withCountryNameButton={false}
-              withAlphaFilter
-              withCallingCode
-              withEmoji
-              visible={showCountryPicker}
-              onClose={() => setShowCountryPicker(false)}
-              onSelect={selectedCountry => {
-                setCountry(selectedCountry);
-                setShowCountryPicker(false);
-              }}
-
-              theme={{
-                fontSize: 16,
-              }} countryCode={'AF'} />
-          )}
+          
         </ScrollView>
       </KeyboardAvoidingView>
-
     </SafeAreaView>
   );
 };
@@ -240,7 +451,7 @@ const styles = StyleSheet.create({
   },
   scroll: {
     padding: 16,
-    paddingBottom: 50,
+    paddingBottom: 100,
   },
   heading: {
     fontSize: 18,
@@ -261,6 +472,69 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     fontSize: 14,
     backgroundColor: COLORS.white,
+  },
+  dropdownContainer: {
+    borderWidth: 1,
+    borderColor: '#ddd',
+    borderRadius: 6,
+    backgroundColor: COLORS.white,
+    marginTop: 4,
+    zIndex: 1000,
+    minHeight: 45,
+  },
+  dropdown: {
+    height: 45,
+    paddingHorizontal: 12,
+  },
+  placeholderStyle: {
+    fontSize: 14,
+    color: '#999',
+  },
+  selectedTextStyle: {
+    fontSize: 14,
+    color: '#000',
+  },
+  itemTextStyle: {
+    fontSize: 14,
+    color: '#000',
+  },
+  dropdownListContainer: {
+    backgroundColor: '#ffffff',
+    borderRadius: 8,
+    marginTop: 4,
+    borderWidth: 1,
+    borderColor: '#ddd',
+    elevation: 5,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.3,
+    shadowRadius: 4,
+    zIndex: 9999,
+    paddingVertical: 5,
+    maxHeight: 300,
+  },
+  dropdownItemContainer: {
+    paddingVertical: 12,
+    paddingHorizontal: 16,
+    borderBottomWidth: 1,
+    borderBottomColor: '#f0f0f0',
+  },
+  itemContainer: {
+    paddingVertical: 12,
+    paddingHorizontal: 16,
+  },
+  itemText: {
+    fontSize: 14,
+    color: '#000',
+  },
+  searchInputStyle: {
+    fontSize: 14,
+    color: '#000',
+    borderWidth: 1,
+    borderColor: '#ddd',
+    borderRadius: 4,
+    paddingHorizontal: 10,
+    height: 40,
   },
   saveBtn: {
     backgroundColor: COLORS.btnbg,

@@ -73,7 +73,11 @@ const EditProfile: React.FC<Props> = ({ navigation, route }) => {
   }
 
   if (response.errorCode) {
-    console.log(response.errorMessage);
+    Toast.show({
+      type: 'error',
+      text1: t('error'),
+      text2: response.errorMessage,
+    });
     return;
   }
 
@@ -160,7 +164,6 @@ const EditProfile: React.FC<Props> = ({ navigation, route }) => {
 
     navigation.goBack();
   } catch (error: any) {
-    console.log('UPDATE ERROR =>', error?.response?.data);
 
     Toast.show({
       type: 'error',

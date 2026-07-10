@@ -23,6 +23,7 @@ import { t } from 'i18next';
 import { useFocusEffect } from '@react-navigation/native';
 import Loader from '../../components/Loader';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import Toast from 'react-native-toast-message';
 
 type props = NativeStackScreenProps<RootStackParamList, 'Profileinfo'>;
 
@@ -53,7 +54,12 @@ const ProfileInformation: React.FC<props> = ({ navigation }) => {
                 setuserinfo(res?.data?.customer);
             }
         } catch (error: any) {
-            console.log(error.message);
+            Toast.show({
+                type: 'error',
+                text1: t('error'),
+                text2: error?.response?.data?.message || error.message,
+            });
+            
         } finally {
             setLoading(false);
         }

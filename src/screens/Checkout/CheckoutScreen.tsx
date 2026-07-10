@@ -133,8 +133,12 @@ const CheckoutScreen: React.FC = () => {
         email: userinfo.email,
         mobile: userinfo.phone,
       });
-    } catch (error) {
-      console.log('Error fetching customer data:', error);
+    } catch (error:any) {
+      Toast.show({
+        type: 'error',
+        text1: t('error'),
+        text2: error?.response?.data?.message || error.message,
+      });
     }
   };
 
@@ -227,8 +231,12 @@ const CheckoutScreen: React.FC = () => {
     try {
       const premimum = await isUserPremium();
       setIsPremium(premimum);
-    } catch (error) {
-      console.error('Error checking premium status:', error);
+    } catch (error:any) {
+      Toast.show({
+        type: 'error',
+        text1: t('error'),
+        text2: error?.response?.data?.message || error.message,
+      });
       setIsPremium(false);
     }
   };

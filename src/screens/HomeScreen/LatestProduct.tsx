@@ -20,11 +20,14 @@ import { useTranslation } from 'react-i18next';
 import { isUserPremium, primeicon } from '../../utils/premimumuser';
 
 import Subscriptionstyle from '../../components/Subscriptionstyle';
+import Toast from 'react-native-toast-message';
 
 const { width } = Dimensions.get('window');
 const CARD_WIDTH = width * 0.52;
 
 interface Product {
+  shipping_days
+: string | undefined;
   discount: any;
   thumbnail: any;
   id: number;
@@ -82,7 +85,7 @@ const LatestProduct: React.FC<LatestProductProps> = ({ searchQuery = '' }) => {
           guest_id: 1,
         },
       });
-
+// console.log(res.data)
 
       if (res?.data?.data?.products) {
         const availableProducts = res.data.data.products.filter(
@@ -92,8 +95,12 @@ const LatestProduct: React.FC<LatestProductProps> = ({ searchQuery = '' }) => {
         setAllProducts(availableProducts);
         filterProducts(availableProducts, searchQuery);
       }
-    } catch (error) {
-      console.log('Error fetching products:', error);
+    } catch (error:any) {
+      Toast.show({
+        type: 'error',
+        text1: t('error'),
+        text2: error?.response?.data?.message || error.message,
+      });
     }
   };
   const filterProducts = (products: Product[], query: string) => {
@@ -227,7 +234,7 @@ const LatestProduct: React.FC<LatestProductProps> = ({ searchQuery = '' }) => {
           </View>
 
           {showPrimeUserSection && (
-            <Subscriptionstyle />
+            <Subscriptionstyle expectedDeliveryTime={`Next ${item?.shipping_days} Days` || "Next 10 Days"} />
           )}
         </View>
       </TouchableOpacity>

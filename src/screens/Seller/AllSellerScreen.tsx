@@ -17,6 +17,7 @@ import { useNavigation, NavigationProp } from '@react-navigation/native';
 import Loader from '../../components/Loader';
 import { base_url, Base_Url } from '../../utils/ApiUrl';
 import { t } from 'i18next';
+import Toast from 'react-native-toast-message';
 
 const { width } = Dimensions.get('window');
 const CARD_WIDTH = (width - 36) / 2;
@@ -47,8 +48,12 @@ const AllSellerScreen: React.FC = () => {
       const res = await axios.get(Base_Url.allseller);
       if (res.data) {setSellers(res.data);}
 
-    } catch (error) {
-      console.log('Error fetching sellers:', error);
+    } catch (error:any) {
+      Toast.show({
+        type: 'error',
+        text1: t('error'),
+        text2: error?.response?.data?.message || error.message,
+      });
     } finally {
       setLoading(false);
     }

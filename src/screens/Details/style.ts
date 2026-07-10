@@ -22,11 +22,14 @@ const styles = StyleSheet.create({
   headerTitle: {
     textAlign:'center',
     fontSize: 20,
+    // borderWidth:1,
     fontWeight: 'bold',
     color: COLORS.appColor,
   },
-   placeholder: {
-    width: 40,
+  placeholder: { width: 40 },
+  flatListContent: {
+    paddingHorizontal: 16,
+    paddingBottom: 16,
   },
   price: {
     color: 'green',

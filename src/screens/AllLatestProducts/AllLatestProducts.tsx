@@ -22,11 +22,14 @@ import { isUserPremium, primeicon } from '../../utils/premimumuser';
 import Subscriptionstyle from '../../components/Subscriptionstyle';
 import Loader from '../../components/Loader';
 import SafeImage from '../../components/SafeImage';
+import Toast from 'react-native-toast-message';
 
 const { width } = Dimensions.get('window');
 const CARD_WIDTH = (width - 40) / 2;
 
 interface Product {
+  shipping_days
+: string;
   discount: any;
   thumbnail: any;
   id: number;
@@ -88,8 +91,12 @@ const AllLatestProducts: React.FC = () => {
 
         setAllProducts(availableProducts);
       }
-    } catch (error) {
-      console.log('Error fetching products:', error);
+    } catch (error:any) {
+      Toast.show({
+        type: 'error',
+        text1: t('error'),
+        text2: error?.response?.data?.message || error.message,
+      });
     }
     setLoading(false);
   };
@@ -229,7 +236,7 @@ const AllLatestProducts: React.FC = () => {
             )}
           </View>
           {showPrimeUserSection && (
-            <Subscriptionstyle />
+            <Subscriptionstyle expectedDeliveryTime={`Next ${item?.shipping_days} Days` || "Next 10 Days"} />
           )}
         </View>
       </TouchableOpacity>

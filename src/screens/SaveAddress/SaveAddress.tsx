@@ -2,10 +2,8 @@
 import React, { useEffect, useState } from 'react';
 import {
   View,
-  SafeAreaView,
   FlatList,
   TouchableOpacity,
-
 
 } from 'react-native';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
@@ -22,6 +20,7 @@ import { Base_Url } from '../../utils/ApiUrl';
 import VectorIcon from '../../components/VectorIcon';
 
 import Loader from '../../components/Loader';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 type AddressType = {
   id: number | string;

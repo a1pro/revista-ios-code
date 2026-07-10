@@ -25,6 +25,7 @@ import { RootStackParamList } from '../../types';
 import { CustomText } from '../../components/CustomText';
 import { horizontalScale, verticalScale } from '../../utils/Metrics';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import Toast from 'react-native-toast-message';
 
 interface Product {
   id: number;
@@ -130,7 +131,11 @@ const Seller = () => {
         setusercount(res?.data?.count);
       }
     } catch (error: any) {
-      console.log(error.message);
+      Toast.show({
+        type: 'error',
+        text1: t('error'),
+        text2: error?.response?.data?.message || error.message,
+      });
     }
   };
 
@@ -148,7 +153,11 @@ const Seller = () => {
         setRatingdata(res?.data);
       }
     } catch (error: any) {
-      console.log(error.message);
+      Toast.show({
+        type: 'error',
+        text1: t('error'),
+        text2: error?.response?.data?.message || error.message,
+      });
     }
   };
 

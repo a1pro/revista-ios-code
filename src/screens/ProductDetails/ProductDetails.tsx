@@ -546,8 +546,12 @@ const ProductDetails: React.FC<Props> = ({ route, navigation }) => {
       const wishlist = res?.data;
       const exists = wishlist.some((item: any) => item?.product_full_info?.id === product.id);
       setIsFavoriteLocal(exists);
-    } catch (error) {
-      console.log('wishlist check error', error);
+    } catch (error:any) {
+      Toast.show({
+        type: 'error',
+        text1: t('error'),
+        text2: error?.response?.data?.message || error.message,
+      });
     }
   };
   
@@ -812,7 +816,7 @@ const ProductDetails: React.FC<Props> = ({ route, navigation }) => {
               </Text>
             )}
             {showPrimeUserSection && (
-              <Subscriptionstyle />
+             <Subscriptionstyle expectedDeliveryTime={`Next ${product?.shipping_days} Days`|| "Next 10 Days"} />
             )}
           </View>
 

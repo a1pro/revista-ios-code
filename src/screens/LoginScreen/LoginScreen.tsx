@@ -50,7 +50,6 @@ const LoginScreen: React.FC<Props> = ({ navigation }) => {
       } else {
       }
     } catch (error: any) {
-console.log(error)
       let errorMsg =
         error?.response?.data?.errors?.[0]?.message || error?.response?.data?.message || t('wrong');
 

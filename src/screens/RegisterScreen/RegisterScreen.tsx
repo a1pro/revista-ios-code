@@ -62,7 +62,6 @@ const RegisterScreen: React.FC<Props> = ({ navigation }) => {
 
       }
     } catch (error: any) {
-      console.log('Login error:', error);
       Toast.show({
         type: 'error',
         text1: t('error'),
