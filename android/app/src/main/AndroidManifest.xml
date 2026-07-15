@@ -21,11 +21,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:allowBackup="false"
         android:theme="@style/AppTheme"
-         android:usesCleartextTraffic="true"
+        android:usesCleartextTraffic="true"
+        android:requestLegacyExternalStorage="true"
         android:supportsRtl="true"
         tools:replace="android:allowBackup,android:theme,android:supportsRtl">
 
-        <!-- FileProvider for PDF sharing - FIXED -->
+        <!-- FileProvider for file sharing -->
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="com.revistanewrepo.fileprovider"
@@ -51,16 +52,16 @@
             </intent-filter>
         </activity>
 
-        
     </application>
-        <queries>
-            <intent>
-                <action android:name="android.intent.action.SEND" />
-                <data android:mimeType="application/pdf" />
-            </intent>
-            <intent>
-                <action android:name="android.intent.action.VIEW" />
-                <data android:mimeType="application/pdf" />
-            </intent>
-        </queries>
+    
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.SEND" />
+            <data android:mimeType="application/pdf" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:mimeType="application/pdf" />
+        </intent>
+    </queries>
 </manifest>
