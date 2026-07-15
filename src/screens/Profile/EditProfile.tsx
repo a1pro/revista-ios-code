@@ -8,9 +8,9 @@ import {
   SafeAreaView,
   Pressable,
   Modal,
-  Alert,
   ScrollView,
   Text,
+  Platform,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
@@ -32,6 +32,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { base_url, Base_Url } from '../../utils/ApiUrl';
 import Toast from 'react-native-toast-message';
 import { useTranslation } from 'react-i18next';
+import RNFS from 'react-native-fs';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'EditProfile'>;
 
@@ -64,33 +65,45 @@ const EditProfile: React.FC<Props> = ({ navigation, route }) => {
     setModalVisible(false);
     const options = {
       mediaType: 'photo' as const,
-      quality: 0.7,
+      quality: 0.3, // Reduced quality for smaller file
+      maxWidth: 400, // Reduced size
+      maxHeight: 400,
     };
 
     const callback = (response: ImagePickerResponse) => {
-  if (response.didCancel) {
-    return;
-  }
+      if (response.didCancel) {
+        return;
+      }
 
-  if (response.errorCode) {
-    Toast.show({
-      type: 'error',
-      text1: t('error'),
-      text2: response.errorMessage,
-    });
-    return;
-  }
+      if (response.errorCode) {
+        Toast.show({
+          type: 'error',
+          text1: 'Error',
+          text2: response.errorMessage || 'Failed to select image',
+        });
+        return;
+      }
 
-  if (response.assets?.length) {
-    const asset = response.assets[0];
+      if (response.assets?.length) {
+        const asset = response.assets[0];
+        
+        if (!asset.uri) {
+          Toast.show({
+            type: 'error',
+            text1: 'Error',
+            text2: 'Invalid image selected',
+          });
+          return;
+        }
 
-    setImageAsset(asset);
+        
 
-    setProfileImage({
-      uri: asset.uri,
-    });
-  }
-};
+        setImageAsset(asset);
+        setProfileImage({
+          uri: asset.uri,
+        });
+      }
+    };
 
     if (type === 'camera') {
       launchCamera(options, callback);
@@ -100,83 +113,143 @@ const EditProfile: React.FC<Props> = ({ navigation, route }) => {
   };
 
   const handleSave = async () => {
-  try {
-    setLoading(true);
+    try {
+      setLoading(true);
 
-    const token = await AsyncStorage.getItem('token');
+      const token = await AsyncStorage.getItem('token');
 
-    if (!token) {
+      if (!token) {
+        Toast.show({
+          type: 'error',
+          text1: 'Error',
+          text2: 'Token not found',
+        });
+        setLoading(false);
+        return;
+      }
+
+      // Create FormData for file upload
+      const formData = new FormData();
+
+      // Only append if user entered value
+      if (name?.trim()) {
+        formData.append('f_name', name.trim());
+      }
+
+      if (lastName?.trim()) {
+        formData.append('l_name', lastName.trim());
+      }
+
+      if (phoneNumber?.trim()) {
+        formData.append('phone', phoneNumber.trim());
+      }
+
+     
+
+      // Upload image only if selected
+      if (imageAsset?.uri) {
+        try {
+          
+          let filePath = imageAsset.uri;
+          
+          // For Android, remove file:// prefix
+          if (Platform.OS === 'android' && filePath.startsWith('file://')) {
+            filePath = filePath.replace('file://', '');
+          }
+          
+          const fileExtension = imageAsset.fileName?.split('.').pop() || 'jpg';
+          const fileName = imageAsset.fileName || `profile_${Date.now()}.${fileExtension}`;
+          const mimeType = imageAsset.type || `image/${fileExtension}`;
+          
+          // For Android, we need to create a proper file object
+          if (Platform.OS === 'android') {
+            // Read the file to verify it exists
+            await RNFS.readFile(filePath, 'base64');
+            
+            // Append the file with proper URI
+            formData.append('image', {
+              uri: `file://${filePath}`,
+              type: mimeType,
+              name: fileName,
+            } as any);
+          } else {
+            // iOS
+            formData.append('image', {
+              uri: filePath,
+              type: mimeType,
+              name: fileName,
+            } as any);
+          }
+          
+          
+        } catch (imageError) {
+          console.error('❌ Error processing image:', imageError);
+          Toast.show({
+            type: 'error',
+            text1: 'Error',
+            text2: 'Failed to process image. Please try again.',
+          });
+          setLoading(false);
+          return;
+        }
+      }
+
+
+      const response = await axios.post(
+        Base_Url.updateProfile,
+        formData,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+            'Accept': 'application/json',
+            'Content-Type': 'multipart/form-data',
+          },
+          timeout: 60000,
+          maxContentLength: Infinity,
+          maxBodyLength: Infinity,
+        },
+      );
+
+
+      Toast.show({
+        type: 'success',
+        text1: 'Success',
+        text2: response.data.message || 'Profile Updated',
+      });
+
+      navigation.goBack();
+      
+    } catch (error: any) {
+      // console.log(' UPDATE ERROR:', error);
+      
+      
+
+      let errorMessage = 'Profile update failed';
+      
+      if (error?.response?.data?.message) {
+        errorMessage = error.response.data.message;
+      } else if (error?.response?.data?.errors) {
+        const errors = error.response.data.errors;
+        if (typeof errors === 'object') {
+          errorMessage = Object.values(errors).flat().join(', ');
+        } else {
+          errorMessage = String(errors);
+        }
+      } else if (error?.message === 'Network Error') {
+        errorMessage = 'Network error. Please check your internet connection and try again.';
+      } else if (error?.message) {
+        errorMessage = error.message;
+      }
+
       Toast.show({
         type: 'error',
         text1: 'Error',
-        text2: 'Token not found',
+        text2: errorMessage,
       });
-      return;
+    } finally {
+      setLoading(false);
     }
-
-    const formData = new FormData();
-
-    // Only append if user entered value
-    if (name?.trim()) {
-      formData.append('f_name', name.trim());
-    }
-
-    if (lastName?.trim()) {
-      formData.append('l_name', lastName.trim());
-    }
-
-    if (phoneNumber?.trim()) {
-      formData.append('phone', phoneNumber.trim());
-    }
-
-    if (password?.trim()) {
-      formData.append('password', password.trim());
-    }
-
-    // Upload image only if selected
-    if (imageAsset?.uri) {
-      formData.append('image', {
-        uri: imageAsset.uri,
-        type: imageAsset.type || 'image/jpeg',
-        name: imageAsset.fileName || `profile_${Date.now()}.jpg`,
-      } as any);
-    }
-
-
-    const response = await axios.post(
-      Base_Url.updateProfile,
-      formData,
-      {
-        headers: {
-          Authorization: `Bearer ${token}`,
-          Accept: 'application/json',
-          'Content-Type': 'multipart/form-data',
-        },
-      },
-    );
-
-
-    Toast.show({
-      type: 'success',
-      text1: 'Success',
-      text2: response.data.message || 'Profile Updated',
-    });
-
-    navigation.goBack();
-  } catch (error: any) {
-
-    Toast.show({
-      type: 'error',
-      text1: 'Error',
-      text2:
-        error?.response?.data?.message ||
-        JSON.stringify(error?.response?.data?.errors) ||
-        'Profile update failed',
-    });
-  } finally {
-    setLoading(false);
-  }
-};
+  };
 
   return (
     <SafeAreaView style={styles.container}>
@@ -194,7 +267,6 @@ const EditProfile: React.FC<Props> = ({ navigation, route }) => {
             />
           </TouchableOpacity>
 
-
           <CustomText
             type="heading"
             color={COLORS.textColor}
@@ -202,7 +274,6 @@ const EditProfile: React.FC<Props> = ({ navigation, route }) => {
             style={styles.headerText}>
             {t('myprofile')}
           </CustomText>
-
 
           <View style={styles.profileSection}>
             <Image source={profileImage} style={styles.profileImage} />
@@ -212,7 +283,6 @@ const EditProfile: React.FC<Props> = ({ navigation, route }) => {
               <Icon name="edit" size={18} color="#fff" />
             </TouchableOpacity>
           </View>
-
 
           <CustomText
             style={styles.label}
@@ -252,32 +322,18 @@ const EditProfile: React.FC<Props> = ({ navigation, route }) => {
             style={styles.input}
           />
 
-          <CustomText
-            style={styles.label}
-            fontWeight="bold"
-            color={COLORS.textColor}>
-            {t('password')}
-          </CustomText>
-          <CustomInput
-            value={password}
-            placeholder="Password"
-            type="password"
-            onChangeText={setPassword}
-            style={styles.input}
-          />
-
+         
 
           <TouchableOpacity
             style={styles.saveButton}
             onPress={handleSave}
             disabled={loading}
           >
-            <Text
-
-              style={styles.saveButtonText}>
+            <Text style={styles.saveButtonText}>
               {loading ? t('saving') : t('saveChanges')}
             </Text>
           </TouchableOpacity>
+          
           <Modal
             visible={modalVisible}
             transparent
@@ -302,7 +358,6 @@ const EditProfile: React.FC<Props> = ({ navigation, route }) => {
                   </CustomText>
                 </TouchableOpacity>
                 <TouchableOpacity
-                  // eslint-disable-next-line react-native/no-inline-styles
                   style={[styles.modalOption, { borderBottomWidth: 0 }]}
                   onPress={() => setModalVisible(false)}>
                   <CustomText color="red" fontWeight="bold">
@@ -385,7 +440,7 @@ const styles = StyleSheet.create({
   },
   modalOverlay: {
     flex: 1,
-    backgroundColor: COLORS.black,
+    backgroundColor: 'rgba(0,0,0,0.5)',
     justifyContent: 'flex-end',
   },
   modalContent: {
@@ -404,4 +459,3 @@ const styles = StyleSheet.create({
 });
 
 export default EditProfile;
-
