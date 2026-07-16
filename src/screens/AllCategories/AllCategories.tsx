@@ -143,7 +143,7 @@ const AllCategories: React.FC<Props> = ({ navigation }) => {
   const fetchCategories = useCallback(async () => {
     try {
       const res = await axios.get(Base_Url.allcategory);
-      
+      console.log(res)
       if (res.data && Array.isArray(res.data)) {
         const premiumCategories = res.data.filter((cat: any) => cat.is_membership === 1);
         const freeCategories = res.data.filter((cat: any) => cat.is_membership === 0);

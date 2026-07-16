@@ -94,7 +94,7 @@ type Props = NativeStackScreenProps<RootStackParamList, 'SubCategories'>;
 const SubCategories: React.FC<Props> = ({route, navigation}) => {
   const { category } = route.params;
   const { t } = useTranslation();
-
+console.log(category)
   const [loadedImages, setLoadedImages] = useState<{[key: string]: boolean}>({});
 
   const renderSubCategory = ({item}: {item:any}) => {

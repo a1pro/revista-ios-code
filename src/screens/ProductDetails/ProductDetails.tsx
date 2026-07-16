@@ -92,12 +92,11 @@ const ProductDetails: React.FC<Props> = ({ route, navigation }) => {
   
   const getAllImages = () => {
     let arr: string[] = [];
-
     if (selectedColor && product?.color_image?.length > 0) {
-      const colorMatch = product.color_image.find((ci: { color: string; }) =>
-        ci.color.replace('#', '').toUpperCase() ===
-        selectedColor.replace('#', '').toUpperCase()
-      );
+      const colorMatch = product?.color_image.find((ci: { color: string; }) =>(
+        ci?.color.replace('#', '').toUpperCase() ===
+      selectedColor.replace('#', '').toUpperCase()
+      ));
 
       if (colorMatch?.image_name) {
         arr.push(`${base_url}/${colorMatch.image_name}`);
