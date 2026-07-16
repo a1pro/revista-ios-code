@@ -59,6 +59,7 @@ const styles = StyleSheet.create({
     margin: CARD_MARGIN / 2,
     width: CARD_WIDTH,
     padding: horizontalScale(10),
+    paddingHorizontal:horizontalScale(20),
     alignItems: 'center',
     shadowColor: COLORS.black,
     shadowOpacity: 0.07,
@@ -99,6 +100,83 @@ const styles = StyleSheet.create({
     color: COLORS.black,
     marginBottom: verticalScale(4),
   },
+  subCategoryContainer: {
+  backgroundColor: COLORS.white,
+  paddingVertical: 10,
+  borderBottomWidth: 1,
+  borderBottomColor: '#f0f0f0',
+},
+
+subCategoryScrollContent: {
+  paddingHorizontal: 16,
+  alignItems: 'center',
+},
+
+subCategoryItem: {
+  alignItems: 'center',
+  marginRight: 16,
+  paddingVertical: 4,
+  paddingHorizontal: 8,
+  borderRadius: 8,
+  minWidth: 70,
+},
+
+subCategoryItemSelected: {
+  backgroundColor: COLORS.appColor + '20', // 20% opacity
+},
+
+subCategoryIconContainer: {
+  width: 60,
+  height: 60,
+  borderRadius: 30,
+  backgroundColor: '#f5f5f5',
+  justifyContent: 'center',
+  alignItems: 'center',
+  marginBottom: 4,
+  borderWidth: 1,
+  borderColor: '#e0e0e0',
+  overflow: 'hidden',
+},
+
+subCategoryIcon: {
+  width: 50,
+  height: 50,
+  borderRadius: 25,
+},
+
+subCategoryIconPlaceholder: {
+  width: 60,
+  height: 60,
+  borderRadius: 25,
+  backgroundColor: COLORS.btnbg,
+  justifyContent: 'center',
+  alignItems: 'center',
+},
+
+subCategoryIconText: {
+  color: COLORS.white,
+  fontSize: 18,
+  fontWeight: 'bold',
+},
+
+subCategoryName: {
+  fontSize: 12,
+  color: COLORS.textColor,
+  textAlign: 'center',
+  maxWidth: 70,
+},
+
+subCategoryNameSelected: {
+  color: COLORS.appColor,
+  fontWeight: 'bold',
+},
+
+// Update your existing productList style
+// productList: {
+//   paddingHorizontal: 8,
+//   paddingBottom: 16,
+//   paddingTop: 8,
+// },
 });
 
 export default styles;
