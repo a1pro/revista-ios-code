@@ -45,7 +45,6 @@ const Seller = () => {
 
   const route = useRoute<any>();
   const { seller, shop } = route?.params || {};
-
   const [popularProducts, setPopularProducts] = useState<[]>([]);
   const [loadingProducts, setLoadingProducts] = useState<boolean>(true);
   const [ratingdata, setRatingdata] = useState<any>();
