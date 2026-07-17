@@ -10,7 +10,6 @@ import {
   Modal,
   Dimensions,
   ScrollView,
-  SafeAreaView,
   FlatList,
 } from 'react-native';
 import { useNavigation, useRoute, RouteProp } from '@react-navigation/native';
@@ -20,6 +19,7 @@ import COLORS from '../../utils/Colors';
 import IMAGES from '../../assets/images';
 import { t } from 'i18next';
 import { base_url } from '../../utils/ApiUrl';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 const { width, height } = Dimensions.get('window');
 const BANNER_HEIGHT = 180;
@@ -61,7 +61,6 @@ const SellerDetails: React.FC = () => {
   const [search, setSearch] = useState('');
   const [chatModal, setChatModal] = useState(false);
   const [message, setMessage] = useState('');
-
   const bannerSource = seller?.banner
     ? {
       uri: `${base_url}/${seller.banner_path
