@@ -253,7 +253,6 @@ const PaymentScreen: React.FC<Props> = ({ route, navigation }) => {
         InvoiceStatus: paymentResult.InvoiceStatus || statusData?.status || 'Paid',
         paymentDate: new Date().toISOString(),
       };
-
       const token = await AsyncStorage.getItem('token');
       if (isSubscriptionPayment) {
         await handleSubscriptionPayment(paymentData, token);
@@ -318,7 +317,6 @@ const PaymentScreen: React.FC<Props> = ({ route, navigation }) => {
  
   const handleOrderPayment = async (paymentData: any, token: string | null) => {
   try {
-    
     const productIds = metadata?.cartItems?.map((item: any) => ({
       product_id: item.product_id,
       quantity: item.quantity,
@@ -358,7 +356,6 @@ const PaymentScreen: React.FC<Props> = ({ route, navigation }) => {
       longitude: metadata.longitude ? parseFloat(metadata.longitude) : null,
       payment_data: paymentData,
     };
-    
     
     const response = await axios.post(Base_Url.placeorder, payload, {
       headers: {
