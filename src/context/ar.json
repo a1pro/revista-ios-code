@@ -312,6 +312,13 @@
   "Overlastdays": "خلال الـ 90 يومًا الماضية",
    "sellerFeedbackRequired": "يرجى تقديم تقييم للبائع",
   "feedback": "تقييم",
-  "sellerReviewSubmitted": "تم إرسال تقييم البائع بنجاح!"
+  "sellerReviewSubmitted": "تم إرسال تقييم البائع بنجاح!",
+
+  "phoneInvalid": "رقم الهاتف غير صالح",
+  "phoneMinLength": "رقم الهاتف يجب أن يكون 9 أرقام على الأقل",
+  "phoneMaxLength": "رقم الهاتف يجب أن لا يتجاوز 11 رقم",
+  "phoneHint": "أدخل 9-11 رقمًا تبدأ بـ 5 (مثال: 5XXXXXXXX)",
+  "phoneRequired": "رقم الهاتف مطلوب",
+  "phoneStartWith5": "رقم الهاتف السعودي يجب أن يبدأ بـ 5"
    
 }
