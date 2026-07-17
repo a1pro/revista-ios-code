@@ -27,6 +27,7 @@ const BANNER_BASE_URL = 'https://revista-sa.com/storage/app/public/shop/banner';
 const AVATAR_BASE_URL = 'https://revista-sa.com/storage/app/public/seller';
 
 interface Seller {
+  product_list: any;
   image_path: any;
   banner_path: any;
   id: number;
@@ -46,22 +47,22 @@ const AllSellerScreen: React.FC = () => {
   const fetchSellers = async () => {
     try {
       const res = await axios.get(Base_Url.allseller);
-      if (res.data) {setSellers(res.data);}
+if (res.data) {setSellers(res.data);}
 
-    } catch (error:any) {
-      Toast.show({
-        type: 'error',
-        text1: t('error'),
-        text2: error?.response?.data?.message || error.message,
-      });
-    } finally {
-      setLoading(false);
-    }
-  };
+} catch (error:any) {
+  Toast.show({
+    type: 'error',
+    text1: t('error'),
+    text2: error?.response?.data?.message || error.message,
+  });
+} finally {
+  setLoading(false);
+}
+};
 
-  useEffect(() => {
-    fetchSellers();
-  }, []);
+useEffect(() => {
+  fetchSellers();
+}, []);
 
   const renderSeller = ({ item }: { item: Seller }) => {
     const bannerSource = item.banner
