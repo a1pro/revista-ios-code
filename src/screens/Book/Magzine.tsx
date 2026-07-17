@@ -209,21 +209,17 @@ const Magzine = ({ navigation }: any) => {
 
       const lang = (await AsyncStorage.getItem('language')) || 'sa';
 
-      console.log('Language:', lang);
 
       const headers = {
         Authorization: `Bearer ${token}`,
         'Accept-Language': lang,
       };
-      console.log('headers:',);
 
-      console.log('Headers:', headers);
 
       const response = await axios.get(Base_Url.magzinecategory, {
         headers,
       });
 
-      console.log('Categoriessssssssssssss:', response);
 
       setCategories(response.data);
       setFilteredCategories(response.data);
