@@ -23,7 +23,7 @@ let isSDKInitialized = false;
 const isNativeModuleAvailable = (): boolean => {
   if (Platform.OS === 'ios') {
     const hasModule = !!NativeModules.MFModule;
-    console.log(`🔍 iOS Native Module MFModule available: ${hasModule}`);
+    // console.log(`🔍 iOS Native Module MFModule available: ${hasModule}`);
 
     if (!hasModule) {
       console.warn('⚠️ MFModule not found. Check if pod is installed correctly.');
@@ -38,36 +38,36 @@ const isNativeModuleAvailable = (): boolean => {
 
 export const initializeMyFatoorah = async (): Promise<boolean> => {
   try {
-    console.log('🔄 Initializing MyFatoorah SDK...');
+    // console.log('🔄 Initializing MyFatoorah SDK...');
 
     if (!API_KEY) {
-      console.error('❌ API_KEY is not set');
+      // console.error('❌ API_KEY is not set');
       return false;
     }
 
     if (isSDKInitialized) {
-      console.log('✅ SDK already initialized');
+      // console.log('✅ SDK already initialized');
       return true;
     }
 
     // Check native module for iOS
     if (Platform.OS === 'ios' && !isNativeModuleAvailable()) {
-      console.error('❌ Native module not available on iOS');
+      // console.error('❌ Native module not available on iOS');
       return false;
     }
 
     // Wait a bit for iOS native modules to load
     if (Platform.OS === 'ios') {
-      console.log('⏳ Waiting for iOS native modules...');
+      // console.log('⏳ Waiting for iOS native modules...');
       await new Promise(resolve => setTimeout(resolve, 500));
     }
 
     await MFSDK.init(API_KEY, COUNTRY, ENVIRONMENT);
     isSDKInitialized = true;
-    console.log('✅ MyFatoorah SDK initialized successfully');
+    // console.log('✅ MyFatoorah SDK initialized successfully');
     return true;
   } catch (error: any) {
-    console.error('❌ MyFatoorah SDK initialization failed:', error);
+    // console.error('❌ MyFatoorah SDK initialization failed:', error);
     return false;
   }
 };
@@ -81,7 +81,7 @@ export const MyFatoorahService = {
     error?: string;
   }> {
     try {
-      console.log('🔄 Getting payment methods...');
+      // console.log('🔄 Getting payment methods...');
 
       const initialized = await this.initialize();
       if (!initialized) {
@@ -113,7 +113,7 @@ export const MyFatoorahService = {
         error: 'No payment methods available',
       };
     } catch (error: any) {
-      console.error('❌ Error in getPaymentMethods:', error);
+      // console.error('❌ Error in getPaymentMethods:', error);
       return {
         success: false,
         error: error.message || 'Failed to get payment methods',
@@ -123,7 +123,7 @@ export const MyFatoorahService = {
 
   async executePayment(paymentRequest: PaymentRequest): Promise<PaymentResponse> {
     try {
-      console.log('🔄 Executing payment...');
+      // console.log('🔄 Executing payment...');
 
       const initialized = await this.initialize();
       if (!initialized) {
@@ -141,17 +141,27 @@ export const MyFatoorahService = {
       sessionRequest.IsRecurring = false;
 
       const sessionResponse = await MFSDK.initiateSession(sessionRequest, MFLanguage.ENGLISH);
-
+ let formattedMobile = '';
+    if (customer.mobile) {
+      // Remove + and any country code (966 or +966)
+      formattedMobile = customer.mobile
+        .replace(/^\+?966/, '') // Remove Saudi country code
+        .replace(/[^0-9]/g, '') // Remove all non-numeric characters
+        .slice(0, 11); // Ensure maximum 11 characters
+      
+      // console.log('📱 Original mobile:', customer.mobile);
+      // console.log('📱 Formatted mobile:', formattedMobile);
+    }
       // Execute payment
       const executeRequest = new MFExecutePaymentRequest(amount);
       executeRequest.SessionId = sessionResponse.SessionId;
       executeRequest.PaymentMethodId = metadata?.paymentMethodId;
       executeRequest.CustomerEmail = customer.email;
-      executeRequest.CustomerMobile = customer.mobile;
+      executeRequest.CustomerMobile = formattedMobile;
       executeRequest.DisplayCurrencyIso = MFCurrencyISO.SAUDIARABIA_SAR;
       executeRequest.CustomerName = customer.name || 'Customer';
       executeRequest.CustomerReference = `ORDER_${Date.now()}`;
-
+// console.log(executeRequest)
       const response = await MFSDK.executePayment(
         executeRequest,
         MFLanguage.ENGLISH,
@@ -167,7 +177,7 @@ export const MyFatoorahService = {
         allRes: response,
       };
     } catch (error: any) {
-      console.error('❌ Payment execution error:', error);
+      // console.error('❌ Payment execution error:', error);
       return {
         success: false,
         error: error.message || 'Payment failed',
