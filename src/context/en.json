@@ -204,7 +204,6 @@
   "sellerReviewSubmitted":"Seller review submitted successfully!",
   "sellerReviewCompleted":"✓ Seller review completed",
   "submitProductReview":"Submit Product Review",
-
   "subBill":"Subscription & Billing",
   "subscriptionplans":"Subscription Plans",
   "Subscribe":"Subscribe",
@@ -316,6 +315,11 @@
 "includedCategories": "Included Categories",
 "chooseYourPlan": "Choose your Plan",
 "startMembership": "Start Membership",
-"subscriptionRenewText": "Subscriptions renew automatically until cancelled."
-
+"subscriptionRenewText": "Subscriptions renew automatically until cancelled.",
+ "phoneInvalid": "Invalid Phone Number",
+  "phoneMinLength": "Phone number must be at least 9 digits",
+  "phoneMaxLength": "Phone number must not exceed 11 digits",
+  "phoneHint": "Enter 9-11 digits starting with 5 (e.g., 5XXXXXXXX)",
+  "phoneRequired": "Phone number is required",
+  "phoneStartWith5": "Saudi phone number must start with 5"
  }
