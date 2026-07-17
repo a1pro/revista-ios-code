@@ -46,6 +46,7 @@ const EditProfile: React.FC<Props> = ({ navigation, route }) => {
   const [imageAsset, setImageAsset] = useState<Asset | null>(null);
   const [modalVisible, setModalVisible] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [phoneError, setPhoneError] = useState('');
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -53,7 +54,13 @@ const EditProfile: React.FC<Props> = ({ navigation, route }) => {
       const user = route.params.userData;
       setName(user.f_name || '');
       setLastName(user.l_name || '');
-      setPhoneNumber(user.phone || '');
+      
+      // Format phone number for display (remove country code if exists)
+      if (user.phone) {
+        const formattedPhone = user.phone.replace(/^\+?966/, '').trim();
+        setPhoneNumber(formattedPhone);
+      }
+      
       setEmail(user.email || '');
       if (user.image) {
         setProfileImage({ uri: `${base_url}${user.image}` });
@@ -61,12 +68,58 @@ const EditProfile: React.FC<Props> = ({ navigation, route }) => {
     }
   }, [route.params]);
 
+  // Validate Saudi phone number
+  const validateSaudiPhone = (number: string): boolean => {
+    // Remove all non-numeric characters
+    const cleaned = number.replace(/[^0-9]/g, '');
+    
+    // Check if it starts with 5 (Saudi mobile) or 0 (if user includes it)
+    const isValid = cleaned.length >= 9 && cleaned.length <= 11 && 
+                    (cleaned.startsWith('5') || cleaned.startsWith('05'));
+    
+    return isValid;
+  };
+
+  // Format phone number as user types
+  const formatPhoneNumber = (text: string) => {
+    // Remove any non-numeric characters
+    let cleaned = text.replace(/[^0-9]/g, '');
+    
+    // If user enters 966, remove it (they should only enter local number)
+    if (cleaned.startsWith('966')) {
+      cleaned = cleaned.substring(3);
+    }
+    
+    // Limit to 11 digits (max for Saudi number)
+    if (cleaned.length > 11) {
+      cleaned = cleaned.substring(0, 11);
+    }
+    
+    // Update state with cleaned number
+    setPhoneNumber(cleaned);
+    
+    // Validate
+    if (cleaned.length > 0) {
+      if (cleaned.length < 9) {
+        setPhoneError(t('phoneMinLength'));
+      } else if (cleaned.length > 11) {
+        setPhoneError(t('phoneMaxLength'));
+      } else if (!cleaned.startsWith('5') && !cleaned.startsWith('05')) {
+        setPhoneError(t('phoneInvalid') );
+      } else {
+        setPhoneError('');
+      }
+    } else {
+      setPhoneError('');
+    }
+  };
+
   const handleImagePick = (type: 'camera' | 'gallery') => {
     setModalVisible(false);
     const options = {
       mediaType: 'photo' as const,
-      quality: 0.3, // Reduced quality for smaller file
-      maxWidth: 400, // Reduced size
+      quality: 0.3,
+      maxWidth: 400,
       maxHeight: 400,
     };
 
@@ -96,8 +149,6 @@ const EditProfile: React.FC<Props> = ({ navigation, route }) => {
           return;
         }
 
-        
-
         setImageAsset(asset);
         setProfileImage({
           uri: asset.uri,
@@ -114,6 +165,38 @@ const EditProfile: React.FC<Props> = ({ navigation, route }) => {
 
   const handleSave = async () => {
     try {
+      // Validate phone number before saving
+      const cleanedPhone = phoneNumber.replace(/[^0-9]/g, '');
+      
+      if (cleanedPhone) {
+        if (cleanedPhone.length < 9) {
+          Toast.show({
+            type: 'error',
+            text1: 'Error',
+            text2: t('phoneMinLength') || 'Phone number must be at least 9 digits',
+          });
+          return;
+        }
+        
+        if (cleanedPhone.length > 11) {
+          Toast.show({
+            type: 'error',
+            text1: 'Error',
+            text2: t('phoneMaxLength') || 'Phone number must be at most 11 digits',
+          });
+          return;
+        }
+        
+        if (!cleanedPhone.startsWith('5') && !cleanedPhone.startsWith('05')) {
+          Toast.show({
+            type: 'error',
+            text1: 'Error',
+            text2: t('phoneInvalid') || 'Saudi phone number must start with 5',
+          });
+          return;
+        }
+      }
+
       setLoading(true);
 
       const token = await AsyncStorage.getItem('token');
@@ -128,10 +211,8 @@ const EditProfile: React.FC<Props> = ({ navigation, route }) => {
         return;
       }
 
-      // Create FormData for file upload
       const formData = new FormData();
 
-      // Only append if user entered value
       if (name?.trim()) {
         formData.append('f_name', name.trim());
       }
@@ -140,19 +221,22 @@ const EditProfile: React.FC<Props> = ({ navigation, route }) => {
         formData.append('l_name', lastName.trim());
       }
 
+      // Add country code +966 to phone number before sending
       if (phoneNumber?.trim()) {
-        formData.append('phone', phoneNumber.trim());
+        // Remove any non-numeric and existing country code
+        let cleanPhone = phoneNumber.trim().replace(/[^0-9]/g, '');
+        if (cleanPhone.startsWith('966')) {
+          cleanPhone = cleanPhone.substring(3);
+        }
+        // Add +966 country code
+        const fullPhoneNumber = `+966${cleanPhone}`;
+        formData.append('phone', fullPhoneNumber);
       }
 
-     
-
-      // Upload image only if selected
       if (imageAsset?.uri) {
         try {
-          
           let filePath = imageAsset.uri;
           
-          // For Android, remove file:// prefix
           if (Platform.OS === 'android' && filePath.startsWith('file://')) {
             filePath = filePath.replace('file://', '');
           }
@@ -161,26 +245,21 @@ const EditProfile: React.FC<Props> = ({ navigation, route }) => {
           const fileName = imageAsset.fileName || `profile_${Date.now()}.${fileExtension}`;
           const mimeType = imageAsset.type || `image/${fileExtension}`;
           
-          // For Android, we need to create a proper file object
           if (Platform.OS === 'android') {
-            // Read the file to verify it exists
             await RNFS.readFile(filePath, 'base64');
             
-            // Append the file with proper URI
             formData.append('image', {
               uri: `file://${filePath}`,
               type: mimeType,
               name: fileName,
             } as any);
           } else {
-            // iOS
             formData.append('image', {
               uri: filePath,
               type: mimeType,
               name: fileName,
             } as any);
           }
-          
           
         } catch (imageError) {
           console.error('❌ Error processing image:', imageError);
@@ -193,7 +272,6 @@ const EditProfile: React.FC<Props> = ({ navigation, route }) => {
           return;
         }
       }
-
 
       const response = await axios.post(
         Base_Url.updateProfile,
@@ -210,7 +288,6 @@ const EditProfile: React.FC<Props> = ({ navigation, route }) => {
         },
       );
 
-
       Toast.show({
         type: 'success',
         text1: 'Success',
@@ -220,10 +297,6 @@ const EditProfile: React.FC<Props> = ({ navigation, route }) => {
       navigation.goBack();
       
     } catch (error: any) {
-      // console.log(' UPDATE ERROR:', error);
-      
-      
-
       let errorMessage = 'Profile update failed';
       
       if (error?.response?.data?.message) {
@@ -296,6 +369,7 @@ const EditProfile: React.FC<Props> = ({ navigation, route }) => {
             onChangeText={setName}
             style={styles.input}
           />
+          
           <CustomText
             style={styles.label}
             fontWeight="bold"
@@ -308,21 +382,35 @@ const EditProfile: React.FC<Props> = ({ navigation, route }) => {
             onChangeText={setLastName}
             style={styles.input}
           />
+          
           <CustomText
             style={styles.label}
             fontWeight="bold"
             color={COLORS.textColor}>
             {t('phoneNumber')}
           </CustomText>
-          <CustomInput
-            value={phoneNumber}
-            placeholder="Phone Number"
-            keyboardType="phone-pad"
-            onChangeText={setPhoneNumber}
-            style={styles.input}
-          />
-
-         
+          
+          <View style={styles.phoneInputContainer}>
+            <View style={styles.countryCodeContainer}>
+              <Text style={styles.countryCodeText}>+966</Text>
+            </View>
+            <CustomInput
+              value={phoneNumber}
+              placeholder="5XXXXXXXX"
+              keyboardType="phone-pad"
+              onChangeText={formatPhoneNumber}
+              style={[styles.input, styles.phoneInput, phoneError ? styles.inputError : null]}
+              maxLength={11}
+            />
+          </View>
+          
+          {phoneError ? (
+            <Text style={styles.errorText}>{phoneError}</Text>
+          ) : (
+            <Text style={styles.hintText}>
+              {t('phoneHint') || 'Enter 9-11 digits starting with 5 (e.g., 5XXXXXXXX)'}
+            </Text>
+          )}
 
           <TouchableOpacity
             style={styles.saveButton}
@@ -425,6 +513,45 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
     paddingVertical: 10,
     fontSize: 15,
+  },
+  phoneInputContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: verticalScale(4),
+  },
+  countryCodeContainer: {
+    backgroundColor: '#F5F7FA',
+    borderRadius: 8,
+    paddingHorizontal: 12,
+    paddingVertical: 10,
+    marginRight: 8,
+    borderWidth: 1,
+    borderColor: '#E0E0E0',
+  },
+  countryCodeText: {
+    fontSize: 15,
+    color: '#333',
+    fontWeight: '600',
+  },
+  phoneInput: {
+    flex: 1,
+    marginBottom: 0,
+  },
+  inputError: {
+    borderColor: 'red',
+    borderWidth: 1,
+  },
+  errorText: {
+    color: 'red',
+    fontSize: 12,
+    marginBottom: verticalScale(8),
+    marginTop: verticalScale(2),
+  },
+  hintText: {
+    color: '#999',
+    fontSize: 12,
+    marginBottom: verticalScale(8),
+    marginTop: verticalScale(2),
   },
   saveButton: {
     backgroundColor: COLORS.btnbg,
