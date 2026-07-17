@@ -44,6 +44,8 @@ const TopSeller: React.FC<props> = () => {
           'Content-Type': 'application/json',
         },
       });
+
+      console.log('res of top seller :', res.data)
       if (res.data) {
         setSellers(res.data);
       } else {
