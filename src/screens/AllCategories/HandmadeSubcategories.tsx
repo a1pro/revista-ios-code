@@ -29,7 +29,6 @@ type Props = NativeStackScreenProps<RootStackParamList, 'HandmadeSubcategories'>
 const HandmadeSubcategories: React.FC<Props> = ({ route, navigation }) => {
   const { category } = (route.params as any) || null;
   const { t } = useTranslation();
-
   const renderSubCategory = ({ item }: any) => {
     const staticImage = SUBCATEGORY_IMAGE_MAP[item.name?.toLowerCase()];
     const imageSource = item.icon
@@ -37,7 +36,7 @@ const HandmadeSubcategories: React.FC<Props> = ({ route, navigation }) => {
     return (
       <TouchableOpacity
         onPress={() => {
-          (navigation as any).navigate('HandmadeProducts', { subcategory: item, products: item.products || [] });
+          (navigation as any).navigate('Details', { subcategory: item, products: item.products || [] });
         }}
         style={styles.subCategory}
       >
