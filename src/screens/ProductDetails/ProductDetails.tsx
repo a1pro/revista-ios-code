@@ -80,7 +80,6 @@ const ProductDetails: React.FC<Props> = ({ route, navigation }) => {
   const [icon, setprimeicon] = useState<prime | null>(null);
   const [isFavoriteLocal, setIsFavoriteLocal] = useState(false);
   const [loaded, setLoaded] = useState<boolean>(false);
-  
   const { t } = useTranslation();
   
   const primeIcon = async () => {
